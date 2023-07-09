@@ -1,0 +1,38 @@
+(footprint "Autochess_Square_40mm" (version 20221018) (generator pcbnew)
+  (layer "F.Cu")
+  (attr smd)
+  (fp_text reference "REF**" (at 0 -15 unlocked) (layer "F.SilkS")
+      (effects (font (size 1 1) (thickness 0.1)))
+    (tstamp d200157f-5577-4cc4-a46c-172359c40955)
+  )
+  (fp_text value "Autochess_Square_40mm" (at 0 11.5 unlocked) (layer "F.Fab")
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 830090ff-2c3a-4634-b20b-3e8bf2a212cf)
+  )
+  (fp_text user "${REFERENCE}" (at 0 13 unlocked) (layer "F.Fab")
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp 2dce70cf-a73d-44fd-9378-afe93c1f340e)
+  )
+  (pad "1" smd custom (at 20 20) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask")
+    (options (clearance outline) (anchor rect))
+    (primitives
+      (gr_poly
+        (pts
+          (xy -39 1)
+          (xy 1 1)
+          (xy 1 -39)
+        )
+        (width 0.2) (fill yes))
+    ) (tstamp dc7b721e-d331-40cf-b4ee-707240964fd9))
+  (pad "2" smd custom (at -20 -20 180) (size 2 2) (layers "F.Cu" "F.Paste" "F.Mask")
+    (options (clearance outline) (anchor rect))
+    (primitives
+      (gr_poly
+        (pts
+          (xy -39 1)
+          (xy 1 1)
+          (xy 1 -39)
+        )
+        (width 0.2) (fill yes))
+    ) (tstamp 575b4576-3627-4233-93f2-f8a4e471b110))
+)
