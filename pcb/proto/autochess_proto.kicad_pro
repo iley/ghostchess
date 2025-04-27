@@ -524,7 +524,7 @@
       "plot": "gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "autochess_proto.step",
       "svg": "",
       "vrml": ""
     },
