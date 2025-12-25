@@ -416,6 +416,10 @@
     [
       "bbb3b9c6-6f2e-438b-8ed9-1a301d0a9170",
       "LEDs"
+    ],
+    [
+      "84cfae0a-cf76-418d-b87e-613eb74c6d8a",
+      "sensors"
     ]
   ],
   "text_variables": {}
