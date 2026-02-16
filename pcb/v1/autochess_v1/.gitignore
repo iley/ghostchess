@@ -1,2 +1,28 @@
-autochess_v1-backups
+# KiCad backup files
+*-backups/
+
+# Lock files
 *.lck
+
+# Footprint cache
+fp-info-cache
+
+# Netlist files
+*.net
+
+# Generated fabrication outputs
+*-bak
+*.bak
+*~
+
+# DRC/ERC reports
+*.rpt
+
+# Gerber/drill outputs (usually in separate output dir)
+*.gbr
+*.drl
+*.gbrjob
+
+# 3D cache
+*.3dshapes/
+3d-cache/

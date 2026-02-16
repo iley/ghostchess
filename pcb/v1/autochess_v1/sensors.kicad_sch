@@ -700,6 +700,131 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:+3.3V"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+3.3V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+3.3V_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+3.3V_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -782,131 +907,6 @@
 			(symbol "GND_1_1"
 				(pin power_in line
 					(at 0 0 270)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "power:VCC"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "VCC"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"VCC\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "VCC_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "VCC_1_1"
-				(pin power_in line
-					(at 0 0 90)
 					(length 0)
 					(name "~"
 						(effects
@@ -1256,6 +1256,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "37ef9206-1df6-4b29-a80b-99d9347ee40d")
+	)
+	(junction
+		(at 146.05 49.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "388efcc7-bada-411f-bfd8-a2df6dbc2beb")
 	)
 	(junction
 		(at 226.06 143.51)
@@ -2212,12 +2218,6 @@
 		(uuid "dcbce467-dbd1-4265-aca7-6d37a38cb1e3")
 	)
 	(junction
-		(at 146.05 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dd5c12e4-674b-4ffc-b551-8580b15691ec")
-	)
-	(junction
 		(at 198.12 218.44)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3004,6 +3004,16 @@
 			(type default)
 		)
 		(uuid "1dd4d9d9-95bd-4384-b450-30eb95ad3e2d")
+	)
+	(wire
+		(pts
+			(xy 146.05 46.99) (xy 146.05 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f273378-213c-4629-a06f-2c5b121f16ff")
 	)
 	(wire
 		(pts
@@ -4567,7 +4577,7 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 49.53) (xy 149.86 49.53)
+			(xy 142.24 49.53) (xy 146.05 49.53)
 		)
 		(stroke
 			(width 0)
@@ -5334,16 +5344,6 @@
 			(type default)
 		)
 		(uuid "8c8e9beb-9a17-4714-9bda-8ea821885ace")
-	)
-	(wire
-		(pts
-			(xy 146.05 46.99) (xy 146.05 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8cb2c078-95db-4ea7-9a84-c4e54e0661c8")
 	)
 	(wire
 		(pts
@@ -6207,16 +6207,6 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 49.53) (xy 146.05 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b7d2fdb3-4f7b-48bb-8806-6395f09ee770")
-	)
-	(wire
-		(pts
 			(xy 170.18 135.89) (xy 170.18 143.51)
 		)
 		(stroke
@@ -6474,6 +6464,16 @@
 			(type default)
 		)
 		(uuid "c1d2462c-211f-4825-b62e-ee722a156a46")
+	)
+	(wire
+		(pts
+			(xy 146.05 49.53) (xy 149.86 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1ed96f3-961e-4f29-bd81-9c680abc73a1")
 	)
 	(wire
 		(pts
@@ -7872,6 +7872,72 @@
 		(uuid "dbfc2eb4-33df-4ea8-9a83-1509cfe60911")
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 201.93 232.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0297eed1-f1d3-4658-ac58-e7790eda5121")
+		(property "Reference" "#PWR0325"
+			(at 201.93 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 201.93 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 201.93 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 201.93 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 201.93 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4ac6b993-d908-4594-b96c-a0723b2a199d")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0325")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 58.42 207.01 0)
 		(unit 1)
@@ -7898,7 +7964,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 59.3852 210.82 0)
 			(effects
 				(font
@@ -8039,7 +8105,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 143.2052 210.82 0)
 			(effects
 				(font
@@ -8108,7 +8174,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 143.2052 135.89 0)
 			(effects
 				(font
@@ -8177,7 +8243,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 171.1452 99.06 0)
 			(effects
 				(font
@@ -8220,6 +8286,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 146.05 306.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0a028588-5a09-4faa-8039-4a3d3ee1e5fc")
+		(property "Reference" "#PWR0339"
+			(at 146.05 309.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 146.05 300.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 146.05 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 146.05 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f4a80645-8c45-446f-a4dd-4b3b91f1fcf0")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0339")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 38.1 152.4 0)
 		(unit 1)
@@ -8247,7 +8379,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 36.322 152.4 90)
 			(effects
 				(font
@@ -8290,72 +8422,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 256.54 306.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0c55585b-a8cf-492a-a364-16afe809962f")
-		(property "Reference" "#PWR0343"
-			(at 256.54 309.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 256.54 300.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 256.54 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 256.54 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 256.54 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0c29e193-fbcb-4d2c-bf88-1887c65fa972")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0343")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 58.42 168.91 0)
 		(unit 1)
@@ -8382,7 +8448,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 59.3852 172.72 0)
 			(effects
 				(font
@@ -8419,72 +8485,6 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "C84")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 90.17 269.24 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0f12c2e9-05b7-49bd-baa4-4031700774b2")
-		(property "Reference" "#PWR0318"
-			(at 90.17 273.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 90.17 264.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 90.17 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 90.17 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 90.17 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f5251e5b-618d-4a47-b188-43606a4b38b8")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0318")
 					(unit 1)
 				)
 			)
@@ -8563,72 +8563,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 146.05 269.24 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "10c289c5-cb72-4ad5-b163-5f5e78059634")
-		(property "Reference" "#PWR0326"
-			(at 146.05 273.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 146.05 264.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 146.05 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.05 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 146.05 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6266f49b-74f0-4da5-b8ba-7601ec6acf06")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0326")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 170.18 58.42 0)
 		(unit 1)
@@ -8655,7 +8589,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 171.1452 62.23 0)
 			(effects
 				(font
@@ -8692,138 +8626,6 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "C71")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 90.17 157.48 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "12cac679-2b91-458c-bfc8-1369758ad037")
-		(property "Reference" "#PWR0291"
-			(at 90.17 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 90.17 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 90.17 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 90.17 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 90.17 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ac2aeffa-0bbd-4bbf-8b0f-7a121875c8f5")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0291")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 229.87 157.48 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "12ce243c-5987-4904-b419-04add0da804b")
-		(property "Reference" "#PWR0301"
-			(at 229.87 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 229.87 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 229.87 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 229.87 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 229.87 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7a29abd1-98c6-4441-9220-c0591086a38b")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0301")
 					(unit 1)
 				)
 			)
@@ -8928,7 +8730,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 227.0252 321.31 0)
 			(effects
 				(font
@@ -8997,7 +8799,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 171.1452 284.48 0)
 			(effects
 				(font
@@ -9066,7 +8868,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 115.2652 284.48 0)
 			(effects
 				(font
@@ -9175,6 +8977,72 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "U47")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 90.17 195.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1a8d7eb0-6442-4123-baf2-043958eba421")
+		(property "Reference" "#PWR0313"
+			(at 90.17 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 90.17 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 90.17 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7e34f5d5-f326-4454-89e7-c686e4a88719")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0313")
 					(unit 1)
 				)
 			)
@@ -9351,7 +9219,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 171.1452 135.89 0)
 			(effects
 				(font
@@ -9394,17 +9262,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 62.23 46.99 0)
+		(lib_id "power:+3.3V")
+		(at 229.87 306.07 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "1bd19432-3968-4dd4-90c7-9065b160e6a7")
-		(property "Reference" "#PWR0264"
-			(at 62.23 50.8 0)
+		(uuid "1c06c2d3-3e0e-482c-9f0b-53c6b87df167")
+		(property "Reference" "#PWR0342"
+			(at 229.87 309.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9412,8 +9280,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 62.23 41.91 0)
+		(property "Value" "+3.3V"
+			(at 229.87 300.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9421,7 +9289,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 62.23 46.99 0)
+			(at 229.87 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9430,7 +9298,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 62.23 46.99 0)
+			(at 229.87 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9438,8 +9306,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 62.23 46.99 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 229.87 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9448,12 +9316,78 @@
 			)
 		)
 		(pin "1"
-			(uuid "3ade55c5-8474-4f4c-89a2-a6876d3cfa05")
+			(uuid "c42c4c6e-d576-4121-ab8e-168a26026de9")
 		)
 		(instances
-			(project ""
+			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0264")
+					(reference "#PWR0342")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 118.11 232.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1dcde2b2-ecb8-4992-a266-3be89b91c888")
+		(property "Reference" "#PWR0322"
+			(at 118.11 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 118.11 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 118.11 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eb08903a-dc0f-4e75-a40c-c720a34b1780")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0322")
 					(unit 1)
 				)
 			)
@@ -9486,7 +9420,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 199.0852 135.89 0)
 			(effects
 				(font
@@ -9595,6 +9529,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 62.23 232.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2356496c-1739-4aa4-adca-79de023a985a")
+		(property "Reference" "#PWR0320"
+			(at 62.23 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 62.23 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 62.23 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "340d19fc-fd5f-448d-82c5-184e63a18af1")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0320")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Sensor_Magnetic:DRV5033AJxDBZ")
 		(at 68.58 96.52 0)
 		(unit 1)
@@ -9693,7 +9693,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 199.0852 321.31 0)
 			(effects
 				(font
@@ -9762,7 +9762,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 87.3252 135.89 0)
 			(effects
 				(font
@@ -9831,7 +9831,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 199.0852 210.82 0)
 			(effects
 				(font
@@ -9950,72 +9950,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 173.99 232.41 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2a850a9b-807a-479b-aff9-d1258f9acd6a")
-		(property "Reference" "#PWR0329"
-			(at 173.99 236.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 173.99 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 173.99 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.99 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 173.99 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b8614ffe-3018-4030-a3ee-936d3512b821")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0329")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Sensor_Magnetic:DRV5033AJxDBZ")
 		(at 262.89 170.18 0)
 		(unit 1)
@@ -10114,7 +10048,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 143.2052 172.72 0)
 			(effects
 				(font
@@ -10157,17 +10091,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 256.54 120.65 0)
+		(lib_id "power:+3.3V")
+		(at 118.11 120.65 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "2aed2e0f-0f4f-461f-85ca-b13d53ec23a1")
-		(property "Reference" "#PWR0302"
-			(at 256.54 124.46 0)
+		(uuid "2bdf16f8-43b6-44c8-8068-d8e1e41ae995")
+		(property "Reference" "#PWR0290"
+			(at 118.11 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10175,8 +10109,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 256.54 115.57 0)
+		(property "Value" "+3.3V"
+			(at 118.11 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10184,7 +10118,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 256.54 120.65 0)
+			(at 118.11 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10193,7 +10127,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 256.54 120.65 0)
+			(at 118.11 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10201,8 +10135,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 256.54 120.65 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 118.11 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10211,12 +10145,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "32b33e9d-8d78-4f7b-9d8b-8102efb980cd")
+			(uuid "7edc4b04-db75-46a3-b4ef-2f92c21e93c5")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0302")
+					(reference "#PWR0290")
 					(unit 1)
 				)
 			)
@@ -10249,7 +10183,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 115.2652 321.31 0)
 			(effects
 				(font
@@ -10390,7 +10324,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 227.0252 172.72 0)
 			(effects
 				(font
@@ -10433,17 +10367,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 118.11 195.58 0)
+		(lib_id "power:+3.3V")
+		(at 118.11 306.07 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "313f10e5-78d0-47b6-8efd-72e0cb6a6d5a")
-		(property "Reference" "#PWR0320"
-			(at 118.11 199.39 0)
+		(uuid "2fd2afa0-72d4-4f65-ae60-3c64cacc1a2d")
+		(property "Reference" "#PWR0338"
+			(at 118.11 309.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10451,8 +10385,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 118.11 190.5 0)
+		(property "Value" "+3.3V"
+			(at 118.11 300.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10460,7 +10394,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 118.11 195.58 0)
+			(at 118.11 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10469,7 +10403,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 118.11 195.58 0)
+			(at 118.11 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10477,8 +10411,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 118.11 195.58 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 118.11 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10487,12 +10421,78 @@
 			)
 		)
 		(pin "1"
-			(uuid "c9a8b898-d0ae-4bec-8173-8c3eca7aa759")
+			(uuid "4f1e554a-5c05-4f58-9d56-212782f47d10")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0320")
+					(reference "#PWR0338")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 62.23 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2fffe829-f476-4e2b-a05d-18fbb4260373")
+		(property "Reference" "#PWR0276"
+			(at 62.23 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 62.23 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 62.23 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "82f171cc-91e4-4b2d-b79d-e1759bbb5922")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0276")
 					(unit 1)
 				)
 			)
@@ -10525,7 +10525,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 171.1452 210.82 0)
 			(effects
 				(font
@@ -10562,6 +10562,72 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "C115")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 256.54 269.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "316277ae-ff0c-4bb9-ab88-f8fa43a0cd1c")
+		(property "Reference" "#PWR0335"
+			(at 256.54 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 256.54 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 256.54 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 256.54 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 256.54 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "295c11f7-5c99-4b61-9687-306e2809c067")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0335")
 					(unit 1)
 				)
 			)
@@ -10640,72 +10706,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 62.23 120.65 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3448b59f-b984-4546-8318-4dac59257a22")
-		(property "Reference" "#PWR0288"
-			(at 62.23 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 62.23 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 62.23 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 62.23 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 62.23 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f67c1896-4631-45f9-9210-6db20415eb6c")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0288")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 198.12 243.84 0)
 		(unit 1)
@@ -10732,7 +10732,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 199.0852 247.65 0)
 			(effects
 				(font
@@ -10769,72 +10769,6 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "C120")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 229.87 46.99 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "35f27a20-f553-4356-a586-5e10adb1835a")
-		(property "Reference" "#PWR0272"
-			(at 229.87 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 229.87 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 229.87 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 229.87 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 229.87 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1e955f67-958a-4a44-9f79-fb6b07809b76")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0272")
 					(unit 1)
 				)
 			)
@@ -10913,6 +10847,138 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 256.54 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "367bea6b-cc5e-4356-bf99-58da6d01074f")
+		(property "Reference" "#PWR0283"
+			(at 256.54 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 256.54 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 256.54 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 256.54 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 256.54 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f93b5e7f-3ce4-4ae3-97ef-040a35d26365")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0283")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 90.17 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "37a54bdf-cce9-49cc-8a69-99a1afb7a953")
+		(property "Reference" "#PWR0277"
+			(at 90.17 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 90.17 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 90.17 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "429be35e-5ad7-408f-9aeb-2183cde1b5ca")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0277")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 38.1 115.57 0)
 		(unit 1)
@@ -10940,7 +11006,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 36.322 115.57 90)
 			(effects
 				(font
@@ -11055,17 +11121,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 256.54 83.82 0)
+		(lib_id "power:+3.3V")
+		(at 118.11 269.24 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "3cc57d43-06c9-498d-86c3-7df62504e7b7")
-		(property "Reference" "#PWR0283"
-			(at 256.54 87.63 0)
+		(uuid "3e4f06e3-1a7c-4cb7-93c6-ce1b9310c576")
+		(property "Reference" "#PWR0330"
+			(at 118.11 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11073,8 +11139,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 256.54 78.74 0)
+		(property "Value" "+3.3V"
+			(at 118.11 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11082,7 +11148,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 256.54 83.82 0)
+			(at 118.11 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11091,7 +11157,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 256.54 83.82 0)
+			(at 118.11 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11099,74 +11165,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 256.54 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e50b5305-f4cc-4fa4-9c8b-ad019f0753b9")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0283")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 90.17 306.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3d09f38d-8c99-47b8-b546-1f0414de6e4f")
-		(property "Reference" "#PWR0319"
-			(at 90.17 309.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 90.17 300.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 90.17 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 90.17 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 90.17 306.07 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 118.11 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11175,12 +11175,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "f2aa3797-cc43-4edd-80b4-96901f2867b9")
+			(uuid "ac6c52ad-faee-4f5d-a5d1-ecf48d74f753")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0319")
+					(reference "#PWR0330")
 					(unit 1)
 				)
 			)
@@ -11213,7 +11213,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 87.3252 172.72 0)
 			(effects
 				(font
@@ -11282,7 +11282,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 171.1452 247.65 0)
 			(effects
 				(font
@@ -11325,17 +11325,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 62.23 157.48 0)
+		(lib_id "power:+3.3V")
+		(at 201.93 157.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "40614870-1ec4-4514-afd5-8a2d82c142be")
-		(property "Reference" "#PWR0289"
-			(at 62.23 161.29 0)
+		(uuid "3f413da4-37cb-4bdd-bb03-81f262a6b50b")
+		(property "Reference" "#PWR0301"
+			(at 201.93 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11343,8 +11343,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 62.23 152.4 0)
+		(property "Value" "+3.3V"
+			(at 201.93 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11352,7 +11352,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 62.23 157.48 0)
+			(at 201.93 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11361,7 +11361,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 62.23 157.48 0)
+			(at 201.93 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11369,8 +11369,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 62.23 157.48 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 201.93 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11379,12 +11379,78 @@
 			)
 		)
 		(pin "1"
-			(uuid "92995197-14ca-498e-ac85-071f77772fd8")
+			(uuid "e8536bc5-dc5b-4b5b-84c1-73103eda526f")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0289")
+					(reference "#PWR0301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 62.23 195.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4046e8e7-9526-4c6e-b341-18b3e3dbfc86")
+		(property "Reference" "#PWR0312"
+			(at 62.23 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 62.23 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 62.23 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4b982b60-a7e5-4340-8429-ef543d3a97bb")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0312")
 					(unit 1)
 				)
 			)
@@ -11417,7 +11483,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 143.2052 99.06 0)
 			(effects
 				(font
@@ -11526,17 +11592,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 229.87 269.24 0)
+		(lib_id "power:+3.3V")
+		(at 62.23 306.07 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "415c18eb-5902-4b83-9eb3-498a10ca405b")
-		(property "Reference" "#PWR0338"
-			(at 229.87 273.05 0)
+		(uuid "42af14af-4440-4264-98d9-70eb548e0f55")
+		(property "Reference" "#PWR0336"
+			(at 62.23 309.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11544,8 +11610,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 229.87 264.16 0)
+		(property "Value" "+3.3V"
+			(at 62.23 300.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11553,7 +11619,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 229.87 269.24 0)
+			(at 62.23 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11562,7 +11628,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 229.87 269.24 0)
+			(at 62.23 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11570,8 +11636,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 229.87 269.24 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 62.23 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11580,12 +11646,78 @@
 			)
 		)
 		(pin "1"
-			(uuid "5f2df06a-987b-4e5e-bf7d-9ba5cb76b100")
+			(uuid "78dad3fe-aa60-461e-a073-8e146271e71f")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0338")
+					(reference "#PWR0336")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 201.93 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "44889f3c-d944-4d5a-95b3-97c143f7f7dc")
+		(property "Reference" "#PWR0271"
+			(at 201.93 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 201.93 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 201.93 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 201.93 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 201.93 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "87244d58-89a0-4290-9723-a828be1cc9d0")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0271")
 					(unit 1)
 				)
 			)
@@ -11618,7 +11750,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 87.3252 62.23 0)
 			(effects
 				(font
@@ -11727,72 +11859,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 256.54 232.41 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4840204a-6a53-47e1-b109-0f777ce2acc7")
-		(property "Reference" "#PWR0341"
-			(at 256.54 236.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 256.54 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 256.54 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 256.54 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 256.54 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b5c5801f-de07-4133-a564-38a2f1dcee58")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0341")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 226.06 95.25 0)
 		(unit 1)
@@ -11819,7 +11885,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 227.0252 99.06 0)
 			(effects
 				(font
@@ -11856,72 +11922,6 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "C81")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 118.11 120.65 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "48e20fb5-64d6-496b-9063-5885421cb619")
-		(property "Reference" "#PWR0292"
-			(at 118.11 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 118.11 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 118.11 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 118.11 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 118.11 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9f80a565-7885-4227-9b47-91280b3675db")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0292")
 					(unit 1)
 				)
 			)
@@ -12000,72 +12000,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 229.87 232.41 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "48f3a443-7a1b-4c65-a24a-58814ac39918")
-		(property "Reference" "#PWR0337"
-			(at 229.87 236.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 229.87 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 229.87 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 229.87 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 229.87 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0ed03e7a-a0d7-4062-8446-9e60bf31d261")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0337")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 114.3 95.25 0)
 		(unit 1)
@@ -12092,7 +12026,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 115.2652 99.06 0)
 			(effects
 				(font
@@ -12129,6 +12063,138 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "C77")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 256.54 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4ad53d0a-2a85-40a3-8f97-ee87448e20a1")
+		(property "Reference" "#PWR0273"
+			(at 256.54 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 256.54 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 256.54 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 256.54 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 256.54 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "48023134-8a78-4e2d-bd93-f03a2fa45692")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0273")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 62.23 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4bffca62-5462-47e1-ae25-3cdf72b3814d")
+		(property "Reference" "#PWR0296"
+			(at 62.23 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 62.23 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 62.23 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3dbbf679-12d5-4f30-9ca5-58b957130910")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0296")
 					(unit 1)
 				)
 			)
@@ -12233,7 +12299,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 59.3852 99.06 0)
 			(effects
 				(font
@@ -12276,72 +12342,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 62.23 195.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4f2ce1cd-1109-4979-82f9-b913cad5ce9f")
-		(property "Reference" "#PWR0312"
-			(at 62.23 199.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 62.23 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 62.23 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 62.23 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 62.23 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cc57c1a0-9c53-4642-a0ad-95c62db50ce9")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0312")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 198.12 280.67 0)
 		(unit 1)
@@ -12368,7 +12368,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 199.0852 284.48 0)
 			(effects
 				(font
@@ -12405,72 +12405,6 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "C121")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 173.99 306.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5054426e-c26d-4db7-b104-ba3ef6ec0b1f")
-		(property "Reference" "#PWR0331"
-			(at 173.99 309.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 173.99 300.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 173.99 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.99 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 173.99 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bc2e95e3-f537-4f54-8bc7-b40e6f3689db")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0331")
 					(unit 1)
 				)
 			)
@@ -12720,7 +12654,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 36.322 78.74 90)
 			(effects
 				(font
@@ -12839,6 +12773,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 90.17 269.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "56006c9e-7cf2-44d3-84a6-0fe13eea7744")
+		(property "Reference" "#PWR0329"
+			(at 90.17 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 90.17 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 90.17 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "42a21e80-a613-4785-b4a5-4631b2f74e64")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0329")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 48.26 265.43 0)
 		(unit 1)
@@ -12899,72 +12899,6 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "#PWR0309")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 90.17 232.41 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5a8e0718-143a-4c57-9362-b399e8d0240a")
-		(property "Reference" "#PWR0317"
-			(at 90.17 236.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 90.17 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 90.17 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 90.17 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 90.17 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "477c2ea1-7e75-4ec8-919d-8b584a8b29a6")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0317")
 					(unit 1)
 				)
 			)
@@ -13115,6 +13049,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 90.17 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5da2b966-b4f9-4cea-ba2f-2f69f9f25f13")
+		(property "Reference" "#PWR0297"
+			(at 90.17 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 90.17 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 90.17 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3143ffb5-4e4b-4f73-98d8-1c9de4c95886")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0297")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 252.73 243.84 0)
 		(unit 1)
@@ -13141,7 +13141,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 253.6952 247.65 0)
 			(effects
 				(font
@@ -13256,17 +13256,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 173.99 83.82 0)
+		(lib_id "power:+3.3V")
+		(at 201.93 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "64f18343-4c25-42e5-9e2d-665b67073ab9")
-		(property "Reference" "#PWR0280"
-			(at 173.99 87.63 0)
+		(uuid "636ce06f-1213-40fc-899d-a2cd08b07e8c")
+		(property "Reference" "#PWR0281"
+			(at 201.93 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13274,8 +13274,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 173.99 78.74 0)
+		(property "Value" "+3.3V"
+			(at 201.93 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13283,7 +13283,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 173.99 83.82 0)
+			(at 201.93 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13292,7 +13292,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 83.82 0)
+			(at 201.93 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13300,8 +13300,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 173.99 83.82 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 201.93 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13310,12 +13310,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "77d99ad9-8a06-483d-9c98-b3b8178c9039")
+			(uuid "26635be2-a363-4f47-99c7-d07707a59ddb")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0280")
+					(reference "#PWR0281")
 					(unit 1)
 				)
 			)
@@ -13348,7 +13348,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 87.3252 210.82 0)
 			(effects
 				(font
@@ -13535,72 +13535,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 201.93 306.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6887552b-3bf9-4706-a0e5-f9353873655e")
-		(property "Reference" "#PWR0335"
-			(at 201.93 309.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 201.93 300.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 201.93 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 201.93 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 201.93 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "67e3c14f-0696-46ee-b202-ec9ca76af01d")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0335")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 198.12 58.42 0)
 		(unit 1)
@@ -13627,7 +13561,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 199.0852 62.23 0)
 			(effects
 				(font
@@ -13768,7 +13702,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 143.2052 284.48 0)
 			(effects
 				(font
@@ -13811,17 +13745,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 146.05 46.99 0)
+		(lib_id "power:+3.3V")
+		(at 229.87 46.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6f55e80b-118e-4406-929b-4df7f32e0701")
-		(property "Reference" "#PWR0269"
-			(at 146.05 50.8 0)
+		(uuid "6f01cca5-d8f6-43da-9f7e-1c3f7376285b")
+		(property "Reference" "#PWR0272"
+			(at 229.87 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13829,8 +13763,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 146.05 41.91 0)
+		(property "Value" "+3.3V"
+			(at 229.87 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13838,7 +13772,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 146.05 46.99 0)
+			(at 229.87 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13847,7 +13781,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 46.99 0)
+			(at 229.87 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13855,8 +13789,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 146.05 46.99 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 229.87 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13865,29 +13799,29 @@
 			)
 		)
 		(pin "1"
-			(uuid "d63a44a1-8fc8-4b83-a2cc-12681d9060c1")
+			(uuid "d50f2d5b-6097-49dd-8ecf-e90692f15570")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0269")
+					(reference "#PWR0272")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 118.11 46.99 0)
+		(lib_id "power:+3.3V")
+		(at 146.05 269.24 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "7325ec21-2c3d-40ee-8a81-2c8d552f42ee")
-		(property "Reference" "#PWR0268"
-			(at 118.11 50.8 0)
+		(uuid "70471860-7b29-4681-b41e-e47b776653be")
+		(property "Reference" "#PWR0331"
+			(at 146.05 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13895,8 +13829,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 118.11 41.91 0)
+		(property "Value" "+3.3V"
+			(at 146.05 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13904,7 +13838,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 118.11 46.99 0)
+			(at 146.05 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13913,7 +13847,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 118.11 46.99 0)
+			(at 146.05 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13921,8 +13855,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 118.11 46.99 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 146.05 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13931,12 +13865,78 @@
 			)
 		)
 		(pin "1"
-			(uuid "c84c48a7-5ae1-429b-8129-9e1fb57cfd6c")
+			(uuid "50194800-f442-4218-94b5-8be42574a4fa")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0268")
+					(reference "#PWR0331")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 256.54 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "712f57f5-d484-4c04-b60a-b44d3073ab25")
+		(property "Reference" "#PWR0303"
+			(at 256.54 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 256.54 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 256.54 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 256.54 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 256.54 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a2242796-4714-4d2b-a3f9-283a9c52e307")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0303")
 					(unit 1)
 				)
 			)
@@ -14035,7 +14035,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 59.3852 135.89 0)
 			(effects
 				(font
@@ -14078,6 +14078,138 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 173.99 232.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "750e967f-722e-4e7c-9f75-ece5fef7a973")
+		(property "Reference" "#PWR0324"
+			(at 173.99 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 173.99 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.99 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 173.99 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "087a738e-afdb-4439-b4e6-2b788243d094")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0324")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 146.05 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7535693c-dade-4c25-9da1-970e64810c37")
+		(property "Reference" "#PWR0279"
+			(at 146.05 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 146.05 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 146.05 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 146.05 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "99a718c5-b1fb-422a-b180-1ac66afb431f")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0279")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 58.42 58.42 0)
 		(unit 1)
@@ -14104,7 +14236,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 59.3852 62.23 0)
 			(effects
 				(font
@@ -14141,72 +14273,6 @@
 			(project ""
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "C67")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 201.93 46.99 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7580947b-7420-4529-a101-690f7706c171")
-		(property "Reference" "#PWR0271"
-			(at 201.93 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 201.93 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 201.93 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 201.93 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 201.93 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "911598e1-e061-4c80-a9ac-6e85575e6b08")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0271")
 					(unit 1)
 				)
 			)
@@ -14607,7 +14673,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 171.1452 172.72 0)
 			(effects
 				(font
@@ -14650,72 +14716,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 173.99 120.65 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "79954169-292c-462a-a930-5458316dcfdc")
-		(property "Reference" "#PWR0296"
-			(at 173.99 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 173.99 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 173.99 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.99 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 173.99 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0dffc04c-37bf-4615-91d9-376ba63e4496")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0296")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 38.1 337.82 0)
 		(unit 1)
@@ -14743,7 +14743,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 36.322 337.82 90)
 			(effects
 				(font
@@ -14786,17 +14786,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 62.23 83.82 0)
+		(lib_id "power:+3.3V")
+		(at 256.54 120.65 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "7a9d24ab-eeaf-4805-bfaa-1de33d83f8ab")
-		(property "Reference" "#PWR0276"
-			(at 62.23 87.63 0)
+		(uuid "7bc5e0de-e279-4d31-b803-9f66689a7d72")
+		(property "Reference" "#PWR0295"
+			(at 256.54 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14804,8 +14804,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 62.23 78.74 0)
+		(property "Value" "+3.3V"
+			(at 256.54 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14813,7 +14813,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 62.23 83.82 0)
+			(at 256.54 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14822,7 +14822,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 62.23 83.82 0)
+			(at 256.54 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14830,8 +14830,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 62.23 83.82 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 256.54 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14840,12 +14840,144 @@
 			)
 		)
 		(pin "1"
-			(uuid "b565fd38-7da7-4494-80ba-5e1a617a9d93")
+			(uuid "5a2b7811-13e0-429d-a2e6-b32c0c02b27d")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0276")
+					(reference "#PWR0295")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 146.05 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7cc7275c-5cc6-4002-ae81-2c671789d339")
+		(property "Reference" "#PWR0299"
+			(at 146.05 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 146.05 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 146.05 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 146.05 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1ab7011e-63e8-418e-93c0-faf30cf50458")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0299")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 146.05 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7d854056-3152-438b-914b-c2ea92a66614")
+		(property "Reference" "#PWR0269"
+			(at 146.05 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 146.05 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 146.05 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 146.05 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "05a92643-0c00-4222-9e51-4f274d1fba03")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0269")
 					(unit 1)
 				)
 			)
@@ -14954,7 +15086,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 59.3852 321.31 0)
 			(effects
 				(font
@@ -15069,17 +15201,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 146.05 157.48 0)
+		(lib_id "power:+3.3V")
+		(at 201.93 306.07 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "82ba9d84-4b69-4c22-a42e-66ef2e09729b")
-		(property "Reference" "#PWR0295"
-			(at 146.05 161.29 0)
+		(uuid "82713e35-0a04-41e8-9dda-8cedaa7da6bc")
+		(property "Reference" "#PWR0341"
+			(at 201.93 309.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15087,8 +15219,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 146.05 152.4 0)
+		(property "Value" "+3.3V"
+			(at 201.93 300.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15096,7 +15228,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 146.05 157.48 0)
+			(at 201.93 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15105,7 +15237,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 157.48 0)
+			(at 201.93 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15113,8 +15245,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 146.05 157.48 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 201.93 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15123,29 +15255,29 @@
 			)
 		)
 		(pin "1"
-			(uuid "0d9b95b9-6153-408d-a4d8-77a799ca20dc")
+			(uuid "5b804162-3851-41ba-8736-85db90157b48")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0295")
+					(reference "#PWR0341")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 90.17 120.65 0)
+		(lib_id "power:+3.3V")
+		(at 201.93 195.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "841c7c4c-2e8a-4bd7-91e9-c0f12845e8fe")
-		(property "Reference" "#PWR0290"
-			(at 90.17 124.46 0)
+		(uuid "82b7f96f-b623-4810-b4cb-4da352899581")
+		(property "Reference" "#PWR0317"
+			(at 201.93 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15153,8 +15285,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 90.17 115.57 0)
+		(property "Value" "+3.3V"
+			(at 201.93 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15162,7 +15294,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 90.17 120.65 0)
+			(at 201.93 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15171,7 +15303,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 90.17 120.65 0)
+			(at 201.93 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15179,8 +15311,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 90.17 120.65 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 201.93 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15189,29 +15321,29 @@
 			)
 		)
 		(pin "1"
-			(uuid "db97640d-01b1-4ce0-adae-4ab86b4ad40d")
+			(uuid "83894af9-e45d-4373-ac6a-cdfd350a14d0")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0290")
+					(reference "#PWR0317")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 256.54 46.99 0)
+		(lib_id "power:+3.3V")
+		(at 229.87 269.24 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "881e091a-e624-4571-a2f9-aa6844b3f1d2")
-		(property "Reference" "#PWR0273"
-			(at 256.54 50.8 0)
+		(uuid "843cf116-8507-4833-9cab-b0aea19feb26")
+		(property "Reference" "#PWR0334"
+			(at 229.87 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15219,8 +15351,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 256.54 41.91 0)
+		(property "Value" "+3.3V"
+			(at 229.87 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15228,7 +15360,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 256.54 46.99 0)
+			(at 229.87 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15237,7 +15369,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 256.54 46.99 0)
+			(at 229.87 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15245,8 +15377,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 256.54 46.99 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 229.87 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15255,12 +15387,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a8b14972-98b8-4542-80fd-8172c716cff3")
+			(uuid "428683a8-af8b-42ff-9b85-1466eb625b87")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0273")
+					(reference "#PWR0334")
 					(unit 1)
 				)
 			)
@@ -15293,7 +15425,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 115.2652 172.72 0)
 			(effects
 				(font
@@ -15363,7 +15495,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 36.322 227.33 90)
 			(effects
 				(font
@@ -15433,7 +15565,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 36.322 300.99 90)
 			(effects
 				(font
@@ -15574,7 +15706,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 227.0252 62.23 0)
 			(effects
 				(font
@@ -15689,17 +15821,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 146.05 306.07 0)
+		(lib_id "power:+3.3V")
+		(at 146.05 232.41 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "8c0f2da9-3626-4f09-8ad6-ca09c9e4b99c")
-		(property "Reference" "#PWR0327"
-			(at 146.05 309.88 0)
+		(uuid "8b6bfb83-c2f5-47bb-acb0-db7950d68e3f")
+		(property "Reference" "#PWR0323"
+			(at 146.05 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15707,8 +15839,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 146.05 300.99 0)
+		(property "Value" "+3.3V"
+			(at 146.05 227.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15716,7 +15848,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 146.05 306.07 0)
+			(at 146.05 232.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15725,7 +15857,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 306.07 0)
+			(at 146.05 232.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15733,8 +15865,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 146.05 306.07 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 146.05 232.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15743,12 +15875,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "6a447994-015a-4a49-ab70-591cf73b5e7a")
+			(uuid "0960443a-77d1-4281-814b-175a8901cdec")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0327")
+					(reference "#PWR0323")
 					(unit 1)
 				)
 			)
@@ -15831,72 +15963,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 256.54 269.24 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8c251cf4-1fed-485c-a013-ddd1b093c025")
-		(property "Reference" "#PWR0342"
-			(at 256.54 273.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 256.54 264.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 256.54 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 256.54 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 256.54 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f50e6b62-6683-4faa-bf9e-4d87d82a696e")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0342")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 252.73 168.91 0)
 		(unit 1)
@@ -15923,7 +15989,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 253.6952 172.72 0)
 			(effects
 				(font
@@ -16110,6 +16176,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 146.05 195.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8e6283b3-938f-4198-9661-aa83e91c3cc3")
+		(property "Reference" "#PWR0315"
+			(at 146.05 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 146.05 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 146.05 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 146.05 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d4ce5d6c-956f-4adb-ad17-d8530979a1ba")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0315")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 86.36 243.84 0)
 		(unit 1)
@@ -16136,7 +16268,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 87.3252 247.65 0)
 			(effects
 				(font
@@ -16179,17 +16311,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 90.17 46.99 0)
+		(lib_id "power:+3.3V")
+		(at 173.99 306.07 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "90754fbf-8570-4419-aa29-0cf94141210d")
-		(property "Reference" "#PWR0267"
-			(at 90.17 50.8 0)
+		(uuid "8f5eed31-6bdf-4f66-aa02-1e6a148e012e")
+		(property "Reference" "#PWR0340"
+			(at 173.99 309.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16197,8 +16329,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 90.17 41.91 0)
+		(property "Value" "+3.3V"
+			(at 173.99 300.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16206,7 +16338,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 90.17 46.99 0)
+			(at 173.99 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16215,7 +16347,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 90.17 46.99 0)
+			(at 173.99 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16223,8 +16355,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 90.17 46.99 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 173.99 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16233,12 +16365,78 @@
 			)
 		)
 		(pin "1"
-			(uuid "d4056a37-2031-4405-8a67-990265f7614d")
+			(uuid "0ea6a41c-b35a-4de5-bc32-5781d434f1f6")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0267")
+					(reference "#PWR0340")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 62.23 269.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8ff0af15-727c-4b76-bd0b-ef88375982de")
+		(property "Reference" "#PWR0328"
+			(at 62.23 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 62.23 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 62.23 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 62.23 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "64e3ffe4-ecce-45e1-8b5c-17f4081a6d1b")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0328")
 					(unit 1)
 				)
 			)
@@ -16271,7 +16469,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 253.6952 210.82 0)
 			(effects
 				(font
@@ -16616,7 +16814,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 87.3252 284.48 0)
 			(effects
 				(font
@@ -16685,7 +16883,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 199.0852 172.72 0)
 			(effects
 				(font
@@ -16754,7 +16952,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 115.2652 135.89 0)
 			(effects
 				(font
@@ -16797,17 +16995,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 256.54 157.48 0)
+		(lib_id "power:+3.3V")
+		(at 173.99 120.65 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9a0606d7-8581-4245-aeee-46a2726c082a")
-		(property "Reference" "#PWR0303"
-			(at 256.54 161.29 0)
+		(uuid "9b2de17a-1cbe-4aa9-97a2-58a8e00758a9")
+		(property "Reference" "#PWR0292"
+			(at 173.99 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16815,8 +17013,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 256.54 152.4 0)
+		(property "Value" "+3.3V"
+			(at 173.99 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16824,7 +17022,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 256.54 157.48 0)
+			(at 173.99 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16833,7 +17031,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 256.54 157.48 0)
+			(at 173.99 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16841,74 +17039,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 256.54 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "58a53af3-ed64-4f26-89f5-108b78f88770")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0303")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 90.17 83.82 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9ab93697-9bf5-4200-aa5b-ab1c3fe4131e")
-		(property "Reference" "#PWR0277"
-			(at 90.17 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 90.17 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 90.17 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 90.17 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 90.17 83.82 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 173.99 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16917,12 +17049,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "414ca5ba-6577-476d-90b5-2aac95bde4bd")
+			(uuid "86e01a33-4722-448c-a623-3be5775c0931")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0277")
+					(reference "#PWR0292")
 					(unit 1)
 				)
 			)
@@ -16995,72 +17127,6 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "U16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 118.11 269.24 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9bc85c88-9594-41ed-9a9e-4f944bb0ca00")
-		(property "Reference" "#PWR0322"
-			(at 118.11 273.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 118.11 264.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 118.11 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 118.11 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 118.11 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9660310c-de3b-4ccb-947d-aad09cdda770")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0322")
 					(unit 1)
 				)
 			)
@@ -17211,17 +17277,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 146.05 232.41 0)
+		(lib_id "power:+3.3V")
+		(at 90.17 232.41 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9f96f7b1-5aee-43b1-ad16-8f68de977a4b")
-		(property "Reference" "#PWR0325"
-			(at 146.05 236.22 0)
+		(uuid "9f87bec4-59e4-44ba-bfe4-9499a7c24f6a")
+		(property "Reference" "#PWR0321"
+			(at 90.17 236.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17229,8 +17295,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 146.05 227.33 0)
+		(property "Value" "+3.3V"
+			(at 90.17 227.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17238,7 +17304,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 146.05 232.41 0)
+			(at 90.17 232.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17247,7 +17313,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 232.41 0)
+			(at 90.17 232.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17255,74 +17321,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 146.05 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a290c70a-9c06-4752-ab03-5cf7b3f42ecf")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0325")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 118.11 83.82 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a00bb348-3556-4529-809e-6a585045b7b3")
-		(property "Reference" "#PWR0278"
-			(at 118.11 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 118.11 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 118.11 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 118.11 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 118.11 83.82 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 90.17 232.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17331,12 +17331,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "b0ce08c2-8f0c-45f0-b23f-c0effdc3ef45")
+			(uuid "be00f208-cded-4092-8408-026bbf7692aa")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0278")
+					(reference "#PWR0321")
 					(unit 1)
 				)
 			)
@@ -17415,138 +17415,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 118.11 306.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a0d183bb-e696-4235-91c3-b8ab1737a437")
-		(property "Reference" "#PWR0323"
-			(at 118.11 309.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 118.11 300.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 118.11 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 118.11 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 118.11 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7dbe28d1-d569-4e1d-af01-780be06863be")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0323")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 173.99 269.24 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a1fc000b-a04d-49f8-b955-65035005e1d1")
-		(property "Reference" "#PWR0330"
-			(at 173.99 273.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 173.99 264.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 173.99 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.99 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 173.99 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "07d1b775-c1ed-4689-ad98-5a1b4d5fbe55")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0330")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Sensor_Magnetic:DRV5033AJxDBZ")
 		(at 152.4 318.77 0)
 		(unit 1)
@@ -17619,17 +17487,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 146.05 195.58 0)
+		(lib_id "power:+3.3V")
+		(at 62.23 120.65 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a9afbe6c-2eb0-4157-96d2-79e03a042dce")
-		(property "Reference" "#PWR0324"
-			(at 146.05 199.39 0)
+		(uuid "a96b70a5-38b1-4688-aa33-4641c7158215")
+		(property "Reference" "#PWR0288"
+			(at 62.23 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17637,8 +17505,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 146.05 190.5 0)
+		(property "Value" "+3.3V"
+			(at 62.23 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17646,7 +17514,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 146.05 195.58 0)
+			(at 62.23 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17655,7 +17523,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 146.05 195.58 0)
+			(at 62.23 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17663,8 +17531,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 146.05 195.58 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 62.23 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17673,29 +17541,29 @@
 			)
 		)
 		(pin "1"
-			(uuid "796061f3-9d4e-4bc9-a379-e7c6fa4b4847")
+			(uuid "33561dd8-fac8-49c9-803f-1a66c815a797")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0324")
+					(reference "#PWR0288")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 229.87 195.58 0)
+		(lib_id "power:+3.3V")
+		(at 90.17 46.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "aa8c4458-db03-4c37-8472-508e89bf41e9")
-		(property "Reference" "#PWR0336"
-			(at 229.87 199.39 0)
+		(uuid "aa5adaf3-39e7-40d6-8132-a0d72a6727b0")
+		(property "Reference" "#PWR0267"
+			(at 90.17 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17703,8 +17571,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 229.87 190.5 0)
+		(property "Value" "+3.3V"
+			(at 90.17 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17712,7 +17580,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 229.87 195.58 0)
+			(at 90.17 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17721,7 +17589,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 229.87 195.58 0)
+			(at 90.17 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17729,8 +17597,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 229.87 195.58 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 90.17 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17739,12 +17607,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "2fdbaa71-cffa-4cfc-a543-73d0e59e7913")
+			(uuid "2b74d79c-94bb-4bc0-bf4f-6e905591924f")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0336")
+					(reference "#PWR0267")
 					(unit 1)
 				)
 			)
@@ -17777,7 +17645,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 253.6952 284.48 0)
 			(effects
 				(font
@@ -17847,7 +17715,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 36.322 264.16 90)
 			(effects
 				(font
@@ -17884,6 +17752,72 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 118.11 195.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ace0b80e-c276-4bee-89cd-05bc81fe0305")
+		(property "Reference" "#PWR0314"
+			(at 118.11 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 118.11 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 118.11 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fd53e976-74cf-42c2-ad47-8ba16d12fe84")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0314")
 					(unit 1)
 				)
 			)
@@ -17962,72 +17896,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 173.99 46.99 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ada15c3c-f135-4fc5-8717-ad3e58ccff8a")
-		(property "Reference" "#PWR0270"
-			(at 173.99 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 173.99 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 173.99 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 173.99 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 173.99 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "179f0685-efc1-4621-8ead-e08cc9682229")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0270")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Sensor_Magnetic:DRV5033AJxDBZ")
 		(at 236.22 170.18 0)
 		(unit 1)
@@ -18094,6 +17962,138 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "U31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 90.17 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "adfc28a2-096d-4486-9e3e-54111496e664")
+		(property "Reference" "#PWR0289"
+			(at 90.17 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 90.17 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 90.17 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4af00874-ad99-4baf-9cb8-3475e9523b19")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0289")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 118.11 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "afa5bfb5-19d1-43ee-b665-d026d685199d")
+		(property "Reference" "#PWR0298"
+			(at 118.11 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 118.11 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 118.11 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "463be6a1-f802-4cfe-8be1-3521a0b9f293")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0298")
 					(unit 1)
 				)
 			)
@@ -18270,7 +18270,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 227.0252 247.65 0)
 			(effects
 				(font
@@ -18307,72 +18307,6 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "C124")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 201.93 83.82 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b32466ca-afd1-4544-94b6-bf83aa4e3411")
-		(property "Reference" "#PWR0281"
-			(at 201.93 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 201.93 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 201.93 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 201.93 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 201.93 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b9d67d39-7de2-44ac-9989-0c02d578d8cf")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0281")
 					(unit 1)
 				)
 			)
@@ -18445,17 +18379,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 173.99 195.58 0)
+		(lib_id "power:+3.3V")
+		(at 256.54 195.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "b48bab39-409a-44a8-b36e-7ea599877eb5")
-		(property "Reference" "#PWR0328"
-			(at 173.99 199.39 0)
+		(uuid "b4640c2f-c1e0-4e8c-8058-02e468971f78")
+		(property "Reference" "#PWR0319"
+			(at 256.54 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18463,8 +18397,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 173.99 190.5 0)
+		(property "Value" "+3.3V"
+			(at 256.54 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18472,7 +18406,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 173.99 195.58 0)
+			(at 256.54 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18481,7 +18415,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 195.58 0)
+			(at 256.54 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18489,8 +18423,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 173.99 195.58 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 256.54 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18499,12 +18433,144 @@
 			)
 		)
 		(pin "1"
-			(uuid "5f3192e0-6a81-4fcb-9a11-0cc0102f84a1")
+			(uuid "9bb75d52-1fd4-4ab8-b0db-0dc2496992e9")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0328")
+					(reference "#PWR0319")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 229.87 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b5142258-173d-4dcf-8a5a-ec03da3ecf21")
+		(property "Reference" "#PWR0294"
+			(at 229.87 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 229.87 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 229.87 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 229.87 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 229.87 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "21c1cff5-68b9-48c7-87ae-56ffb1accb73")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0294")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 256.54 306.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b7a2a56b-945f-41fe-a09b-cbaa5c868f16")
+		(property "Reference" "#PWR0343"
+			(at 256.54 309.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 256.54 300.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 256.54 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 256.54 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 256.54 306.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "281c6c8b-7b50-485f-bc69-6bfd382157e2")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0343")
 					(unit 1)
 				)
 			)
@@ -18609,7 +18675,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 199.0852 99.06 0)
 			(effects
 				(font
@@ -18678,7 +18744,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 253.6952 135.89 0)
 			(effects
 				(font
@@ -18787,17 +18853,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 173.99 157.48 0)
+		(lib_id "power:+3.3V")
+		(at 118.11 46.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "baedad7e-03b7-4760-a8e8-9bd6a74e45c5")
-		(property "Reference" "#PWR0297"
-			(at 173.99 161.29 0)
+		(uuid "ba9eda48-1144-410d-9ce3-15f1f9d86aac")
+		(property "Reference" "#PWR0268"
+			(at 118.11 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18805,8 +18871,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 173.99 152.4 0)
+		(property "Value" "+3.3V"
+			(at 118.11 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18814,7 +18880,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 173.99 157.48 0)
+			(at 118.11 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18823,7 +18889,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 157.48 0)
+			(at 118.11 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18831,8 +18897,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 173.99 157.48 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 118.11 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18841,29 +18907,29 @@
 			)
 		)
 		(pin "1"
-			(uuid "1961ea12-9c4d-4c59-9584-577d3c3a44d1")
+			(uuid "3e58fbdc-bcac-448d-a5e7-e531a9aa6ac0")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0297")
+					(reference "#PWR0268")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 229.87 120.65 0)
+		(lib_id "power:+3.3V")
+		(at 62.23 46.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "bb8d5336-fdb5-49c2-9305-57ebfa4181b9")
-		(property "Reference" "#PWR0300"
-			(at 229.87 124.46 0)
+		(uuid "bc491211-3579-4c83-868a-269bac9558c9")
+		(property "Reference" "#PWR0264"
+			(at 62.23 50.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18871,8 +18937,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 229.87 115.57 0)
+		(property "Value" "+3.3V"
+			(at 62.23 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18880,7 +18946,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 229.87 120.65 0)
+			(at 62.23 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18889,7 +18955,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 229.87 120.65 0)
+			(at 62.23 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18897,74 +18963,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 229.87 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1067fbe5-3b85-4a9b-83d5-0e87fe327148")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0300")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 201.93 120.65 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bb936dae-bad1-48e7-98f0-e01c45bcebb4")
-		(property "Reference" "#PWR0298"
-			(at 201.93 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 201.93 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 201.93 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 201.93 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 201.93 120.65 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 62.23 46.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18973,12 +18973,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "50b3d780-1b89-43a9-96ff-6014da0068bf")
+			(uuid "70c02bee-3cda-421d-84be-8f6915deb0f0")
 		)
 		(instances
-			(project "autochess_v1"
+			(project ""
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0298")
+					(reference "#PWR0264")
 					(unit 1)
 				)
 			)
@@ -19051,6 +19051,72 @@
 			(project ""
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 118.11 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "be051e1d-82a4-4dfb-8984-edc71c17894c")
+		(property "Reference" "#PWR0278"
+			(at 118.11 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 118.11 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 118.11 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eec4400e-1a54-4f28-9e43-fcc5b6b6ebf2")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0278")
 					(unit 1)
 				)
 			)
@@ -19155,7 +19221,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 227.0252 135.89 0)
 			(effects
 				(font
@@ -19290,7 +19356,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 59.3852 247.65 0)
 			(effects
 				(font
@@ -19537,17 +19603,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 62.23 306.07 0)
+		(lib_id "power:+3.3V")
+		(at 173.99 269.24 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c29ac0bc-e7c5-4426-9b5d-83b905b5c2f4")
-		(property "Reference" "#PWR0315"
-			(at 62.23 309.88 0)
+		(uuid "c220b8a6-7849-4a20-a406-abc9c6ba7626")
+		(property "Reference" "#PWR0332"
+			(at 173.99 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19555,8 +19621,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 62.23 300.99 0)
+		(property "Value" "+3.3V"
+			(at 173.99 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19564,7 +19630,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 62.23 306.07 0)
+			(at 173.99 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19573,7 +19639,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 62.23 306.07 0)
+			(at 173.99 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19581,8 +19647,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 62.23 306.07 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 173.99 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19591,12 +19657,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "0d8c722c-183f-4af1-90c1-d0f1710f1aa0")
+			(uuid "cb288814-73d2-48ca-a895-2925e316927c")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0315")
+					(reference "#PWR0332")
 					(unit 1)
 				)
 			)
@@ -19777,7 +19843,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 171.1452 321.31 0)
 			(effects
 				(font
@@ -19820,17 +19886,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 118.11 157.48 0)
+		(lib_id "power:+3.3V")
+		(at 201.93 269.24 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c686e342-fcea-47d1-a7e4-4d71e3cd3a89")
-		(property "Reference" "#PWR0293"
-			(at 118.11 161.29 0)
+		(uuid "c732bcf2-3a4d-42b8-9f89-d0a17a42f1dd")
+		(property "Reference" "#PWR0333"
+			(at 201.93 273.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19838,8 +19904,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 118.11 152.4 0)
+		(property "Value" "+3.3V"
+			(at 201.93 264.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19847,7 +19913,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 118.11 157.48 0)
+			(at 201.93 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19856,7 +19922,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 118.11 157.48 0)
+			(at 201.93 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19864,8 +19930,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 118.11 157.48 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 201.93 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19874,29 +19940,29 @@
 			)
 		)
 		(pin "1"
-			(uuid "37103d00-0387-49f4-a6fc-0c8c3e96b30c")
+			(uuid "ceb21f1e-4ec4-4ec6-bd99-740b37601cd1")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0293")
+					(reference "#PWR0333")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 62.23 232.41 0)
+		(lib_id "power:+3.3V")
+		(at 146.05 120.65 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c9f327a6-5319-4aa8-803b-df23a5113a34")
-		(property "Reference" "#PWR0313"
-			(at 62.23 236.22 0)
+		(uuid "c7f8151e-de63-43f2-a8a2-7668ee5ed4bf")
+		(property "Reference" "#PWR0291"
+			(at 146.05 124.46 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19904,8 +19970,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 62.23 227.33 0)
+		(property "Value" "+3.3V"
+			(at 146.05 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19913,7 +19979,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 62.23 232.41 0)
+			(at 146.05 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19922,7 +19988,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 62.23 232.41 0)
+			(at 146.05 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19930,8 +19996,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 62.23 232.41 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 146.05 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19940,29 +20006,29 @@
 			)
 		)
 		(pin "1"
-			(uuid "4cf332e0-8fd5-404b-90c1-89b58fdf8080")
+			(uuid "27922112-52f2-4eaf-81ee-72cd3dd7ee22")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0313")
+					(reference "#PWR0291")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 90.17 195.58 0)
+		(lib_id "power:+3.3V")
+		(at 229.87 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "caf2838b-e3e6-48fb-8782-dc540a31a786")
-		(property "Reference" "#PWR0316"
-			(at 90.17 199.39 0)
+		(uuid "c9f3e2aa-ebe7-4f09-bb68-210dd6b90c0b")
+		(property "Reference" "#PWR0282"
+			(at 229.87 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19970,8 +20036,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 90.17 190.5 0)
+		(property "Value" "+3.3V"
+			(at 229.87 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19979,7 +20045,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 90.17 195.58 0)
+			(at 229.87 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19988,7 +20054,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 90.17 195.58 0)
+			(at 229.87 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19996,8 +20062,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 90.17 195.58 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 229.87 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20006,12 +20072,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a21b00de-77b8-4804-96c7-4cac5dfed47d")
+			(uuid "c3b45098-99b7-4861-b67c-329ae3339532")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0316")
+					(reference "#PWR0282")
 					(unit 1)
 				)
 			)
@@ -20084,6 +20150,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 173.99 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cc08e431-8559-4f0a-9a0e-b79e09f4901c")
+		(property "Reference" "#PWR0280"
+			(at 173.99 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 173.99 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.99 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 173.99 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "18e0842d-4740-4175-b441-1a4fdf660e35")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0280")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 252.73 317.5 0)
 		(unit 1)
@@ -20110,7 +20242,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 253.6952 321.31 0)
 			(effects
 				(font
@@ -20251,7 +20383,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 143.2052 321.31 0)
 			(effects
 				(font
@@ -20294,6 +20426,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 256.54 232.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ce3fe3a7-8960-40b3-8d2f-fdfb92668f63")
+		(property "Reference" "#PWR0327"
+			(at 256.54 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 256.54 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 256.54 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 256.54 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 256.54 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "387cf8c1-1bef-4011-9ed9-db01a92c9b2e")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0327")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 58.42 280.67 0)
 		(unit 1)
@@ -20320,7 +20518,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 59.3852 284.48 0)
 			(effects
 				(font
@@ -20389,7 +20587,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 115.2652 62.23 0)
 			(effects
 				(font
@@ -20458,7 +20656,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 253.6952 62.23 0)
 			(effects
 				(font
@@ -20633,72 +20831,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 118.11 232.41 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d1fa96c1-902e-4ce3-9510-283e9287b4f3")
-		(property "Reference" "#PWR0321"
-			(at 118.11 236.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 118.11 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 118.11 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 118.11 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 118.11 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b1ded106-e7b5-4df8-a8f5-5c5ce93a6203")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0321")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 114.3 207.01 0)
 		(unit 1)
@@ -20725,7 +20857,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 115.2652 210.82 0)
 			(effects
 				(font
@@ -20762,72 +20894,6 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "C107")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 201.93 195.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d2a035e4-c84f-4ea6-a17a-2ea26df240d6")
-		(property "Reference" "#PWR0332"
-			(at 201.93 199.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 201.93 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 201.93 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 201.93 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 201.93 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a2cc048d-13af-47b4-a6ff-af2b47a7a58d")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0332")
 					(unit 1)
 				)
 			)
@@ -20978,6 +21044,138 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 229.87 195.58 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d4adc728-19a7-47ca-9e0e-d35b240cab8a")
+		(property "Reference" "#PWR0318"
+			(at 229.87 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 229.87 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 229.87 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 229.87 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 229.87 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4d418876-1ab1-461c-b5db-4ccc4230cbd6")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0318")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 229.87 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d587bd79-53d9-4e61-949d-542b055081e1")
+		(property "Reference" "#PWR0302"
+			(at 229.87 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 229.87 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 229.87 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 229.87 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 229.87 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3559ee6f-950f-44fe-86cc-1e1147e7c028")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 226.06 207.01 0)
 		(unit 1)
@@ -21004,7 +21202,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 227.0252 210.82 0)
 			(effects
 				(font
@@ -21041,138 +21239,6 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "C123")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 256.54 195.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "d93a10ed-edfe-4f72-abcc-1bbea7f11af8")
-		(property "Reference" "#PWR0340"
-			(at 256.54 199.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 256.54 190.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 256.54 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 256.54 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 256.54 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d83235b7-00ae-43f9-8ec9-cd587208e36f")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0340")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 146.05 120.65 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "daafeab3-9c12-4f41-9450-59c1bb182b6d")
-		(property "Reference" "#PWR0294"
-			(at 146.05 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 146.05 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 146.05 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.05 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 146.05 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a56ec25f-0c4b-4d9a-83e0-4c2833928d8e")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0294")
 					(unit 1)
 				)
 			)
@@ -21421,7 +21487,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 115.2652 247.65 0)
 			(effects
 				(font
@@ -21608,6 +21674,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 173.99 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e342bab1-91e3-4685-8770-4633765d07e4")
+		(property "Reference" "#PWR0270"
+			(at 173.99 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 173.99 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.99 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 173.99 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8513be35-99b2-4cc1-b60d-ae241c262d11")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0270")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 38.1 189.23 0)
 		(unit 1)
@@ -21635,7 +21767,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 36.322 189.23 90)
 			(effects
 				(font
@@ -21744,6 +21876,204 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "U50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 201.93 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e51627ac-e8bd-40f2-8b16-dc608be5e7b8")
+		(property "Reference" "#PWR0293"
+			(at 201.93 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 201.93 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 201.93 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 201.93 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 201.93 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dc826051-7475-4fa4-ab7f-5e6d1c507046")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0293")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 229.87 232.41 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e5af480d-5e3e-4af9-8a79-24d46458177c")
+		(property "Reference" "#PWR0326"
+			(at 229.87 236.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 229.87 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 229.87 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 229.87 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 229.87 232.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c9da2fb1-e42f-4640-b4cf-5a7715d3dfe3")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0326")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 173.99 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e62a9487-b59b-448d-89ce-b6c0d4f999b8")
+		(property "Reference" "#PWR0300"
+			(at 173.99 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 173.99 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 173.99 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 173.99 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 173.99 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "63e7a415-c621-4e8e-a7de-e5b14a9c8765")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "#PWR0300")
 					(unit 1)
 				)
 			)
@@ -21996,7 +22326,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 227.0252 284.48 0)
 			(effects
 				(font
@@ -22065,7 +22395,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 143.2052 62.23 0)
 			(effects
 				(font
@@ -22108,17 +22438,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 201.93 157.48 0)
+		(lib_id "power:+3.3V")
+		(at 90.17 306.07 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ed3dfa0a-a310-463e-9f35-08adf22ba9bb")
-		(property "Reference" "#PWR0299"
-			(at 201.93 161.29 0)
+		(uuid "ebacd553-a38f-484f-9738-612b4224be3e")
+		(property "Reference" "#PWR0337"
+			(at 90.17 309.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22126,8 +22456,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 201.93 152.4 0)
+		(property "Value" "+3.3V"
+			(at 90.17 300.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22135,7 +22465,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 201.93 157.48 0)
+			(at 90.17 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22144,7 +22474,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 201.93 157.48 0)
+			(at 90.17 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22152,8 +22482,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 201.93 157.48 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 90.17 306.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22162,12 +22492,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "d13d490e-35c9-4d38-9768-5bac35cadbd0")
+			(uuid "789a66ed-603d-4757-bbb7-76bff2fbd17f")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0299")
+					(reference "#PWR0337")
 					(unit 1)
 				)
 			)
@@ -22344,7 +22674,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 87.3252 99.06 0)
 			(effects
 				(font
@@ -22629,7 +22959,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 143.2052 247.65 0)
 			(effects
 				(font
@@ -22672,204 +23002,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 146.05 83.82 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f4f3b016-890e-4287-b26a-05137288df4d")
-		(property "Reference" "#PWR0279"
-			(at 146.05 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 146.05 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 146.05 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 146.05 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 146.05 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c940db76-73ed-46f8-8bef-99523183c18f")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0279")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 229.87 306.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f52cb021-640e-40f7-968e-9d5bc6aa2478")
-		(property "Reference" "#PWR0339"
-			(at 229.87 309.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 229.87 300.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 229.87 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 229.87 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 229.87 306.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f8d1df47-2317-4d5b-9bef-0ddf096ac739")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0339")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 201.93 232.41 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f6a5ae6e-aeed-439a-a290-a46c8145dddc")
-		(property "Reference" "#PWR0333"
-			(at 201.93 236.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 201.93 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 201.93 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 201.93 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 201.93 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cfad22cd-bd19-4612-b897-d4f1fa224f57")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0333")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 86.36 317.5 0)
 		(unit 1)
@@ -22896,7 +23028,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 87.3252 321.31 0)
 			(effects
 				(font
@@ -22939,17 +23071,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 201.93 269.24 0)
+		(lib_id "power:+3.3V")
+		(at 173.99 195.58 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "fae2f09e-73a6-4dbb-b308-54d7b9f52420")
-		(property "Reference" "#PWR0334"
-			(at 201.93 273.05 0)
+		(uuid "fad586a2-4b3c-4fc2-9d8c-bfc6d1a858a9")
+		(property "Reference" "#PWR0316"
+			(at 173.99 199.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22957,8 +23089,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VCC"
-			(at 201.93 264.16 0)
+		(property "Value" "+3.3V"
+			(at 173.99 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22966,7 +23098,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 201.93 269.24 0)
+			(at 173.99 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22975,7 +23107,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 201.93 269.24 0)
+			(at 173.99 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22983,74 +23115,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 201.93 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a49a1794-9937-456c-bd9a-ceccd2370d58")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0334")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 62.23 269.24 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fb4ed8b6-6ab4-44b9-935d-9d94bdf6c039")
-		(property "Reference" "#PWR0314"
-			(at 62.23 273.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 62.23 264.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 62.23 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 62.23 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 62.23 269.24 0)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 173.99 195.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23059,12 +23125,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "d310d628-208a-4221-88d0-6c792086918c")
+			(uuid "bed0884a-000b-499f-bbd2-57283e82efd4")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0314")
+					(reference "#PWR0316")
 					(unit 1)
 				)
 			)
@@ -23209,72 +23275,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 229.87 83.82 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fd0bdc7b-6eca-4522-b8ca-401cb804adbc")
-		(property "Reference" "#PWR0282"
-			(at 229.87 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 229.87 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 229.87 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 229.87 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 229.87 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "518255d8-9787-46cf-8c5b-8124faf31fea")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "#PWR0282")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 252.73 95.25 0)
 		(unit 1)
@@ -23301,7 +23301,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 253.6952 99.06 0)
 			(effects
 				(font
