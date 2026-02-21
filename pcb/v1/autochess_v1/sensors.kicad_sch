@@ -402,8 +402,9 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_FET:BS170"
+		(symbol "Transistor_FET:2N7002"
 			(pin_names
+				(offset 0)
 				(hide yes)
 			)
 			(exclude_from_sim no)
@@ -418,7 +419,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "BS170"
+			(property "Value" "2N7002"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -427,7 +428,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -438,7 +439,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BS170-D.PDF"
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF"
 				(at 5.08 -3.81 0)
 				(effects
 					(font
@@ -448,7 +449,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, TO-92"
+			(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
 				(at 0 0 0)
 				(effects
 					(font
@@ -457,7 +458,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "N-Channel MOSFET"
+			(property "ki_keywords" "N-Channel Switching MOSFET"
 				(at 0 0 0)
 				(effects
 					(font
@@ -466,7 +467,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TO?92*"
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -475,7 +476,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "BS170_0_1"
+			(symbol "2N7002_0_1"
 				(polyline
 					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
@@ -619,7 +620,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+						(xy 2.921 0.381) (xy 3.683 0.381)
 					)
 					(stroke
 						(width 0)
@@ -642,7 +643,7 @@
 					)
 				)
 			)
-			(symbol "BS170_1_1"
+			(symbol "2N7002_1_1"
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -653,7 +654,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -671,7 +672,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -689,7 +690,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7945,6 +7946,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "041eb97f-939c-4f5d-a1f9-e2921ff364d2")
 		(property "Reference" "C99"
 			(at 53.594 204.724 0)
@@ -8014,8 +8016,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "047440ff-d88e-4a0e-815f-acf222c0ce5f")
-		(property "Reference" "U3"
+		(property "Reference" "U2"
 			(at 94.996 59.436 0)
 			(effects
 				(font
@@ -8072,7 +8075,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U3")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -8086,6 +8089,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "04f313da-ddc2-4715-8b88-51918ab27262")
 		(property "Reference" "C111"
 			(at 137.414 204.724 0)
@@ -8155,6 +8159,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "06047fd0-7bda-4882-844e-36a1b7bafe51")
 		(property "Reference" "C89"
 			(at 137.414 129.794 0)
@@ -8224,6 +8229,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "07a832e1-4298-4574-80f0-295378362778")
 		(property "Reference" "C79"
 			(at 165.354 92.964 0)
@@ -8429,6 +8435,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "0caab38a-d8cc-456b-9f5d-7a9699f6fbef")
 		(property "Reference" "C84"
 			(at 53.594 166.624 0)
@@ -8491,6 +8498,158 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:2N7002")
+		(at 45.72 297.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0d5b5c09-2b10-44c7-9d4d-11a6ca77b192")
+		(property "Reference" "Q7"
+			(at 52.07 295.9099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2N7002"
+			(at 52.07 298.4499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 50.8 299.085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF"
+			(at 50.8 300.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 45.72 297.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "57ef2eee-ddb2-4ab6-9af8-80216c77ef1b")
+		)
+		(pin "1"
+			(uuid "1ea382e9-6bc2-4a5f-87fb-ebb50a9eb091")
+		)
+		(pin "2"
+			(uuid "a21dfe6a-6fe4-486f-a60f-0a5a766998ec")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "Q7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:2N7002")
+		(at 45.72 74.93 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0e498469-aa61-4c23-a035-7fe3e6cac339")
+		(property "Reference" "Q1"
+			(at 52.07 73.6599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2N7002"
+			(at 52.07 76.1999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 50.8 76.835 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF"
+			(at 50.8 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 45.72 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "30848fae-3e1a-4521-b91a-9ea86f5b154c")
+		)
+		(pin "1"
+			(uuid "4cb417f6-b8f8-4160-8e30-efbc7f4845f8")
+		)
+		(pin "2"
+			(uuid "ff598dec-3be9-4c45-81ef-baa999ccf333")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Sensor_Magnetic:DRV5033AJxDBZ")
 		(at 180.34 318.77 0)
 		(unit 1)
@@ -8498,8 +8657,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "106abccf-e82b-4737-b66e-7ad609695a79")
-		(property "Reference" "U53"
+		(property "Reference" "U61"
 			(at 178.816 318.516 0)
 			(effects
 				(font
@@ -8556,7 +8716,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U53")
+					(reference "U61")
 					(unit 1)
 				)
 			)
@@ -8570,6 +8730,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "114122d0-9848-4195-9c3f-2df4eccc68e3")
 		(property "Reference" "C71"
 			(at 165.354 56.134 0)
@@ -8632,6 +8793,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:2N7002")
+		(at 45.72 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "13b28ecd-1c75-441c-ba04-f1904570fac4")
+		(property "Reference" "Q2"
+			(at 52.07 110.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2N7002"
+			(at 52.07 113.0299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 50.8 113.665 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF"
+			(at 50.8 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 45.72 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "9f45d80b-c68f-433c-b708-02be06d49828")
+		)
+		(pin "1"
+			(uuid "18386b8a-c66a-4186-a1c0-b4c2655c09da")
+		)
+		(pin "2"
+			(uuid "77266a0a-3af1-4f77-8eaf-73453fd96e79")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "Q2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Sensor_Magnetic:DRV5033AJxDBZ")
 		(at 208.28 245.11 0)
 		(unit 1)
@@ -8639,8 +8876,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "14c14f24-17be-489f-9f35-9eb41e7fdef7")
-		(property "Reference" "U55"
+		(property "Reference" "U46"
 			(at 206.756 244.856 0)
 			(effects
 				(font
@@ -8697,7 +8935,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U55")
+					(reference "U46")
 					(unit 1)
 				)
 			)
@@ -8711,6 +8949,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "158e6dd5-8237-431d-9450-00bf53d0ff94")
 		(property "Reference" "C126"
 			(at 221.234 315.214 0)
@@ -8780,6 +9019,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "15cdfa7b-6ed7-4ede-b259-8a0b405c3fa6")
 		(property "Reference" "C117"
 			(at 165.354 278.384 0)
@@ -8849,6 +9089,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "16631388-3f8a-4f83-8860-f883c94f4a09")
 		(property "Reference" "C109"
 			(at 109.474 278.384 0)
@@ -8918,8 +9159,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "19e4989d-13a5-4c64-82fa-86efef6c7cef")
-		(property "Reference" "U47"
+		(property "Reference" "U44"
 			(at 150.876 244.856 0)
 			(effects
 				(font
@@ -8976,7 +9218,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U47")
+					(reference "U44")
 					(unit 1)
 				)
 			)
@@ -9056,8 +9298,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "1ab1098e-2f52-4fde-ac32-9d104031d35b")
-		(property "Reference" "U7"
+		(property "Reference" "U6"
 			(at 206.756 59.436 0)
 			(effects
 				(font
@@ -9114,7 +9357,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U7")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -9128,8 +9371,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "1b2977f9-33bc-4c0c-8c8a-deb6a9579762")
-		(property "Reference" "U6"
+		(property "Reference" "U5"
 			(at 178.816 59.436 0)
 			(effects
 				(font
@@ -9186,7 +9430,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U6")
+					(reference "U5")
 					(unit 1)
 				)
 			)
@@ -9200,6 +9444,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "1bbfbde8-2921-4d73-8fb0-1f44e62f9d58")
 		(property "Reference" "C91"
 			(at 165.354 129.794 0)
@@ -9401,6 +9646,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "1e539301-2f0c-4e9d-9621-356014d3ec86")
 		(property "Reference" "C93"
 			(at 193.294 129.794 0)
@@ -9602,8 +9848,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "24016cf1-9a58-4afc-86cc-eb550f4b5a5a")
-		(property "Reference" "U10"
+		(property "Reference" "U9"
 			(at 67.056 96.266 0)
 			(effects
 				(font
@@ -9660,7 +9907,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U10")
+					(reference "U9")
 					(unit 1)
 				)
 			)
@@ -9674,6 +9921,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "2638cb5a-d370-4f11-a89c-bf28c061abdf")
 		(property "Reference" "C122"
 			(at 193.294 315.214 0)
@@ -9743,6 +9991,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "266ec77c-7c51-4da0-9f8e-e0f9aa4ee21e")
 		(property "Reference" "C85"
 			(at 81.534 129.794 0)
@@ -9812,6 +10061,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "268766bf-9993-4c90-8d41-378017f56012")
 		(property "Reference" "C119"
 			(at 193.294 204.724 0)
@@ -9874,82 +10124,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:BS170")
-		(at 45.72 185.42 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2935c271-c458-46c9-be43-1017e8996afb")
-		(property "Reference" "Q4"
-			(at 52.07 184.1499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BS170"
-			(at 52.07 186.6899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 50.8 187.325 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BS170-D.PDF"
-			(at 50.8 189.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, TO-92"
-			(at 45.72 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1c0485b5-46de-4e03-a090-5b9491776284")
-		)
-		(pin "2"
-			(uuid "735bbc9e-07d6-4a0d-8d8a-cbfe21c013a2")
-		)
-		(pin "3"
-			(uuid "2923a4d5-230a-44e1-be46-5de62f4aafb3")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "Q4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Sensor_Magnetic:DRV5033AJxDBZ")
 		(at 262.89 170.18 0)
 		(unit 1)
@@ -9957,8 +10131,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "2ab115b9-0b04-4f8e-8f0d-85f254b9796b")
-		(property "Reference" "U33"
+		(property "Reference" "U32"
 			(at 261.366 169.926 0)
 			(effects
 				(font
@@ -10015,7 +10190,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U33")
+					(reference "U32")
 					(unit 1)
 				)
 			)
@@ -10029,6 +10204,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "2ae4325f-2d73-47a5-923b-4f2a3d6b1b48")
 		(property "Reference" "C90"
 			(at 137.414 166.624 0)
@@ -10164,6 +10340,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "2c2bbaf6-5427-495a-86dc-89748d27b410")
 		(property "Reference" "C110"
 			(at 109.474 315.214 0)
@@ -10233,8 +10410,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "2c9ee412-d466-4696-9b31-9b74877ed61b")
-		(property "Reference" "U34"
+		(property "Reference" "U33"
 			(at 67.056 208.026 0)
 			(effects
 				(font
@@ -10291,7 +10469,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U34")
+					(reference "U33")
 					(unit 1)
 				)
 			)
@@ -10305,6 +10483,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "2e13dc81-8407-4781-bc5c-d267ddd811aa")
 		(property "Reference" "C96"
 			(at 221.234 166.624 0)
@@ -10506,6 +10685,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "315d5f94-4abc-4beb-ad8a-c0e6e7029a33")
 		(property "Reference" "C115"
 			(at 165.354 204.724 0)
@@ -10641,8 +10821,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "331fd5f4-7cf3-43cd-836b-67aeb781c400")
-		(property "Reference" "U17"
+		(property "Reference" "U16"
 			(at 261.366 96.266 0)
 			(effects
 				(font
@@ -10699,7 +10880,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U17")
+					(reference "U16")
 					(unit 1)
 				)
 			)
@@ -10713,6 +10894,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "34dd3516-41e5-4a5e-93da-f3a39a0d515d")
 		(property "Reference" "C120"
 			(at 193.294 241.554 0)
@@ -10782,8 +10964,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "36722ec4-f948-4679-b998-4088c039e5c9")
-		(property "Reference" "U64"
+		(property "Reference" "U56"
 			(at 261.366 281.686 0)
 			(effects
 				(font
@@ -10840,7 +11023,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U64")
+					(reference "U56")
 					(unit 1)
 				)
 			)
@@ -11056,8 +11239,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "3be42e71-84f6-4a0d-a00f-6f33b34fd0ad")
-		(property "Reference" "U45"
+		(property "Reference" "U59"
 			(at 122.936 318.516 0)
 			(effects
 				(font
@@ -11114,7 +11298,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U45")
+					(reference "U59")
 					(unit 1)
 				)
 			)
@@ -11194,6 +11378,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "3e899622-c794-4c03-9739-34993b5bc226")
 		(property "Reference" "C86"
 			(at 81.534 166.624 0)
@@ -11263,6 +11448,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "3e91ebdc-d5e2-4728-aafa-df2731707a33")
 		(property "Reference" "C116"
 			(at 165.354 241.554 0)
@@ -11464,6 +11650,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "40e2d522-f426-4d47-8ca1-49e149cbeb5b")
 		(property "Reference" "C78"
 			(at 137.414 92.964 0)
@@ -11731,6 +11918,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "46aff1fd-f654-4d81-897c-3a1d441d9549")
 		(property "Reference" "C68"
 			(at 81.534 56.134 0)
@@ -11866,6 +12054,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "48bc3efa-63ea-48e9-b6bb-f878c1501504")
 		(property "Reference" "C81"
 			(at 221.234 92.964 0)
@@ -11935,8 +12124,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "48f12dff-c2b4-469d-bcf8-7f3979160d04")
-		(property "Reference" "U23"
+		(property "Reference" "U27"
 			(at 122.936 169.926 0)
 			(effects
 				(font
@@ -11993,7 +12183,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U23")
+					(reference "U27")
 					(unit 1)
 				)
 			)
@@ -12007,6 +12197,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "4a4e6033-3c38-4b9e-b9d1-234e8bdb8206")
 		(property "Reference" "C77"
 			(at 109.474 92.964 0)
@@ -12208,8 +12399,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "4c8332e4-d994-4a16-9414-4c660146c8fa")
-		(property "Reference" "U24"
+		(property "Reference" "U20"
 			(at 150.876 133.096 0)
 			(effects
 				(font
@@ -12266,7 +12458,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U24")
+					(reference "U20")
 					(unit 1)
 				)
 			)
@@ -12280,6 +12472,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "4f1d98e2-7107-4009-959d-b73d84c7c0da")
 		(property "Reference" "C75"
 			(at 53.594 92.964 0)
@@ -12349,6 +12542,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "4f7bbc24-be38-45e1-bd91-622164eb6780")
 		(property "Reference" "C121"
 			(at 193.294 278.384 0)
@@ -12418,8 +12612,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "508eeeb7-8ca7-45e9-84d0-1028a9918485")
-		(property "Reference" "U51"
+		(property "Reference" "U45"
 			(at 178.816 244.856 0)
 			(effects
 				(font
@@ -12476,7 +12671,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U51")
+					(reference "U45")
 					(unit 1)
 				)
 			)
@@ -12490,8 +12685,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "50deae27-af88-45b5-9a9e-06c0b058f253")
-		(property "Reference" "U21"
+		(property "Reference" "U26"
 			(at 94.996 169.926 0)
 			(effects
 				(font
@@ -12548,7 +12744,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U21")
+					(reference "U26")
 					(unit 1)
 				)
 			)
@@ -12562,8 +12758,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "549b21f0-17af-42bd-9290-aadf7cc239f5")
-		(property "Reference" "U4"
+		(property "Reference" "U3"
 			(at 122.936 59.436 0)
 			(effects
 				(font
@@ -12620,7 +12817,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U4")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -12697,82 +12894,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:BS170")
-		(at 45.72 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5524f587-64a4-4f97-a82d-fd27229bf6df")
-		(property "Reference" "Q1"
-			(at 52.07 73.6599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BS170"
-			(at 52.07 76.1999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 50.8 76.835 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BS170-D.PDF"
-			(at 50.8 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, TO-92"
-			(at 45.72 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "64df0152-18bc-43e0-89e4-24cf22e3498a")
-		)
-		(pin "2"
-			(uuid "31090591-aca1-42b0-bcfa-afdecc6fd875")
-		)
-		(pin "3"
-			(uuid "92fb60ca-d5fb-4ff1-a3d7-52eb25a7196b")
-		)
-		(instances
-			(project ""
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3.3V")
 		(at 90.17 269.24 0)
 		(unit 1)
@@ -12833,6 +12954,82 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
 					(reference "#PWR0329")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:2N7002")
+		(at 45.72 185.42 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "59ac219e-1a30-445f-9f79-462a889ec63e")
+		(property "Reference" "Q4"
+			(at 52.07 184.1499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2N7002"
+			(at 52.07 186.6899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 50.8 187.325 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF"
+			(at 50.8 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 45.72 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "7cd87db4-dc4d-4587-93b9-ab2c53def97c")
+		)
+		(pin "1"
+			(uuid "094237be-9640-41b8-b166-ce8746763069")
+		)
+		(pin "2"
+			(uuid "59f97934-dda7-429d-ae0d-4b2025d88a7d")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "Q4")
 					(unit 1)
 				)
 			)
@@ -12912,8 +13109,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "5c4021c2-144c-4fc4-a8e7-eba8d6d6752a")
-		(property "Reference" "U65"
+		(property "Reference" "U64"
 			(at 261.366 318.516 0)
 			(effects
 				(font
@@ -12970,7 +13168,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U65")
+					(reference "U64")
 					(unit 1)
 				)
 			)
@@ -12984,8 +13182,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "5d90a41a-7e39-420e-aa82-ab85c8cda614")
-		(property "Reference" "U38"
+		(property "Reference" "U34"
 			(at 94.996 208.026 0)
 			(effects
 				(font
@@ -13042,7 +13241,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U38")
+					(reference "U34")
 					(unit 1)
 				)
 			)
@@ -13122,6 +13321,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "5f9581e8-0ad7-41bb-9bbb-5890d7e23a65")
 		(property "Reference" "C128"
 			(at 247.904 241.554 0)
@@ -13191,8 +13391,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "6102b9d9-b1f7-49a8-9b51-3bae5197c474")
-		(property "Reference" "U5"
+		(property "Reference" "U4"
 			(at 150.876 59.436 0)
 			(effects
 				(font
@@ -13249,7 +13450,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U5")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -13329,6 +13530,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "662e86aa-a345-4bab-a5e4-7bf12975d69f")
 		(property "Reference" "C103"
 			(at 81.534 204.724 0)
@@ -13398,8 +13600,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "667f2370-d669-481a-ad61-78d13bce79be")
-		(property "Reference" "U46"
+		(property "Reference" "U36"
 			(at 150.876 208.026 0)
 			(effects
 				(font
@@ -13456,7 +13659,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U46")
+					(reference "U36")
 					(unit 1)
 				)
 			)
@@ -13470,8 +13673,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "674d739a-6c35-4228-b055-00bc0810fc9e")
-		(property "Reference" "U28"
+		(property "Reference" "U22"
 			(at 206.756 133.096 0)
 			(effects
 				(font
@@ -13528,7 +13732,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U28")
+					(reference "U22")
 					(unit 1)
 				)
 			)
@@ -13542,6 +13746,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "6bd9f843-97f0-443f-8fea-d6ecc2958980")
 		(property "Reference" "C72"
 			(at 193.294 56.134 0)
@@ -13611,8 +13816,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "6df19567-1032-468a-8b56-96495f752ce5")
-		(property "Reference" "U14"
+		(property "Reference" "U13"
 			(at 178.816 96.266 0)
 			(effects
 				(font
@@ -13669,7 +13875,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U14")
+					(reference "U13")
 					(unit 1)
 				)
 			)
@@ -13683,6 +13889,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "6ebce7dd-df25-4aa5-a4e6-74f9325f577a")
 		(property "Reference" "C113"
 			(at 137.414 278.384 0)
@@ -14016,6 +14223,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "7496aefd-fbf7-4f4d-b1ee-ad3b02b6017d")
 		(property "Reference" "C83"
 			(at 53.594 129.794 0)
@@ -14217,6 +14425,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "755eaf54-4fa7-4201-9c9d-08159b30ad73")
 		(property "Reference" "C67"
 			(at 53.594 56.134 0)
@@ -14279,82 +14488,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:BS170")
-		(at 45.72 334.01 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "764f7e2a-87f0-4f67-908e-2f0a0eb647e0")
-		(property "Reference" "Q8"
-			(at 52.07 332.7399 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BS170"
-			(at 52.07 335.2799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 50.8 335.915 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BS170-D.PDF"
-			(at 50.8 337.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, TO-92"
-			(at 45.72 334.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "95ab298e-e0c2-42f2-a834-fda7e417bad9")
-		)
-		(pin "2"
-			(uuid "fca70b88-dbee-4e8f-a0d2-49bafc759860")
-		)
-		(pin "3"
-			(uuid "b2c76ed0-176b-44d2-bed7-1c3f0ba8f3e7")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "Q8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Sensor_Magnetic:DRV5033AJxDBZ")
 		(at 124.46 96.52 0)
 		(unit 1)
@@ -14362,8 +14495,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "765e0416-8d68-40d6-b9f8-d455088b9a0c")
-		(property "Reference" "U12"
+		(property "Reference" "U11"
 			(at 122.936 96.266 0)
 			(effects
 				(font
@@ -14420,83 +14554,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:BS170")
-		(at 45.72 297.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "76985b5d-c2f4-439e-8cb9-f98a62aa65de")
-		(property "Reference" "Q7"
-			(at 52.07 295.9099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BS170"
-			(at 52.07 298.4499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 50.8 299.085 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BS170-D.PDF"
-			(at 50.8 300.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, TO-92"
-			(at 45.72 297.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9210866f-afe2-473f-8264-9528a5efe49d")
-		)
-		(pin "2"
-			(uuid "979a0f10-19e3-423f-bd9d-390abbfb266e")
-		)
-		(pin "3"
-			(uuid "f75cc4fd-17fe-4adc-a824-0c71aeab50a0")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "Q7")
+					(reference "U11")
 					(unit 1)
 				)
 			)
@@ -14510,8 +14568,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "77ddd46e-16d9-4605-92bc-128051ae64b5")
-		(property "Reference" "U30"
+		(property "Reference" "U23"
 			(at 234.696 133.096 0)
 			(effects
 				(font
@@ -14568,7 +14627,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U30")
+					(reference "U23")
 					(unit 1)
 				)
 			)
@@ -14582,8 +14641,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "787fe1c9-357c-4af4-a4e1-9802ab96335c")
-		(property "Reference" "U11"
+		(property "Reference" "U10"
 			(at 94.996 96.266 0)
 			(effects
 				(font
@@ -14640,7 +14700,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U11")
+					(reference "U10")
 					(unit 1)
 				)
 			)
@@ -14654,6 +14714,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "7895dc35-5c53-495c-a010-869be75b95c0")
 		(property "Reference" "C92"
 			(at 165.354 166.624 0)
@@ -14984,82 +15045,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:BS170")
-		(at 45.72 111.76 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7e1991f2-c79a-4541-8d80-adb21ee921f8")
-		(property "Reference" "Q2"
-			(at 52.07 110.4899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BS170"
-			(at 52.07 113.0299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 50.8 113.665 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BS170-D.PDF"
-			(at 50.8 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, TO-92"
-			(at 45.72 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6009ca2f-fa58-4437-828c-4fd075cc804a")
-		)
-		(pin "2"
-			(uuid "544f8bfd-0218-44c0-8d7e-c3b394f77f9b")
-		)
-		(pin "3"
-			(uuid "d4fd2290-50dc-4e38-b239-60527c2acaba")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 58.42 317.5 0)
 		(unit 1)
@@ -15067,6 +15052,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "7f6a1b4f-c00d-4813-abae-784c83634e13")
 		(property "Reference" "C102"
 			(at 53.594 315.214 0)
@@ -15136,8 +15122,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "81380fbe-0c22-4051-a75a-5297b2160b36")
-		(property "Reference" "U18"
+		(property "Reference" "U17"
 			(at 67.056 133.096 0)
 			(effects
 				(font
@@ -15194,7 +15181,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U18")
+					(reference "U17")
 					(unit 1)
 				)
 			)
@@ -15399,6 +15386,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:2N7002")
+		(at 45.72 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "86a6fbdc-860f-4016-89e5-34f537b61ee4")
+		(property "Reference" "Q3"
+			(at 52.07 147.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2N7002"
+			(at 52.07 149.8599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 50.8 150.495 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF"
+			(at 50.8 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 45.72 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "31484197-94a4-436d-ba15-8c66525ce54b")
+		)
+		(pin "1"
+			(uuid "d56f47b9-32d4-47bf-8a88-7ea145916104")
+		)
+		(pin "2"
+			(uuid "d09ca602-0d83-4e84-8321-ad4b6be2dd6e")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "Q3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 114.3 168.91 0)
 		(unit 1)
@@ -15406,6 +15469,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "889a4df1-cc7b-4138-aa26-f9bbced55303")
 		(property "Reference" "C88"
 			(at 109.474 166.624 0)
@@ -15615,8 +15679,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "8a448afd-526f-4bd0-94bf-fccec6ddb03c")
-		(property "Reference" "U60"
+		(property "Reference" "U55"
 			(at 234.696 281.686 0)
 			(effects
 				(font
@@ -15673,7 +15738,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U60")
+					(reference "U55")
 					(unit 1)
 				)
 			)
@@ -15687,6 +15752,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "8b2d66de-1b2a-4dbf-a259-4526db08ddd3")
 		(property "Reference" "C73"
 			(at 221.234 56.134 0)
@@ -15756,8 +15822,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "8b3dc477-b6f8-4dac-a1e2-ac6fc032721e")
-		(property "Reference" "U41"
+		(property "Reference" "U58"
 			(at 94.996 318.516 0)
 			(effects
 				(font
@@ -15814,7 +15881,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U41")
+					(reference "U58")
 					(unit 1)
 				)
 			)
@@ -15887,82 +15954,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:BS170")
-		(at 45.72 223.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8c1d4a4e-796b-4e45-b1d2-ede28acaa939")
-		(property "Reference" "Q5"
-			(at 52.07 222.2499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BS170"
-			(at 52.07 224.7899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 50.8 225.425 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BS170-D.PDF"
-			(at 50.8 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, TO-92"
-			(at 45.72 223.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3a431159-2a1f-47e0-8231-af6c3d189058")
-		)
-		(pin "2"
-			(uuid "0a9ccf6b-223b-423e-af2e-6159b50ead39")
-		)
-		(pin "3"
-			(uuid "ae33239d-ee60-4eba-b173-fd0aa1dfe8e3")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "Q5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 252.73 168.91 0)
 		(unit 1)
@@ -15970,6 +15961,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "8ca5f42e-5e2c-4b06-8848-91786c3f14cb")
 		(property "Reference" "C98"
 			(at 247.904 166.624 0)
@@ -16039,8 +16031,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "8d33d06f-abd7-453b-9510-dcdb72645612")
-		(property "Reference" "U63"
+		(property "Reference" "U48"
 			(at 261.366 244.856 0)
 			(effects
 				(font
@@ -16097,7 +16090,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U63")
+					(reference "U48")
 					(unit 1)
 				)
 			)
@@ -16111,8 +16104,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "8daba7cc-52c2-45a8-8af2-1ad89e674095")
-		(property "Reference" "U32"
+		(property "Reference" "U24"
 			(at 261.366 133.096 0)
 			(effects
 				(font
@@ -16169,7 +16163,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U32")
+					(reference "U24")
 					(unit 1)
 				)
 			)
@@ -16249,6 +16243,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "8ee7a69b-af54-4553-a07f-ef84875143ab")
 		(property "Reference" "C104"
 			(at 81.534 241.554 0)
@@ -16450,6 +16445,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "90d0cbec-f455-4d41-ac80-3446b9ffee3c")
 		(property "Reference" "C127"
 			(at 247.904 204.724 0)
@@ -16644,6 +16640,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:2N7002")
+		(at 45.72 223.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "92509fa6-8aaa-43f9-9b06-4cd2807e6037")
+		(property "Reference" "Q5"
+			(at 52.07 222.2499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2N7002"
+			(at 52.07 224.7899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 50.8 225.425 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF"
+			(at 50.8 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 45.72 223.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "7d21c7e4-c6bc-4907-bdb8-9c7f841d168e")
+		)
+		(pin "1"
+			(uuid "0896ad03-dcdf-4fdb-8e58-ba138bc6f154")
+		)
+		(pin "2"
+			(uuid "36429087-e1bf-4df5-bd6a-76af180b9bec")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Sensor_Magnetic:DRV5033AJxDBZ")
 		(at 208.28 170.18 0)
 		(unit 1)
@@ -16651,8 +16723,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "92ea687c-de96-476a-90e1-b65931c48a58")
-		(property "Reference" "U29"
+		(property "Reference" "U30"
 			(at 206.756 169.926 0)
 			(effects
 				(font
@@ -16709,7 +16782,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U29")
+					(reference "U30")
 					(unit 1)
 				)
 			)
@@ -16723,8 +16796,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "9314c12d-d531-4db7-ad4e-5563fceb822c")
-		(property "Reference" "U39"
+		(property "Reference" "U42"
 			(at 94.996 244.856 0)
 			(effects
 				(font
@@ -16781,7 +16855,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U39")
+					(reference "U42")
 					(unit 1)
 				)
 			)
@@ -16795,6 +16869,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "9400f267-05d7-425f-a2b9-9797bb8e9479")
 		(property "Reference" "C105"
 			(at 81.534 278.384 0)
@@ -16864,6 +16939,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "94d1c8bb-63a7-49fd-83a3-c7b5be80bdb7")
 		(property "Reference" "C94"
 			(at 193.294 166.624 0)
@@ -16933,6 +17009,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "99516c62-c7b4-429a-b0d0-bf91c9ee6502")
 		(property "Reference" "C87"
 			(at 109.474 129.794 0)
@@ -17068,8 +17145,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "9b3bb1b2-458d-49c4-baf7-d31ce5e3533c")
-		(property "Reference" "U16"
+		(property "Reference" "U15"
 			(at 234.696 96.266 0)
 			(effects
 				(font
@@ -17126,7 +17204,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U16")
+					(reference "U15")
 					(unit 1)
 				)
 			)
@@ -17140,8 +17218,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "9bf73d89-8af8-4030-bef2-443358a27609")
-		(property "Reference" "U27"
+		(property "Reference" "U29"
 			(at 178.816 169.926 0)
 			(effects
 				(font
@@ -17198,7 +17277,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U27")
+					(reference "U29")
 					(unit 1)
 				)
 			)
@@ -17212,8 +17291,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "9f2a3bfc-0cf8-4e0a-aac2-183c775d6878")
-		(property "Reference" "U8"
+		(property "Reference" "U7"
 			(at 234.696 59.436 0)
 			(effects
 				(font
@@ -17270,7 +17350,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U8")
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -17350,8 +17430,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "a0b87610-9823-459d-a85b-36085513c3a8")
-		(property "Reference" "U52"
+		(property "Reference" "U53"
 			(at 178.816 281.686 0)
 			(effects
 				(font
@@ -17408,7 +17489,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U52")
+					(reference "U53")
 					(unit 1)
 				)
 			)
@@ -17422,8 +17503,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "a663b4da-d65d-4343-8da8-00755b6d88ba")
-		(property "Reference" "U49"
+		(property "Reference" "U60"
 			(at 150.876 318.516 0)
 			(effects
 				(font
@@ -17480,7 +17562,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U49")
+					(reference "U60")
 					(unit 1)
 				)
 			)
@@ -17626,6 +17708,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "abb2ab8e-0767-45e2-9ae4-71f42dd0dd59")
 		(property "Reference" "C129"
 			(at 247.904 278.384 0)
@@ -17831,6 +17914,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "ad986fd7-f5a4-4458-93b3-b407e4e29ad6")
 		(property "Reference" "U43"
 			(at 122.936 244.856 0)
@@ -17903,6 +17987,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "ade1b9b6-2275-47b4-bb21-daa90a75b91b")
 		(property "Reference" "U31"
 			(at 234.696 169.926 0)
@@ -18107,8 +18192,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "afb92b4c-5b20-4bcc-b6f2-d38b9f0230bb")
-		(property "Reference" "U15"
+		(property "Reference" "U14"
 			(at 206.756 96.266 0)
 			(effects
 				(font
@@ -18165,7 +18251,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U15")
+					(reference "U14")
 					(unit 1)
 				)
 			)
@@ -18179,8 +18265,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "b012af34-655e-4a3e-a5ff-70e8a404453d")
-		(property "Reference" "U37"
+		(property "Reference" "U57"
 			(at 67.056 318.516 0)
 			(effects
 				(font
@@ -18237,7 +18324,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U37")
+					(reference "U57")
 					(unit 1)
 				)
 			)
@@ -18251,6 +18338,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "b268d486-888f-47e5-bfd2-1886319eb2bc")
 		(property "Reference" "C124"
 			(at 221.234 241.554 0)
@@ -18584,8 +18672,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "b7cfa15e-696c-454a-b6b5-824bb6a1826b")
-		(property "Reference" "U61"
+		(property "Reference" "U63"
 			(at 234.696 318.516 0)
 			(effects
 				(font
@@ -18642,7 +18731,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U61")
+					(reference "U63")
 					(unit 1)
 				)
 			)
@@ -18656,6 +18745,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "b8a5c96b-c28d-4533-ab40-04d75328a710")
 		(property "Reference" "C80"
 			(at 193.294 92.964 0)
@@ -18725,6 +18815,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "b9e231fe-9bed-406e-bcff-41545404d099")
 		(property "Reference" "C97"
 			(at 247.904 129.794 0)
@@ -18992,8 +19083,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "bd288316-8e83-473d-ac75-8d49ccbc458f")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 67.056 59.436 0)
 			(effects
 				(font
@@ -19050,7 +19142,7 @@
 		(instances
 			(project ""
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U2")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -19130,8 +19222,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "be302b21-190e-449d-96bc-fdfb08e7e184")
-		(property "Reference" "U59"
+		(property "Reference" "U47"
 			(at 234.696 244.856 0)
 			(effects
 				(font
@@ -19188,7 +19281,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U59")
+					(reference "U47")
 					(unit 1)
 				)
 			)
@@ -19202,6 +19295,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "bf2a0dcb-0fc7-426f-8dc7-b960a7a54214")
 		(property "Reference" "C95"
 			(at 221.234 129.794 0)
@@ -19337,6 +19431,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "c00958af-1125-4227-bc66-fa45077c2c1e")
 		(property "Reference" "C100"
 			(at 53.594 241.554 0)
@@ -19406,8 +19501,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "c0525969-768a-42e1-b3c3-14d569748cb1")
-		(property "Reference" "U19"
+		(property "Reference" "U25"
 			(at 67.056 169.926 0)
 			(effects
 				(font
@@ -19464,7 +19560,83 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U19")
+					(reference "U25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:2N7002")
+		(at 45.72 260.35 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c0823cca-95f3-4708-b790-dbaaf8e36f23")
+		(property "Reference" "Q6"
+			(at 52.07 259.0799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2N7002"
+			(at 52.07 261.6199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 50.8 262.255 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF"
+			(at 50.8 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 45.72 260.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "e2568ad3-5b64-4a63-85a0-aa8a3b1671f2")
+		)
+		(pin "1"
+			(uuid "4efbcc8b-621d-420e-be7b-5049086e7dd0")
+		)
+		(pin "2"
+			(uuid "d9829a4a-8dfa-44d3-b7bb-18f8add8b6e7")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "Q6")
 					(unit 1)
 				)
 			)
@@ -19676,8 +19848,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "c2e7e8af-6161-4819-939c-6fcc7350e177")
-		(property "Reference" "U35"
+		(property "Reference" "U41"
 			(at 67.056 244.856 0)
 			(effects
 				(font
@@ -19734,83 +19907,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U35")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:BS170")
-		(at 45.72 148.59 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c35b3094-a57d-4007-ad6e-cd78b49121da")
-		(property "Reference" "Q3"
-			(at 52.07 147.3199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BS170"
-			(at 52.07 149.8599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 50.8 150.495 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BS170-D.PDF"
-			(at 50.8 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, TO-92"
-			(at 45.72 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "de2e2c99-e8af-4ae1-969c-94d11b7afdc1")
-		)
-		(pin "2"
-			(uuid "6e501dd2-31cc-4771-9620-a697cec7582d")
-		)
-		(pin "3"
-			(uuid "dee7911d-9129-4b2c-a1f7-d6f4b3ca0db3")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "Q3")
+					(reference "U41")
 					(unit 1)
 				)
 			)
@@ -19824,6 +19921,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "c589f030-f597-402e-b4db-3266489324de")
 		(property "Reference" "C118"
 			(at 165.354 315.214 0)
@@ -20223,6 +20321,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "cc4ce1d4-5bd0-49ef-8088-f3808bbb56ba")
 		(property "Reference" "C130"
 			(at 247.904 315.214 0)
@@ -20292,8 +20391,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "ccebdf5f-518c-43fa-ad51-590184511a4a")
-		(property "Reference" "U25"
+		(property "Reference" "U28"
 			(at 150.876 169.926 0)
 			(effects
 				(font
@@ -20350,7 +20450,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U25")
+					(reference "U28")
 					(unit 1)
 				)
 			)
@@ -20364,6 +20464,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "cd1a9809-7d15-47a5-9969-2a0e8a8dfe90")
 		(property "Reference" "C114"
 			(at 137.414 315.214 0)
@@ -20499,6 +20600,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "cebb8e18-1d7f-4c9f-af1a-ea20a14a1037")
 		(property "Reference" "C101"
 			(at 53.594 278.384 0)
@@ -20568,6 +20670,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "cf7636a7-aad0-4bab-96ef-a064d8585ab8")
 		(property "Reference" "C69"
 			(at 109.474 56.134 0)
@@ -20637,6 +20740,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "cfd4ac46-f357-48f2-a84b-99a28a77338a")
 		(property "Reference" "C74"
 			(at 247.904 56.134 0)
@@ -20838,6 +20942,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "d1ff516c-de75-41f2-8df9-74b5cf586aa2")
 		(property "Reference" "C107"
 			(at 109.474 204.724 0)
@@ -20907,8 +21012,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "d2a45495-5330-4d09-88b6-128f454fbf6e")
-		(property "Reference" "U56"
+		(property "Reference" "U54"
 			(at 206.756 281.686 0)
 			(effects
 				(font
@@ -20965,7 +21071,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U56")
+					(reference "U54")
 					(unit 1)
 				)
 			)
@@ -20979,8 +21085,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "d495cc82-6c21-4202-8f76-d4f7ea8aa5f9")
-		(property "Reference" "U26"
+		(property "Reference" "U21"
 			(at 178.816 133.096 0)
 			(effects
 				(font
@@ -21037,7 +21144,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U26")
+					(reference "U21")
 					(unit 1)
 				)
 			)
@@ -21183,6 +21290,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "d6794d8d-c5ab-4f55-8f86-d6f3727f091c")
 		(property "Reference" "C123"
 			(at 221.234 204.724 0)
@@ -21252,8 +21360,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "dd7a6d7b-5792-456c-8a24-e6cf0c48b659")
-		(property "Reference" "U40"
+		(property "Reference" "U50"
 			(at 94.996 281.686 0)
 			(effects
 				(font
@@ -21310,7 +21419,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U40")
+					(reference "U50")
 					(unit 1)
 				)
 			)
@@ -21324,8 +21433,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "de274fc3-020c-43eb-a3cf-cd6297c2e922")
-		(property "Reference" "U44"
+		(property "Reference" "U51"
 			(at 122.936 281.686 0)
 			(effects
 				(font
@@ -21382,7 +21492,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U44")
+					(reference "U51")
 					(unit 1)
 				)
 			)
@@ -21396,8 +21506,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "de85ce8c-d1db-44df-b477-2a68c4548c0d")
-		(property "Reference" "U42"
+		(property "Reference" "U35"
 			(at 122.936 208.026 0)
 			(effects
 				(font
@@ -21454,7 +21565,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U42")
+					(reference "U35")
 					(unit 1)
 				)
 			)
@@ -21468,6 +21579,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "e004fbc0-096f-4baa-800c-9af0b2cf883e")
 		(property "Reference" "C108"
 			(at 109.474 241.554 0)
@@ -21537,8 +21649,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "e1ca4f35-040c-4ab4-a110-4beb8a54b664")
-		(property "Reference" "U9"
+		(property "Reference" "U8"
 			(at 261.366 59.436 0)
 			(effects
 				(font
@@ -21595,7 +21708,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U9")
+					(reference "U8")
 					(unit 1)
 				)
 			)
@@ -21609,8 +21722,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "e2e90b11-319b-442a-ab95-55bd208e14f0")
-		(property "Reference" "U57"
+		(property "Reference" "U62"
 			(at 206.756 318.516 0)
 			(effects
 				(font
@@ -21667,7 +21781,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U57")
+					(reference "U62")
 					(unit 1)
 				)
 			)
@@ -21817,8 +21931,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "e3d4f249-d7b3-4e03-adfe-771959380927")
-		(property "Reference" "U50"
+		(property "Reference" "U37"
 			(at 178.816 208.026 0)
 			(effects
 				(font
@@ -21875,7 +21990,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U50")
+					(reference "U37")
 					(unit 1)
 				)
 			)
@@ -22080,82 +22195,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_FET:BS170")
-		(at 45.72 260.35 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e68e3c80-afa0-408b-bd3d-cec0d732913f")
-		(property "Reference" "Q6"
-			(at 52.07 259.0799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BS170"
-			(at 52.07 261.6199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 50.8 262.255 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BS170-D.PDF"
-			(at 50.8 264.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.5A Id, 60V Vds, N-Channel MOSFET, TO-92"
-			(at 45.72 260.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6405aa00-3828-468b-bef1-22b1f708340c")
-		)
-		(pin "2"
-			(uuid "7ba9912a-0e54-4f53-ad26-d5039e36de23")
-		)
-		(pin "3"
-			(uuid "9026b877-15f3-4f0b-a33a-d45cc0d49488")
-		)
-		(instances
-			(project "autochess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "Q6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Sensor_Magnetic:DRV5033AJxDBZ")
 		(at 96.52 133.35 0)
 		(unit 1)
@@ -22163,8 +22202,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "e6ddf810-7758-4bdb-87a4-ca5fd53e40c7")
-		(property "Reference" "U20"
+		(property "Reference" "U18"
 			(at 94.996 133.096 0)
 			(effects
 				(font
@@ -22221,7 +22261,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U20")
+					(reference "U18")
 					(unit 1)
 				)
 			)
@@ -22235,8 +22275,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "e93388bb-b8f6-41b1-8dca-270202e6ca88")
-		(property "Reference" "U22"
+		(property "Reference" "U19"
 			(at 122.936 133.096 0)
 			(effects
 				(font
@@ -22293,7 +22334,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U22")
+					(reference "U19")
 					(unit 1)
 				)
 			)
@@ -22307,6 +22348,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "e9887dbd-850a-4f9d-a6a6-3a9d634b111f")
 		(property "Reference" "C125"
 			(at 221.234 278.384 0)
@@ -22376,6 +22418,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "e9d03044-5ef3-4703-9ecf-02192695d9dc")
 		(property "Reference" "C70"
 			(at 137.414 56.134 0)
@@ -22511,8 +22554,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "edd2600e-ffb2-433f-9622-8472fe4e2307")
-		(property "Reference" "U36"
+		(property "Reference" "U49"
 			(at 67.056 281.686 0)
 			(effects
 				(font
@@ -22569,7 +22613,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U36")
+					(reference "U49")
 					(unit 1)
 				)
 			)
@@ -22583,8 +22627,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "edd46f39-3a6e-4993-b75f-d882da3f95be")
-		(property "Reference" "U62"
+		(property "Reference" "U40"
 			(at 261.366 208.026 0)
 			(effects
 				(font
@@ -22641,7 +22686,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U62")
+					(reference "U40")
 					(unit 1)
 				)
 			)
@@ -22655,6 +22700,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "eeac6305-880e-422b-9821-c813fd3f7b29")
 		(property "Reference" "C76"
 			(at 81.534 92.964 0)
@@ -22724,8 +22770,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "ef82e6ea-8173-41aa-a074-147de7d7b891")
-		(property "Reference" "U54"
+		(property "Reference" "U38"
 			(at 206.756 208.026 0)
 			(effects
 				(font
@@ -22782,7 +22829,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U54")
+					(reference "U38")
 					(unit 1)
 				)
 			)
@@ -22796,8 +22843,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "f0e27d05-12de-4afe-a2f5-d452d0016dcb")
-		(property "Reference" "U13"
+		(property "Reference" "U12"
 			(at 150.876 96.266 0)
 			(effects
 				(font
@@ -22854,7 +22902,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U13")
+					(reference "U12")
 					(unit 1)
 				)
 			)
@@ -22868,8 +22916,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "f242b197-4f4b-48ff-86d6-6ba29cb17c0f")
-		(property "Reference" "U48"
+		(property "Reference" "U52"
 			(at 150.876 281.686 0)
 			(effects
 				(font
@@ -22926,7 +22975,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U48")
+					(reference "U52")
 					(unit 1)
 				)
 			)
@@ -22940,6 +22989,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "f4a509be-aab6-40a4-a627-94073aa7554a")
 		(property "Reference" "C112"
 			(at 137.414 241.554 0)
@@ -23002,6 +23052,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:2N7002")
+		(at 45.72 334.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f7c00b05-317b-4f3e-84c6-e2ab13c579e0")
+		(property "Reference" "Q8"
+			(at 52.07 332.7399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2N7002"
+			(at 52.07 335.2799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 50.8 335.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF"
+			(at 50.8 337.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 45.72 334.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "e21a329a-6f15-4ae6-b229-2b0baf59f831")
+		)
+		(pin "1"
+			(uuid "3c1e3dca-d84f-41f8-9d96-db051a118e6e")
+		)
+		(pin "2"
+			(uuid "ab68d68d-ad9b-48b7-bc4e-4cd6c85d62df")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 86.36 317.5 0)
 		(unit 1)
@@ -23009,6 +23135,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "fa9edb47-a98e-4b21-8751-5f87d091b151")
 		(property "Reference" "C106"
 			(at 81.534 315.214 0)
@@ -23144,8 +23271,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "fb9cec35-eb38-4d83-af44-8661decb4f7d")
-		(property "Reference" "U58"
+		(property "Reference" "U39"
 			(at 234.696 208.026 0)
 			(effects
 				(font
@@ -23202,7 +23330,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "U58")
+					(reference "U39")
 					(unit 1)
 				)
 			)
@@ -23282,6 +23410,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "ff2c4229-2d79-442b-82f8-b89f5f1b6ab5")
 		(property "Reference" "C82"
 			(at 247.904 92.964 0)
