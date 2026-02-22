@@ -682,12 +682,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "02706b55-2bc9-4bc9-8aea-5832b3a9d3f2")
-		(at 125.5625 490.2)
+		(at 143.8125 72.75 180)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C3"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "aa551bab-a95b-4bdb-92c6-32755230078f")
 			(effects
 				(font
@@ -697,8 +698,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at 4.8125 0 0)
+			(layer "F.SilkS")
 			(uuid "5c20554e-0b22-4e72-9944-1a0dd407161d")
 			(effects
 				(font
@@ -737,16 +738,6 @@
 		(sheetfile "leds.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -0.711252 -0.91)
-			(end 0.711252 -0.91)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "0178d3f7-b4f3-4c21-830c-7c3d2a654147")
-		)
-		(fp_line
 			(start -0.711252 0.91)
 			(end 0.711252 0.91)
 			(stroke
@@ -755,6 +746,16 @@
 			)
 			(layer "F.SilkS")
 			(uuid "b2d2d021-6106-4733-9708-28859516ed70")
+		)
+		(fp_line
+			(start -0.711252 -0.91)
+			(end 0.711252 -0.91)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "0178d3f7-b4f3-4c21-830c-7c3d2a654147")
 		)
 		(fp_rect
 			(start -2.48 -1.15)
@@ -790,7 +791,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.5625 0)
+			(at -1.5625 0 180)
 			(size 1.325 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -799,7 +800,7 @@
 			(uuid "0fc9bc54-7660-47dd-b230-832527cb9cc4")
 		)
 		(pad "2" smd roundrect
-			(at 1.5625 0)
+			(at 1.5625 0 180)
 			(size 1.325 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -964,12 +965,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "04958b5a-1b25-4b6a-90a5-381e3cc489f2")
-		(at 192.5225 453.99)
+		(at 331.1875 60.75)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C74"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "45840872-f954-436a-83a2-5eb26a9d5ead")
 			(effects
 				(font
@@ -979,8 +981,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at -5 0 0)
+			(layer "F.SilkS")
 			(uuid "5531a22c-6e76-4ff3-a659-52562dc0b4fd")
 			(effects
 				(font
@@ -9094,7 +9096,7 @@
 		(descr "5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
 		(tags "LED RGB NeoPixel PLCC-4 5050")
 		(property "Reference" "D6"
-			(at 0 0 0)
+			(at 4.95 -0.1 0)
 			(layer "F.SilkS")
 			(uuid "29a0407e-a8d0-46c5-96fd-672924a54f5f")
 			(effects
@@ -9105,7 +9107,7 @@
 			)
 		)
 		(property "Value" "WS2812B"
-			(at 0 4 0)
+			(at -7.55 -0.1 0)
 			(layer "F.Fab")
 			(uuid "70142caf-f237-4186-8c29-4b1451c47d63")
 			(effects
@@ -10631,12 +10633,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "2513f12e-3a91-46d6-8ffd-016e4b3a37f9")
-		(at 125.5625 486.85)
+		(at 106.1875 72.75 180)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C2"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "fad76f6d-1439-4c15-975f-c8daa3858a32")
 			(effects
 				(font
@@ -10646,8 +10649,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at 4.8125 0 0)
+			(layer "F.SilkS")
 			(uuid "33f2473a-8100-418f-8aa3-d31d624f8645")
 			(effects
 				(font
@@ -10686,16 +10689,6 @@
 		(sheetfile "leds.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -0.711252 -0.91)
-			(end 0.711252 -0.91)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "3babef3e-c201-4b5f-b691-899d37574f90")
-		)
-		(fp_line
 			(start -0.711252 0.91)
 			(end 0.711252 0.91)
 			(stroke
@@ -10704,6 +10697,16 @@
 			)
 			(layer "F.SilkS")
 			(uuid "8537c1bd-d112-4069-9f52-fb81f30ab633")
+		)
+		(fp_line
+			(start -0.711252 -0.91)
+			(end 0.711252 -0.91)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "3babef3e-c201-4b5f-b691-899d37574f90")
 		)
 		(fp_rect
 			(start -2.48 -1.15)
@@ -10739,7 +10742,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.5625 0)
+			(at -1.5625 0 180)
 			(size 1.325 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -10748,7 +10751,7 @@
 			(uuid "7ba7529f-56f2-4de8-8de3-8d856f8eff5b")
 		)
 		(pad "2" smd roundrect
-			(at 1.5625 0)
+			(at 1.5625 0 180)
 			(size 1.325 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -11729,7 +11732,7 @@
 		(descr "5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
 		(tags "LED RGB NeoPixel PLCC-4 5050")
 		(property "Reference" "D16"
-			(at 0 0 0)
+			(at -5.55 0 0)
 			(layer "F.SilkS")
 			(uuid "2c71261c-6356-4453-a0ff-11caecb3247c")
 			(effects
@@ -11740,7 +11743,7 @@
 			)
 		)
 		(property "Value" "WS2812B"
-			(at 0 4 0)
+			(at 7.7 0.1 0)
 			(layer "F.Fab")
 			(uuid "836bf86e-93e1-44b8-a655-860da8f9cf2b")
 			(effects
@@ -13824,7 +13827,7 @@
 		(descr "5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
 		(tags "LED RGB NeoPixel PLCC-4 5050")
 		(property "Reference" "D15"
-			(at 0 0 0)
+			(at -5.75 0 0)
 			(layer "F.SilkS")
 			(uuid "1e25c549-3162-4b32-b950-6bd26f4971ec")
 			(effects
@@ -13835,7 +13838,7 @@
 			)
 		)
 		(property "Value" "WS2812B"
-			(at 0 4 0)
+			(at 7.5 0 0)
 			(layer "F.Fab")
 			(uuid "a6e8ca41-8e6b-4985-a2ed-a9cb55760ba3")
 			(effects
@@ -18379,7 +18382,7 @@
 		(descr "5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
 		(tags "LED RGB NeoPixel PLCC-4 5050")
 		(property "Reference" "D4"
-			(at 0 0 0)
+			(at 5.2 -0.1 0)
 			(layer "F.SilkS")
 			(uuid "dff6a81b-8a60-4730-895f-62cfe738f995")
 			(effects
@@ -18390,7 +18393,7 @@
 			)
 		)
 		(property "Value" "WS2812B"
-			(at 0 4 0)
+			(at -7.3 -0.1 0)
 			(layer "F.Fab")
 			(uuid "fd4a66c9-c334-45d5-9922-1031b23e2bf5")
 			(effects
@@ -20333,11 +20336,11 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "F.Cu")
 		(uuid "4893a56f-36ff-4f3b-8e3c-ae168b787dd8")
-		(at 191.9725 499.09)
+		(at 331.3125 63.75)
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U8"
-			(at 0 -2.4 0)
+			(at -3.5625 0 0)
 			(layer "F.SilkS")
 			(uuid "bc7c4cc2-2c64-453c-a6a5-e8ac8d59197d")
 			(effects
@@ -20348,7 +20351,7 @@
 			)
 		)
 		(property "Value" "DRV5033A"
-			(at 0 2.4 0)
+			(at 6.1875 0 0)
 			(layer "F.Fab")
 			(uuid "7c8be3b3-252e-49ea-a955-3694acd8d9f0")
 			(effects
@@ -21451,11 +21454,11 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "F.Cu")
 		(uuid "4c77448c-e4a5-4002-af4d-a27fcc7a726b")
-		(at 191.9725 494.64)
+		(at 293.75 63.75)
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U7"
-			(at 0 -2.4 0)
+			(at -3.75 0 0)
 			(layer "F.SilkS")
 			(uuid "b6255e83-b0ac-42e1-8404-0ef12448e8e5")
 			(effects
@@ -21466,7 +21469,7 @@
 			)
 		)
 		(property "Value" "DRV5033A"
-			(at 0 2.4 0)
+			(at 6.25 0 0)
 			(layer "F.Fab")
 			(uuid "a037dce9-7256-47e3-b235-a50b204018e5")
 			(effects
@@ -25952,12 +25955,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "55eccc0e-0f35-43d4-aa1f-2baa3b1b8006")
-		(at 125.5625 493.55)
+		(at 181.25 72.75 180)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C4"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "0917d4b8-1c6b-45c7-bf54-a41562d07b33")
 			(effects
 				(font
@@ -25967,8 +25971,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at 5.0625 -0.25 0)
+			(layer "F.SilkS")
 			(uuid "862ba9ce-2aa6-40e3-bbd6-6eba570b04c3")
 			(effects
 				(font
@@ -26007,16 +26011,6 @@
 		(sheetfile "leds.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -0.711252 -0.91)
-			(end 0.711252 -0.91)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "be8b1b78-acae-4feb-8a04-068164022917")
-		)
-		(fp_line
 			(start -0.711252 0.91)
 			(end 0.711252 0.91)
 			(stroke
@@ -26025,6 +26019,16 @@
 			)
 			(layer "F.SilkS")
 			(uuid "5eefbe35-894b-49b0-a596-a44053275312")
+		)
+		(fp_line
+			(start -0.711252 -0.91)
+			(end 0.711252 -0.91)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "be8b1b78-acae-4feb-8a04-068164022917")
 		)
 		(fp_rect
 			(start -2.48 -1.15)
@@ -26060,7 +26064,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.5625 0)
+			(at -1.5625 0 180)
 			(size 1.325 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -26069,7 +26073,7 @@
 			(uuid "e816379d-38ee-40c7-b60a-035dcb03e701")
 		)
 		(pad "2" smd roundrect
-			(at 1.5625 0)
+			(at 1.5625 0 180)
 			(size 1.325 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -26093,12 +26097,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "566df9ce-84b3-4546-9034-c39f6d5c7f8f")
-		(at 192.5225 450.64)
+		(at 293.75 60.75)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C73"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "e2672ac3-132e-46fb-bc56-f54c6cde7ebe")
 			(effects
 				(font
@@ -26108,8 +26113,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at -4.9375 0 0)
+			(layer "F.SilkS")
 			(uuid "bab9a3af-deca-48df-8837-36ff9d7d98ed")
 			(effects
 				(font
@@ -28285,7 +28290,7 @@
 		(descr "5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
 		(tags "LED RGB NeoPixel PLCC-4 5050")
 		(property "Reference" "D5"
-			(at 0 0 0)
+			(at 5.25 0 0)
 			(layer "F.SilkS")
 			(uuid "37fb614b-d99b-4674-a92d-51cf2634707a")
 			(effects
@@ -28296,7 +28301,7 @@
 			)
 		)
 		(property "Value" "WS2812B"
-			(at 0 4 0)
+			(at -7.5 0 0)
 			(layer "F.Fab")
 			(uuid "9cbdc00a-860f-425e-a161-a3dc0112d951")
 			(effects
@@ -28587,12 +28592,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "5f340789-bf55-4962-aa02-81c0b9809b5a")
-		(at 125.5625 500.25)
+		(at 256.1875 72.75 180)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C6"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "f59bb77f-198e-48bd-a468-dedd1f9da996")
 			(effects
 				(font
@@ -28602,8 +28608,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at 5.0625 0 0)
+			(layer "F.SilkS")
 			(uuid "261808ef-a4bb-457a-8549-372166715fdf")
 			(effects
 				(font
@@ -28642,16 +28648,6 @@
 		(sheetfile "leds.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -0.711252 -0.91)
-			(end 0.711252 -0.91)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "d270e7b3-a27f-4448-9d91-cf4353b35d92")
-		)
-		(fp_line
 			(start -0.711252 0.91)
 			(end 0.711252 0.91)
 			(stroke
@@ -28660,6 +28656,16 @@
 			)
 			(layer "F.SilkS")
 			(uuid "e4fd4744-55cb-46af-950d-0c72fdaea1d9")
+		)
+		(fp_line
+			(start -0.711252 -0.91)
+			(end 0.711252 -0.91)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "d270e7b3-a27f-4448-9d91-cf4353b35d92")
 		)
 		(fp_rect
 			(start -2.48 -1.15)
@@ -28695,7 +28701,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.5625 0)
+			(at -1.5625 0 180)
 			(size 1.325 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -28704,7 +28710,7 @@
 			(uuid "4aca0d1d-08b0-4989-a333-687cf1d1543e")
 		)
 		(pad "2" smd roundrect
-			(at 1.5625 0)
+			(at 1.5625 0 180)
 			(size 1.325 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -28728,12 +28734,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "5fb80973-7acb-4063-9109-60285e311647")
-		(at 192.5225 437.24)
+		(at 143.75 60.75)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C69"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "72689e08-31e6-4cd7-9027-69fd78fa38b5")
 			(effects
 				(font
@@ -28743,8 +28750,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at -5 0 0)
+			(layer "F.SilkS")
 			(uuid "20ecaeb9-0334-4697-a6df-d35afa1c8172")
 			(effects
 				(font
@@ -28873,7 +28880,7 @@
 		(descr "5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
 		(tags "LED RGB NeoPixel PLCC-4 5050")
 		(property "Reference" "D3"
-			(at 0 -0.1 0)
+			(at 4.95 -0.1 0)
 			(layer "F.SilkS")
 			(uuid "16955da3-d8eb-4cc2-ac97-d8b49d9a1345")
 			(effects
@@ -28884,7 +28891,7 @@
 			)
 		)
 		(property "Value" "WS2812B"
-			(at 0 4 0)
+			(at -7.55 -0.1 0)
 			(layer "F.Fab")
 			(uuid "e0eeebd2-3edb-4a16-ac54-2777a4b92f0d")
 			(effects
@@ -29905,13 +29912,14 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "62d8310c-ba64-4504-a289-297b6b3ece10")
-		(at 192.5225 440.59)
+		(at 181.1875 60.75)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C70"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
-			(uuid "4e8c23fe-8b35-44a0-af3c-42c6e5f555a1")
+			(hide yes)
+			(uuid "b45f128a-64b6-49b4-b6a0-0b81ab9a16d0")
 			(effects
 				(font
 					(size 1 1)
@@ -29920,9 +29928,9 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
-			(uuid "e8a26586-e56b-45f4-8ac9-7a57527e9986")
+			(at -5 0 0)
+			(layer "F.SilkS")
+			(uuid "34b1cf3d-5557-46fc-babf-b67d908b445a")
 			(effects
 				(font
 					(size 1 1)
@@ -29934,7 +29942,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "78d14827-edf5-48e4-8f2a-fe4dfbcd4e07")
+			(uuid "8abdcf88-3a63-4383-a6dc-deff60c79ec0")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29946,7 +29954,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "878b059f-64d3-4f14-9f7a-1cd22ae30cf8")
+			(uuid "ff867d46-863e-44fe-9a60-bb8c0a9f80b6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30858,12 +30866,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "66a2e4be-654c-4c9d-8455-330cd75b363b")
-		(at 125.5625 513.65)
+		(at 106.25 109.75)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C10"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "7ca2dd3e-4dce-4ad1-bcd1-6e1b9f172300")
 			(effects
 				(font
@@ -30873,8 +30882,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at -4.9375 0 0)
+			(layer "F.SilkS")
 			(uuid "f977937b-465b-45c8-b1ed-10863d82e0af")
 			(effects
 				(font
@@ -31587,11 +31596,11 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "F.Cu")
 		(uuid "67f63aa7-958b-4666-b70b-feeb91af079c")
-		(at 191.9725 485.74)
+		(at 218.8125 63.75)
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U5"
-			(at 0 -2.4 0)
+			(at -3.3125 0 0)
 			(layer "F.SilkS")
 			(uuid "63d7c175-c639-4249-9604-e75898ce165a")
 			(effects
@@ -31602,7 +31611,7 @@
 			)
 		)
 		(property "Value" "DRV5033A"
-			(at 0 2.4 0)
+			(at 6.25 0 0)
 			(layer "F.Fab")
 			(uuid "cf910cc4-6d44-4056-aa10-9b7a4022ae73")
 			(effects
@@ -31952,12 +31961,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "682bde3c-3f18-482f-b89a-c334faad6db5")
-		(at 192.5225 460.69)
+		(at 106.25 97.75)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C76"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "3cde6900-af94-4f2d-86f8-af7497d72e1d")
 			(effects
 				(font
@@ -31967,8 +31977,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at -5.25 0 0)
+			(layer "F.SilkS")
 			(uuid "15e07708-a601-4ecc-9951-5d1b36a702ae")
 			(effects
 				(font
@@ -33022,12 +33032,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "7020c6a2-2f76-4686-b543-7e4dea6608d4")
-		(at 192.5225 443.94)
+		(at 218.75 60.75)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C71"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "7b12e57a-4972-4618-adf6-0a130a973a5e")
 			(effects
 				(font
@@ -33037,8 +33048,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at -5 0.25 0)
+			(layer "F.SilkS")
 			(uuid "892c60a7-e750-4894-9615-b778bcec370b")
 			(effects
 				(font
@@ -34873,11 +34884,11 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "F.Cu")
 		(uuid "7719f627-96dd-485d-bc4c-3352f23384bf")
-		(at 191.9725 481.29)
+		(at 181.25 63.75)
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U4"
-			(at 0 -2.4 0)
+			(at -3.25 0 0)
 			(layer "F.SilkS")
 			(uuid "93a7efbf-4c3d-425f-bf14-adf59c279e9b")
 			(effects
@@ -34888,7 +34899,7 @@
 			)
 		)
 		(property "Value" "DRV5033A"
-			(at 0 2.4 0)
+			(at 6.25 0 0)
 			(layer "F.Fab")
 			(uuid "1740a74d-ebaa-446f-9c68-da5a9602d4a6")
 			(effects
@@ -39898,12 +39909,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "916d96b8-d51d-4d2f-86d6-2d80925574a4")
-		(at 192.5225 457.34)
+		(at 68.75 97.75)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C75"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "e66813e5-6d8b-49ce-8c90-c2bbab2dc37f")
 			(effects
 				(font
@@ -39913,8 +39925,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at -5 0 0)
+			(layer "F.SilkS")
 			(uuid "56d326bc-0ef7-4839-b19e-2069c1370e9e")
 			(effects
 				(font
@@ -46597,12 +46609,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "a5933ec1-c2ef-44da-ae2c-73021225d4e1")
-		(at 192.5225 447.29)
+		(at 256.25 60.75)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C72"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "32d5811a-5092-45f7-802f-b39ce0a70a4a")
 			(effects
 				(font
@@ -46612,8 +46625,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at -5 0 0)
+			(layer "F.SilkS")
 			(uuid "3a25af8e-fca6-471b-a08e-2b8319b59a01")
 			(effects
 				(font
@@ -47103,12 +47116,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "a62c2373-f923-4bd2-a3a8-04f4c3b1735b")
-		(at 125.5625 496.9)
+		(at 218.6875 72.75 180)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C5"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "a5838556-3ef9-49cb-83c1-217b9adb5e2c")
 			(effects
 				(font
@@ -47118,8 +47132,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at 5.0625 0 0)
+			(layer "F.SilkS")
 			(uuid "29affbf5-c60b-4424-b794-afe961807927")
 			(effects
 				(font
@@ -47158,16 +47172,6 @@
 		(sheetfile "leds.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -0.711252 -0.91)
-			(end 0.711252 -0.91)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "abbe7e46-cd58-4822-a0b3-9bf9e85406c8")
-		)
-		(fp_line
 			(start -0.711252 0.91)
 			(end 0.711252 0.91)
 			(stroke
@@ -47176,6 +47180,16 @@
 			)
 			(layer "F.SilkS")
 			(uuid "72903382-4367-4a65-bfdf-4a0711b0c69e")
+		)
+		(fp_line
+			(start -0.711252 -0.91)
+			(end 0.711252 -0.91)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "abbe7e46-cd58-4822-a0b3-9bf9e85406c8")
 		)
 		(fp_rect
 			(start -2.48 -1.15)
@@ -47211,7 +47225,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.5625 0)
+			(at -1.5625 0 180)
 			(size 1.325 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -47220,7 +47234,7 @@
 			(uuid "0cfef46a-f006-4862-9cc5-690a454f4188")
 		)
 		(pad "2" smd roundrect
-			(at 1.5625 0)
+			(at 1.5625 0 180)
 			(size 1.325 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -50967,13 +50981,13 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "F.Cu")
 		(uuid "b5a450e3-8ee6-435d-8393-5f4e2f1660f9")
-		(at 191.9725 476.84)
+		(at 143.75 63.75)
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U3"
-			(at 0 -2.4 0)
+			(at -3.4375 0.05 0)
 			(layer "F.SilkS")
-			(uuid "d4eebc6e-6075-4da1-ae52-6f20f950ab79")
+			(uuid "a02aaed3-1de8-45f8-bf19-998eccf478f1")
 			(effects
 				(font
 					(size 1 1)
@@ -50982,9 +50996,9 @@
 			)
 		)
 		(property "Value" "DRV5033A"
-			(at 0 2.4 0)
+			(at 6.0625 0.05 0)
 			(layer "F.Fab")
-			(uuid "85da623b-df77-4675-b501-faae2bef06ef")
+			(uuid "81b81d83-68f4-4f3f-b926-65ac5cbc9cd6")
 			(effects
 				(font
 					(size 1 1)
@@ -50996,7 +51010,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "883fad97-34c0-4db7-a905-d3ce364435f6")
+			(uuid "1319c81e-4465-4035-afbf-555417517483")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51008,7 +51022,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "7e0c35fe-aa3e-42fe-8cf0-81c72683dc2a")
+			(uuid "065428bc-ce74-46a6-bce7-b911ca1c1739")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -53242,7 +53256,7 @@
 		(descr "5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
 		(tags "LED RGB NeoPixel PLCC-4 5050")
 		(property "Reference" "D8"
-			(at 0 0 0)
+			(at 5.05 0 0)
 			(layer "F.SilkS")
 			(uuid "af6037e6-1338-4980-b552-6f4955682d55")
 			(effects
@@ -53253,7 +53267,7 @@
 			)
 		)
 		(property "Value" "WS2812B"
-			(at 0 4 0)
+			(at -7.45 0.15 0)
 			(layer "F.Fab")
 			(uuid "bfd07f07-56e8-4d83-bf87-9874e064392a")
 			(effects
@@ -56497,12 +56511,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "ca3361e4-b8a5-454b-9bbe-b1da13f7044d")
-		(at 125.5625 506.95)
+		(at 331.25 72.75 180)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C8"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "b28a5c25-7dc1-4506-8878-57c423d4097d")
 			(effects
 				(font
@@ -56512,8 +56527,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at 5 0 0)
+			(layer "F.SilkS")
 			(uuid "967ffe8b-2b4c-4c74-bb38-32c3bc11bf37")
 			(effects
 				(font
@@ -56552,16 +56567,6 @@
 		(sheetfile "leds.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -0.711252 -0.91)
-			(end 0.711252 -0.91)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "be4558e5-e829-4c67-81b8-76b42e40bbad")
-		)
-		(fp_line
 			(start -0.711252 0.91)
 			(end 0.711252 0.91)
 			(stroke
@@ -56570,6 +56575,16 @@
 			)
 			(layer "F.SilkS")
 			(uuid "36ab02f7-4db2-4d9f-91be-ca80f8d5f075")
+		)
+		(fp_line
+			(start -0.711252 -0.91)
+			(end 0.711252 -0.91)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "be4558e5-e829-4c67-81b8-76b42e40bbad")
 		)
 		(fp_rect
 			(start -2.48 -1.15)
@@ -56605,7 +56620,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.5625 0)
+			(at -1.5625 0 180)
 			(size 1.325 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -56614,7 +56629,7 @@
 			(uuid "70832638-c9c1-4595-ab39-5e1d52f75bb3")
 		)
 		(pad "2" smd roundrect
-			(at 1.5625 0)
+			(at 1.5625 0 180)
 			(size 1.325 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -57061,12 +57076,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "cd67e4ea-4803-4e0f-b05f-80d6fe47706c")
-		(at 125.5625 510.3)
+		(at 68.75 109.75)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C9"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "2aedba81-6dea-4210-bffc-7e4fed2c861e")
 			(effects
 				(font
@@ -57076,8 +57092,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at -4.75 0 0)
+			(layer "F.SilkS")
 			(uuid "f55e170c-df4c-4101-ab09-0f9837cbc5a5")
 			(effects
 				(font
@@ -59049,12 +59065,13 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "d93a5a88-359e-48be-8440-92ea2a39da6e")
-		(at 125.5625 503.6)
+		(at 293.75 72.75 180)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C7"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "c4c5cb02-a933-4165-ac2e-24d84de9cf83")
 			(effects
 				(font
@@ -59064,8 +59081,8 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
+			(at 5.0625 0 0)
+			(layer "F.SilkS")
 			(uuid "9143c963-b784-4229-95ca-c2fd3efb52e6")
 			(effects
 				(font
@@ -59104,16 +59121,6 @@
 		(sheetfile "leds.kicad_sch")
 		(attr smd)
 		(fp_line
-			(start -0.711252 -0.91)
-			(end 0.711252 -0.91)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "e12db1c7-1b49-4a7d-ab6b-caeab64df0ca")
-		)
-		(fp_line
 			(start -0.711252 0.91)
 			(end 0.711252 0.91)
 			(stroke
@@ -59122,6 +59129,16 @@
 			)
 			(layer "F.SilkS")
 			(uuid "5152d13d-dcf3-46ad-a575-e4c825e4d050")
+		)
+		(fp_line
+			(start -0.711252 -0.91)
+			(end 0.711252 -0.91)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e12db1c7-1b49-4a7d-ab6b-caeab64df0ca")
 		)
 		(fp_rect
 			(start -2.48 -1.15)
@@ -59157,7 +59174,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -1.5625 0)
+			(at -1.5625 0 180)
 			(size 1.325 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -59166,7 +59183,7 @@
 			(uuid "5cb26340-6ede-4f1c-aa76-81bf0332ebdf")
 		)
 		(pad "2" smd roundrect
-			(at 1.5625 0)
+			(at 1.5625 0 180)
 			(size 1.325 1.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.188679)
@@ -60331,13 +60348,14 @@
 	(footprint "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "db8971c2-dfe6-4092-a5d1-48734be423d1")
-		(at 192.5225 433.89)
+		(at 106.25 60.75)
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C68"
 			(at 0 -1.85 0)
 			(layer "F.SilkS")
-			(uuid "d3e5ce9e-6834-4f7e-8cd7-05d7014746ab")
+			(hide yes)
+			(uuid "ce938131-b90c-482a-972c-6d134ca18fb8")
 			(effects
 				(font
 					(size 1 1)
@@ -60346,9 +60364,9 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
-			(layer "F.Fab")
-			(uuid "e73f7a35-bdfa-47d6-a7cb-2aedb18f052d")
+			(at -5 0 0)
+			(layer "F.SilkS")
+			(uuid "105a2082-3921-4942-9b94-03fd60893a7a")
 			(effects
 				(font
 					(size 1 1)
@@ -60360,7 +60378,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "899073ed-2fb8-4246-b039-9fddfed6dcd7")
+			(uuid "ccafb718-26aa-49d5-b9b8-4885429c43b7")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -60372,7 +60390,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "38151282-f95f-4ee9-8703-391da4c8241b")
+			(uuid "bd454779-8679-4c9c-860f-31a824b1bad6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -60778,11 +60796,11 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "F.Cu")
 		(uuid "dec25f8e-915b-43e2-a1c0-0a9d4ae2792b")
-		(at 191.9725 490.19)
+		(at 256.25 63.75)
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U6"
-			(at 0 -2.4 0)
+			(at -3.5 0 0)
 			(layer "F.SilkS")
 			(uuid "f6c65e55-845f-4909-8fd1-5c7882187f22")
 			(effects
@@ -60793,7 +60811,7 @@
 			)
 		)
 		(property "Value" "DRV5033A"
-			(at 0 2.4 0)
+			(at 6.25 0 0)
 			(layer "F.Fab")
 			(uuid "658c6e81-6861-4384-97b0-224235d78ac3")
 			(effects
@@ -62072,11 +62090,11 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "F.Cu")
 		(uuid "e6582c77-f71d-44c6-a59e-6f4ab6f4d1ac")
-		(at 196.8825 467.94)
+		(at 68.75 100.75)
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U9"
-			(at 0 -2.4 0)
+			(at -3.25 0 0)
 			(layer "F.SilkS")
 			(uuid "bbbc6cea-6e18-4426-a749-6463e116cab4")
 			(effects
@@ -62087,7 +62105,7 @@
 			)
 		)
 		(property "Value" "DRV5033A"
-			(at 0 2.4 0)
+			(at 6.25 0 0)
 			(layer "F.Fab")
 			(uuid "c5728c7a-26a1-4ecf-8a4c-6770caf537a2")
 			(effects
@@ -63783,7 +63801,7 @@
 		(descr "5.0mm x 5.0mm Addressable RGB LED NeoPixel, https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf")
 		(tags "LED RGB NeoPixel PLCC-4 5050")
 		(property "Reference" "D7"
-			(at 0 0 0)
+			(at 4.95 -0.1 0)
 			(layer "F.SilkS")
 			(uuid "9735f410-53ae-4cf9-96fa-e35139989775")
 			(effects
@@ -63794,7 +63812,7 @@
 			)
 		)
 		(property "Value" "WS2812B"
-			(at 0 4 0)
+			(at -7.55 -0.1 0)
 			(layer "F.Fab")
 			(uuid "0ca345d7-db1d-4f6e-a173-59ec1daeaf49")
 			(effects
@@ -65650,11 +65668,11 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "F.Cu")
 		(uuid "f0637c1d-5578-4810-9a96-4b23e108fe60")
-		(at 196.8825 472.39)
+		(at 106.25 100.75)
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "U10"
-			(at 0 -2.4 0)
+			(at -4 0 0)
 			(layer "F.SilkS")
 			(uuid "b8b7dac4-cc56-46a8-82c7-157bf66b71d3")
 			(effects
@@ -65665,7 +65683,7 @@
 			)
 		)
 		(property "Value" "DRV5033A"
-			(at 0 2.4 0)
+			(at 6 0 0)
 			(layer "F.Fab")
 			(uuid "e354280e-2383-4bf8-80ed-04dc85305428")
 			(effects
