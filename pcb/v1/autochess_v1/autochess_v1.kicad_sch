@@ -3547,7 +3547,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0eaed78b-ee19-41fb-ad8a-a8263f75a3d6")
-		(property "Reference" "J3"
+		(property "Reference" "J2"
 			(at 109.22 147.3199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3641,7 +3641,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
-					(reference "J3")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -5448,7 +5448,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9aeeb79b-6722-4362-a643-0e609ea51883")
-		(property "Reference" "J2"
+		(property "Reference" "J9"
 			(at 36.83 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5510,7 +5510,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
-					(reference "J2")
+					(reference "J9")
 					(unit 1)
 				)
 			)
@@ -5768,7 +5768,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bc90f5a6-fc3d-4b86-abe9-8b6a94f44562")
-		(property "Reference" "J5"
+		(property "Reference" "J4"
 			(at 184.15 147.3199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5862,7 +5862,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
-					(reference "J5")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -6277,7 +6277,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f168144b-8bf6-4908-9ed6-1fc6b16e7e89")
-		(property "Reference" "J4"
+		(property "Reference" "J3"
 			(at 146.05 147.3199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6371,7 +6371,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
-					(reference "J4")
+					(reference "J3")
 					(unit 1)
 				)
 			)

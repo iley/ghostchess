@@ -8054,7 +8054,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "041eb97f-939c-4f5d-a1f9-e2921ff364d2")
-		(property "Reference" "C99"
+		(property "Reference" "C97"
 			(at 53.594 204.724 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8118,7 +8118,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C99")
+					(reference "C97")
 					(unit 1)
 				)
 			)
@@ -8221,7 +8221,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "04f313da-ddc2-4715-8b88-51918ab27262")
-		(property "Reference" "C111"
+		(property "Reference" "C109"
 			(at 137.414 204.724 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8285,7 +8285,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C111")
+					(reference "C109")
 					(unit 1)
 				)
 			)
@@ -8303,7 +8303,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "06047fd0-7bda-4882-844e-36a1b7bafe51")
-		(property "Reference" "C89"
+		(property "Reference" "C87"
 			(at 137.414 129.794 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8367,7 +8367,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C89")
+					(reference "C87")
 					(unit 1)
 				)
 			)
@@ -8385,7 +8385,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "07a832e1-4298-4574-80f0-295378362778")
-		(property "Reference" "C79"
+		(property "Reference" "C77"
 			(at 165.354 92.964 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8449,7 +8449,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C79")
+					(reference "C77")
 					(unit 1)
 				)
 			)
@@ -8627,7 +8627,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0caab38a-d8cc-456b-9f5d-7a9699f6fbef")
-		(property "Reference" "C84"
+		(property "Reference" "C82"
 			(at 53.594 166.624 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8691,7 +8691,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C84")
+					(reference "C82")
 					(unit 1)
 				)
 			)
@@ -8970,7 +8970,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "114122d0-9848-4195-9c3f-2df4eccc68e3")
-		(property "Reference" "C71"
+		(property "Reference" "C69"
 			(at 165.354 56.134 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9034,7 +9034,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C71")
+					(reference "C69")
 					(unit 1)
 				)
 			)
@@ -9225,7 +9225,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "158e6dd5-8237-431d-9450-00bf53d0ff94")
-		(property "Reference" "C126"
+		(property "Reference" "C124"
 			(at 221.234 315.214 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9289,7 +9289,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C126")
+					(reference "C124")
 					(unit 1)
 				)
 			)
@@ -9307,7 +9307,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "15cdfa7b-6ed7-4ede-b259-8a0b405c3fa6")
-		(property "Reference" "C117"
+		(property "Reference" "C115"
 			(at 165.354 278.384 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9371,7 +9371,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C117")
+					(reference "C115")
 					(unit 1)
 				)
 			)
@@ -9389,7 +9389,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "16631388-3f8a-4f83-8860-f883c94f4a09")
-		(property "Reference" "C109"
+		(property "Reference" "C107"
 			(at 109.474 278.384 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9453,7 +9453,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C109")
+					(reference "C107")
 					(unit 1)
 				)
 			)
@@ -9804,7 +9804,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1bbfbde8-2921-4d73-8fb0-1f44e62f9d58")
-		(property "Reference" "C91"
+		(property "Reference" "C89"
 			(at 165.354 129.794 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9868,7 +9868,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C91")
+					(reference "C89")
 					(unit 1)
 				)
 			)
@@ -10042,7 +10042,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1e539301-2f0c-4e9d-9621-356014d3ec86")
-		(property "Reference" "C93"
+		(property "Reference" "C91"
 			(at 193.294 129.794 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10106,7 +10106,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C93")
+					(reference "C91")
 					(unit 1)
 				)
 			)
@@ -10365,7 +10365,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2638cb5a-d370-4f11-a89c-bf28c061abdf")
-		(property "Reference" "C122"
+		(property "Reference" "C120"
 			(at 193.294 315.214 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10429,7 +10429,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C122")
+					(reference "C120")
 					(unit 1)
 				)
 			)
@@ -10447,7 +10447,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "266ec77c-7c51-4da0-9f8e-e0f9aa4ee21e")
-		(property "Reference" "C85"
+		(property "Reference" "C83"
 			(at 81.534 129.794 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10511,7 +10511,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C85")
+					(reference "C83")
 					(unit 1)
 				)
 			)
@@ -10529,7 +10529,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "268766bf-9993-4c90-8d41-378017f56012")
-		(property "Reference" "C119"
+		(property "Reference" "C117"
 			(at 193.294 204.724 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10593,7 +10593,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C119")
+					(reference "C117")
 					(unit 1)
 				)
 			)
@@ -10696,7 +10696,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2ae4325f-2d73-47a5-923b-4f2a3d6b1b48")
-		(property "Reference" "C90"
+		(property "Reference" "C88"
 			(at 137.414 166.624 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10760,7 +10760,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C90")
+					(reference "C88")
 					(unit 1)
 				)
 			)
@@ -10856,7 +10856,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2c2bbaf6-5427-495a-86dc-89748d27b410")
-		(property "Reference" "C110"
+		(property "Reference" "C108"
 			(at 109.474 315.214 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10920,7 +10920,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C110")
+					(reference "C108")
 					(unit 1)
 				)
 			)
@@ -11023,7 +11023,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2e13dc81-8407-4781-bc5c-d267ddd811aa")
-		(property "Reference" "C96"
+		(property "Reference" "C94"
 			(at 221.234 166.624 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11087,7 +11087,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C96")
+					(reference "C94")
 					(unit 1)
 				)
 			)
@@ -11261,7 +11261,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "315d5f94-4abc-4beb-ad8a-c0e6e7029a33")
-		(property "Reference" "C115"
+		(property "Reference" "C113"
 			(at 165.354 204.724 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11325,7 +11325,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C115")
+					(reference "C113")
 					(unit 1)
 				)
 			)
@@ -11506,7 +11506,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "34dd3516-41e5-4a5e-93da-f3a39a0d515d")
-		(property "Reference" "C120"
+		(property "Reference" "C118"
 			(at 193.294 241.554 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11570,7 +11570,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C120")
+					(reference "C118")
 					(unit 1)
 				)
 			)
@@ -12074,7 +12074,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3e899622-c794-4c03-9739-34993b5bc226")
-		(property "Reference" "C86"
+		(property "Reference" "C84"
 			(at 81.534 166.624 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12138,7 +12138,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C86")
+					(reference "C84")
 					(unit 1)
 				)
 			)
@@ -12156,7 +12156,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3e91ebdc-d5e2-4728-aafa-df2731707a33")
-		(property "Reference" "C116"
+		(property "Reference" "C114"
 			(at 165.354 241.554 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12220,7 +12220,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C116")
+					(reference "C114")
 					(unit 1)
 				)
 			)
@@ -12394,7 +12394,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "40e2d522-f426-4d47-8ca1-49e149cbeb5b")
-		(property "Reference" "C78"
+		(property "Reference" "C76"
 			(at 137.414 92.964 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12458,7 +12458,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C78")
+					(reference "C76")
 					(unit 1)
 				)
 			)
@@ -12710,7 +12710,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "46aff1fd-f654-4d81-897c-3a1d441d9549")
-		(property "Reference" "C68"
+		(property "Reference" "C66"
 			(at 81.534 56.134 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12774,7 +12774,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C68")
+					(reference "C66")
 					(unit 1)
 				)
 			)
@@ -12870,7 +12870,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "48bc3efa-63ea-48e9-b6bb-f878c1501504")
-		(property "Reference" "C81"
+		(property "Reference" "C79"
 			(at 221.234 92.964 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12934,7 +12934,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C81")
+					(reference "C79")
 					(unit 1)
 				)
 			)
@@ -13037,7 +13037,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4a4e6033-3c38-4b9e-b9d1-234e8bdb8206")
-		(property "Reference" "C77"
+		(property "Reference" "C75"
 			(at 109.474 92.964 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13101,7 +13101,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C77")
+					(reference "C75")
 					(unit 1)
 				)
 			)
@@ -13360,7 +13360,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4f1d98e2-7107-4009-959d-b73d84c7c0da")
-		(property "Reference" "C75"
+		(property "Reference" "C73"
 			(at 53.594 92.964 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13424,7 +13424,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C75")
+					(reference "C73")
 					(unit 1)
 				)
 			)
@@ -13442,7 +13442,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4f7bbc24-be38-45e1-bd91-622164eb6780")
-		(property "Reference" "C121"
+		(property "Reference" "C119"
 			(at 193.294 278.384 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13506,7 +13506,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C121")
+					(reference "C119")
 					(unit 1)
 				)
 			)
@@ -14353,7 +14353,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f9581e8-0ad7-41bb-9bbb-5890d7e23a65")
-		(property "Reference" "C128"
+		(property "Reference" "C126"
 			(at 247.904 241.554 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14417,7 +14417,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C128")
+					(reference "C126")
 					(unit 1)
 				)
 			)
@@ -14598,7 +14598,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "662e86aa-a345-4bab-a5e4-7bf12975d69f")
-		(property "Reference" "C103"
+		(property "Reference" "C101"
 			(at 81.534 204.724 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14662,7 +14662,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C103")
+					(reference "C101")
 					(unit 1)
 				)
 			)
@@ -14850,7 +14850,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6bd9f843-97f0-443f-8fea-d6ecc2958980")
-		(property "Reference" "C72"
+		(property "Reference" "C70"
 			(at 193.294 56.134 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14914,7 +14914,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C72")
+					(reference "C70")
 					(unit 1)
 				)
 			)
@@ -15017,7 +15017,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6ebce7dd-df25-4aa5-a4e6-74f9325f577a")
-		(property "Reference" "C113"
+		(property "Reference" "C111"
 			(at 137.414 278.384 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15081,7 +15081,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C113")
+					(reference "C111")
 					(unit 1)
 				)
 			)
@@ -15411,7 +15411,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7496aefd-fbf7-4f4d-b1ee-ad3b02b6017d")
-		(property "Reference" "C83"
+		(property "Reference" "C81"
 			(at 53.594 129.794 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15475,7 +15475,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C83")
+					(reference "C81")
 					(unit 1)
 				)
 			)
@@ -15648,7 +15648,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "755eaf54-4fa7-4201-9c9d-08159b30ad73")
-		(property "Reference" "C67"
+		(property "Reference" "C65"
 			(at 52.07 56.134 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15712,7 +15712,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C67")
+					(reference "C65")
 					(unit 1)
 				)
 			)
@@ -15985,7 +15985,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7895dc35-5c53-495c-a010-869be75b95c0")
-		(property "Reference" "C92"
+		(property "Reference" "C90"
 			(at 165.354 166.624 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16049,7 +16049,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C92")
+					(reference "C90")
 					(unit 1)
 				)
 			)
@@ -16383,7 +16383,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7f6a1b4f-c00d-4813-abae-784c83634e13")
-		(property "Reference" "C102"
+		(property "Reference" "C100"
 			(at 53.594 315.214 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16447,7 +16447,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C102")
+					(reference "C100")
 					(unit 1)
 				)
 			)
@@ -16872,7 +16872,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "889a4df1-cc7b-4138-aa26-f9bbced55303")
-		(property "Reference" "C88"
+		(property "Reference" "C86"
 			(at 109.474 166.624 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16936,7 +16936,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C88")
+					(reference "C86")
 					(unit 1)
 				)
 			)
@@ -17203,7 +17203,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8b2d66de-1b2a-4dbf-a259-4526db08ddd3")
-		(property "Reference" "C73"
+		(property "Reference" "C71"
 			(at 221.234 56.134 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17267,7 +17267,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C73")
+					(reference "C71")
 					(unit 1)
 				)
 			)
@@ -17448,7 +17448,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8ca5f42e-5e2c-4b06-8848-91786c3f14cb")
-		(property "Reference" "C98"
+		(property "Reference" "C96"
 			(at 247.904 166.624 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17512,7 +17512,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C98")
+					(reference "C96")
 					(unit 1)
 				)
 			)
@@ -17778,7 +17778,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8ee7a69b-af54-4553-a07f-ef84875143ab")
-		(property "Reference" "C104"
+		(property "Reference" "C102"
 			(at 81.534 241.554 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17842,7 +17842,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C104")
+					(reference "C102")
 					(unit 1)
 				)
 			)
@@ -18016,7 +18016,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "90d0cbec-f455-4d41-ac80-3446b9ffee3c")
-		(property "Reference" "C127"
+		(property "Reference" "C125"
 			(at 247.904 204.724 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18080,7 +18080,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C127")
+					(reference "C125")
 					(unit 1)
 				)
 			)
@@ -18512,7 +18512,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9400f267-05d7-425f-a2b9-9797bb8e9479")
-		(property "Reference" "C105"
+		(property "Reference" "C103"
 			(at 81.534 278.384 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18576,7 +18576,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C105")
+					(reference "C103")
 					(unit 1)
 				)
 			)
@@ -18594,7 +18594,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "94d1c8bb-63a7-49fd-83a3-c7b5be80bdb7")
-		(property "Reference" "C94"
+		(property "Reference" "C92"
 			(at 193.294 166.624 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18658,7 +18658,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C94")
+					(reference "C92")
 					(unit 1)
 				)
 			)
@@ -18676,7 +18676,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "99516c62-c7b4-429a-b0d0-bf91c9ee6502")
-		(property "Reference" "C87"
+		(property "Reference" "C85"
 			(at 109.474 129.794 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18740,7 +18740,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C87")
+					(reference "C85")
 					(unit 1)
 				)
 			)
@@ -19495,7 +19495,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "abb2ab8e-0767-45e2-9ae4-71f42dd0dd59")
-		(property "Reference" "C129"
+		(property "Reference" "C127"
 			(at 247.904 278.384 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19559,7 +19559,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C129")
+					(reference "C127")
 					(unit 1)
 				)
 			)
@@ -20233,7 +20233,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b268d486-888f-47e5-bfd2-1886319eb2bc")
-		(property "Reference" "C124"
+		(property "Reference" "C122"
 			(at 221.234 241.554 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20297,7 +20297,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C124")
+					(reference "C122")
 					(unit 1)
 				)
 			)
@@ -20712,7 +20712,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b8a5c96b-c28d-4533-ab40-04d75328a710")
-		(property "Reference" "C80"
+		(property "Reference" "C78"
 			(at 193.294 92.964 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20776,7 +20776,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C80")
+					(reference "C78")
 					(unit 1)
 				)
 			)
@@ -20794,7 +20794,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b9e231fe-9bed-406e-bcff-41545404d099")
-		(property "Reference" "C97"
+		(property "Reference" "C95"
 			(at 247.904 129.794 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20858,7 +20858,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C97")
+					(reference "C95")
 					(unit 1)
 				)
 			)
@@ -21358,7 +21358,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bf2a0dcb-0fc7-426f-8dc7-b960a7a54214")
-		(property "Reference" "C95"
+		(property "Reference" "C93"
 			(at 221.234 129.794 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21422,7 +21422,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C95")
+					(reference "C93")
 					(unit 1)
 				)
 			)
@@ -21518,7 +21518,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c00958af-1125-4227-bc66-fa45077c2c1e")
-		(property "Reference" "C100"
+		(property "Reference" "C98"
 			(at 53.594 241.554 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21582,7 +21582,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C100")
+					(reference "C98")
 					(unit 1)
 				)
 			)
@@ -22092,7 +22092,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c589f030-f597-402e-b4db-3266489324de")
-		(property "Reference" "C118"
+		(property "Reference" "C116"
 			(at 165.354 315.214 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22156,7 +22156,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C118")
+					(reference "C116")
 					(unit 1)
 				)
 			)
@@ -22564,7 +22564,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cc4ce1d4-5bd0-49ef-8088-f3808bbb56ba")
-		(property "Reference" "C130"
+		(property "Reference" "C128"
 			(at 247.904 315.214 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22628,7 +22628,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C130")
+					(reference "C128")
 					(unit 1)
 				)
 			)
@@ -22731,7 +22731,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cd1a9809-7d15-47a5-9969-2a0e8a8dfe90")
-		(property "Reference" "C114"
+		(property "Reference" "C112"
 			(at 137.414 315.214 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22795,7 +22795,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C114")
+					(reference "C112")
 					(unit 1)
 				)
 			)
@@ -22891,7 +22891,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cebb8e18-1d7f-4c9f-af1a-ea20a14a1037")
-		(property "Reference" "C101"
+		(property "Reference" "C99"
 			(at 53.594 278.384 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22955,7 +22955,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C101")
+					(reference "C99")
 					(unit 1)
 				)
 			)
@@ -22973,7 +22973,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cf7636a7-aad0-4bab-96ef-a064d8585ab8")
-		(property "Reference" "C69"
+		(property "Reference" "C67"
 			(at 109.474 56.134 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23037,7 +23037,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C69")
+					(reference "C67")
 					(unit 1)
 				)
 			)
@@ -23055,7 +23055,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cfd4ac46-f357-48f2-a84b-99a28a77338a")
-		(property "Reference" "C74"
+		(property "Reference" "C72"
 			(at 247.904 56.134 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23119,7 +23119,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C74")
+					(reference "C72")
 					(unit 1)
 				)
 			)
@@ -23293,7 +23293,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d1ff516c-de75-41f2-8df9-74b5cf586aa2")
-		(property "Reference" "C107"
+		(property "Reference" "C105"
 			(at 109.474 204.724 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23357,7 +23357,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C107")
+					(reference "C105")
 					(unit 1)
 				)
 			)
@@ -23701,7 +23701,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d6794d8d-c5ab-4f55-8f86-d6f3727f091c")
-		(property "Reference" "C123"
+		(property "Reference" "C121"
 			(at 221.234 204.724 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23765,7 +23765,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C123")
+					(reference "C121")
 					(unit 1)
 				)
 			)
@@ -24038,7 +24038,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e004fbc0-096f-4baa-800c-9af0b2cf883e")
-		(property "Reference" "C108"
+		(property "Reference" "C106"
 			(at 109.474 241.554 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24102,7 +24102,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C108")
+					(reference "C106")
 					(unit 1)
 				)
 			)
@@ -24939,7 +24939,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e9887dbd-850a-4f9d-a6a6-3a9d634b111f")
-		(property "Reference" "C125"
+		(property "Reference" "C123"
 			(at 221.234 278.384 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25003,7 +25003,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C125")
+					(reference "C123")
 					(unit 1)
 				)
 			)
@@ -25021,7 +25021,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e9d03044-5ef3-4703-9ecf-02192695d9dc")
-		(property "Reference" "C70"
+		(property "Reference" "C68"
 			(at 137.414 56.134 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25085,7 +25085,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C70")
+					(reference "C68")
 					(unit 1)
 				)
 			)
@@ -25351,7 +25351,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eeac6305-880e-422b-9821-c813fd3f7b29")
-		(property "Reference" "C76"
+		(property "Reference" "C74"
 			(at 81.534 92.964 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25415,7 +25415,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C76")
+					(reference "C74")
 					(unit 1)
 				)
 			)
@@ -25688,7 +25688,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f4a509be-aab6-40a4-a627-94073aa7554a")
-		(property "Reference" "C112"
+		(property "Reference" "C110"
 			(at 137.414 241.554 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25752,7 +25752,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C112")
+					(reference "C110")
 					(unit 1)
 				)
 			)
@@ -25858,7 +25858,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa9edb47-a98e-4b21-8751-5f87d091b151")
-		(property "Reference" "C106"
+		(property "Reference" "C104"
 			(at 81.534 315.214 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25922,7 +25922,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C106")
+					(reference "C104")
 					(unit 1)
 				)
 			)
@@ -26181,7 +26181,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ff2c4229-2d79-442b-82f8-b89f5f1b6ab5")
-		(property "Reference" "C82"
+		(property "Reference" "C80"
 			(at 247.904 92.964 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26245,7 +26245,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e/84cfae0a-cf76-418d-b87e-613eb74c6d8a"
-					(reference "C82")
+					(reference "C80")
 					(unit 1)
 				)
 			)
