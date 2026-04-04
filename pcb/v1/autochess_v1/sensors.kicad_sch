@@ -15639,7 +15639,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 58.42 58.42 0)
+		(at 58.42 58.42 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15647,32 +15647,31 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "755eaf54-4fa7-4201-9c9d-08159b30ad73")
 		(property "Reference" "C67"
-			(at 53.594 56.134 0)
+			(at 52.07 56.134 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 52.324 60.96 0)
+			(at 51.562 61.214 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
-			(at 59.3852 62.23 0)
+			(at 57.4548 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

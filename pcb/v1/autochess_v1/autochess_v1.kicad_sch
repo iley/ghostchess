@@ -5686,7 +5686,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b6f5b1cc-0e05-4f6f-a7b0-078dcbfa1ac1")
-		(property "Reference" "C66"
+		(property "Reference" "C134"
 			(at 102.87 59.6899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5750,7 +5750,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
-					(reference "C66")
+					(reference "C134")
 					(unit 1)
 				)
 			)
@@ -5880,7 +5880,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c54f7b1c-5140-484d-b806-f14f11be626f")
-		(property "Reference" "C65"
+		(property "Reference" "C133"
 			(at 88.9 59.6899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5944,7 +5944,7 @@
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
-					(reference "C65")
+					(reference "C133")
 					(unit 1)
 				)
 			)
