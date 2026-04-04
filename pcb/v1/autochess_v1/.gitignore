@@ -27,3 +27,5 @@ fp-info-cache
 *.3dshapes/
 3d-cache/
 .history
+.~lock.*
+.claude
