@@ -467,7 +467,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/c54f7b1c-5140-484d-b806-f14f11be626f")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -626,7 +626,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/f168144b-8bf6-4908-9ed6-1fc6b16e7e89")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -1614,7 +1614,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/4a91e2f9-b800-4a06-9959-7a299c9b92fd")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -6383,7 +6383,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/33f4438d-8ac5-4369-a9d8-1d090679f4a0")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -7275,7 +7275,7 @@
 		)
 		(path "/0c7c670a-a744-44a7-887c-55046bd7ddca")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -9078,7 +9078,7 @@
 		(property ki_fp_filters "SOT?223*TabPin2*")
 		(path "/e0adde74-2dd6-4f63-af73-4ca7d1ae264f")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -17631,7 +17631,7 @@
 		(property ki_fp_filters "TO-???* *_Diode_* *SingleDiode* D_*")
 		(path "/5b98c003-c7ca-4daf-8657-f25e7c869069")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -18935,7 +18935,7 @@
 		(property ki_fp_filters "*polyfuse* *PTC*")
 		(path "/b0863a4a-dcee-4e65-98a4-bd32653d0d8e")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -19852,7 +19852,7 @@
 		(property ki_fp_filters "SolderJumper*Bridged*")
 		(path "/36ecd8e2-b31c-4a51-b597-65540fba8bf2")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -20749,7 +20749,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/bc90f5a6-fc3d-4b86-abe9-8b6a94f44562")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -23665,7 +23665,7 @@
 		(property ki_fp_filters "R_*")
 		(path "/630b876c-a072-4d60-ac9b-7067d5353cc3")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -36375,7 +36375,7 @@
 		(property ki_fp_filters "BarrelJack*")
 		(path "/9aeeb79b-6722-4362-a643-0e609ea51883")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -42481,7 +42481,7 @@
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/0eaed78b-ee19-41fb-ad8a-a8263f75a3d6")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -45405,7 +45405,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/6c181786-4e3d-4ad2-b0ac-7fe6e453d6e5")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -66663,7 +66663,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/b6f5b1cc-0e05-4f6f-a7b0-078dcbfa1ac1")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")
@@ -69003,7 +69003,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/11f53985-bf5f-4724-b7e8-7874dda60e31")
 		(sheetname "/")
-		(sheetfile "autochess_v1.kicad_sch")
+		(sheetfile "ghostchess_v1.kicad_sch")
 		(units
 			(unit
 				(name "A")

@@ -1,5 +1,5 @@
 (fp_lib_table
 	(version 7)
-	(lib (name "Autochess") (type "KiCad") (uri "/Users/ilya/projects/autochess/pcb/lib/footprints/Autochess.pretty") (options "") (descr ""))
+	(lib (name "Ghostchess") (type "KiCad") (uri "/Users/ilya/projects/ghostchess/pcb/lib/footprints/Ghostchess.pretty") (options "") (descr ""))
 	(lib (name "easyeda2kicad") (type "KiCad") (uri "${KIPRJMOD}/../lib/easyeda2kicad.pretty") (options "") (descr ""))
 )

@@ -207,7 +207,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/5e2cbeae-1037-4e38-b11b-ceef7fc7e383")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -406,7 +406,7 @@
 		(property ki_fp_filters "SOT?23*")
 		(path "/c4f7146b-ba01-4156-8bbf-eaca2f00f1d3")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 0 -1.56)
@@ -661,7 +661,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/e98cf0b5-84b5-447b-aed9-afa4447e2e6c")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -860,7 +860,7 @@
 		(property ki_fp_filters "SOT?23*")
 		(path "/394f3bcf-ba48-4bb8-800a-7599444d92aa")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 0 -1.56)
@@ -1115,7 +1115,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/9bfc355c-a4b9-43c1-964c-1f301153e322")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -1316,7 +1316,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/045253c2-c14c-4a3f-83df-33faead5f683")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -1517,7 +1517,7 @@
 		(property ki_fp_filters "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*")
 		(path "/a084f9b5-006e-4e7c-9e1c-022c393ac178")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -3.5 -2.75)
@@ -1823,7 +1823,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/91f7f6ad-ec0d-49b2-9dc9-930ee20184df")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -2122,7 +2122,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/3f05566d-e06e-4128-a240-11842bebe886")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -2421,7 +2421,7 @@
 		(property ki_fp_filters "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*")
 		(path "/23e3f7e6-385a-4ca2-b318-11903bdd5700")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -3.5 -2.75)
@@ -2725,7 +2725,7 @@
 		(property ki_fp_filters "SOT?23*")
 		(path "/2a8ff731-06e0-4edb-96ff-36a183f6f077")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 0 -1.56)
@@ -3078,7 +3078,7 @@
 		(property ki_fp_filters "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*")
 		(path "/f4dd8f88-06b7-4b95-9501-7c8f3af20d40")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -3.5 -2.75)
@@ -3384,7 +3384,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/eea09f95-d9ef-4a58-a616-5ce996044bf6")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -3583,7 +3583,7 @@
 		(property ki_fp_filters "SOT?23*")
 		(path "/7cdcfaf8-bffe-41c6-86a4-d44345d1ecbe")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start 0 -1.56)
@@ -3838,7 +3838,7 @@
 		(property ki_fp_filters "C_*")
 		(path "/b3620972-412b-4bb7-8e48-916cff9c86c8")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -0.261252 -0.735)
@@ -4137,7 +4137,7 @@
 		(property ki_fp_filters "LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*")
 		(path "/bee6b130-be7d-45fb-bc0f-0263243a7959")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr smd)
 		(fp_line
 			(start -3.5 -2.75)
@@ -4444,7 +4444,7 @@
 		(property ki_fp_filters "Arduino*Nano*")
 		(path "/b5338779-4458-43be-82a2-2328b7f44bc7")
 		(sheetname "/")
-		(sheetfile "autochess_proto.kicad_sch")
+		(sheetfile "ghostchess_proto.kicad_sch")
 		(attr through_hole)
 		(fp_line
 			(start -1.4 -3.94)

@@ -2078,7 +2078,7 @@
 			(uuid "f53dbce8-328d-495a-aaa5-863904c72a36")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR022")
 					(unit 1)
@@ -2154,7 +2154,7 @@
 			(uuid "8163598f-65fc-4401-823f-235f09ee49fe")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "D3")
 					(unit 1)
@@ -2226,7 +2226,7 @@
 			(uuid "78facf98-a5bd-456a-ba86-36aae342c4ed")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "U4")
 					(unit 1)
@@ -2292,7 +2292,7 @@
 			(uuid "5ef548c5-1c45-4c92-97c2-a7c23d042ae1")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR016")
 					(unit 1)
@@ -2364,7 +2364,7 @@
 			(uuid "aa50bc96-d33e-4d87-94ba-92b8098f26a2")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "U2")
 					(unit 1)
@@ -2434,7 +2434,7 @@
 			(uuid "ea4a1c1e-0c79-4cad-8d48-f9798e927f5e")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "C4")
 					(unit 1)
@@ -2500,7 +2500,7 @@
 			(uuid "939892bb-4fc0-4f4b-b25f-68ac2c95807f")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR011")
 					(unit 1)
@@ -2697,7 +2697,7 @@
 			(uuid "1a9840ef-d5b6-4753-a0ed-74c9116f6900")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR012")
 					(unit 1)
@@ -2829,7 +2829,7 @@
 			(uuid "0ac6df1f-4ceb-415f-9ab9-a21c58e85bb8")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR08")
 					(unit 1)
@@ -2899,7 +2899,7 @@
 			(uuid "dbd12390-924b-4edc-8614-d5655ad2cfc0")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "C6")
 					(unit 1)
@@ -2965,7 +2965,7 @@
 			(uuid "22426c29-a9ad-49a9-8e5a-79325f93dee2")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR015")
 					(unit 1)
@@ -3031,7 +3031,7 @@
 			(uuid "7d86286e-2923-459a-903d-143d4355c5b5")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR02")
 					(unit 1)
@@ -3103,7 +3103,7 @@
 			(uuid "885ea57b-3e92-4ba4-881e-e8de38f793b6")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "U3")
 					(unit 1)
@@ -3235,7 +3235,7 @@
 			(uuid "a771e69c-d7ff-48a4-b843-46b0e189d58f")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR013")
 					(unit 1)
@@ -3305,7 +3305,7 @@
 			(uuid "94e8bf9c-6a0d-44ed-a5aa-66023509e494")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "C8")
 					(unit 1)
@@ -3371,7 +3371,7 @@
 			(uuid "b3ffebb0-6227-4e5d-983a-b25133b97292")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR020")
 					(unit 1)
@@ -3437,7 +3437,7 @@
 			(uuid "ad6428cf-9f79-4edc-9b92-6b1814b68126")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR07")
 					(unit 1)
@@ -3503,7 +3503,7 @@
 			(uuid "61c6ec2c-052b-4dec-9762-68a26874e305")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR019")
 					(unit 1)
@@ -3573,7 +3573,7 @@
 			(uuid "6ae11e3d-ff3a-471f-a49b-73abad4d7ddc")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "C3")
 					(unit 1)
@@ -3649,7 +3649,7 @@
 			(uuid "3541232b-975e-4713-8756-07afbdb61970")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "D4")
 					(unit 1)
@@ -3715,7 +3715,7 @@
 			(uuid "1e9a16df-58e8-4c83-a0f6-1ec9dd023f90")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR018")
 					(unit 1)
@@ -3785,7 +3785,7 @@
 			(uuid "c6526ac0-c05d-4f18-b584-c9385c20000f")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "C7")
 					(unit 1)
@@ -4082,7 +4082,7 @@
 			(uuid "1272ce6c-2cf3-4ea8-a581-7ebb0306c185")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "D2")
 					(unit 1)
@@ -4220,7 +4220,7 @@
 			(uuid "8bad4b03-78b0-4383-8f9f-27caf3e11df4")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR010")
 					(unit 1)
@@ -4286,7 +4286,7 @@
 			(uuid "3c4037c9-82b6-4ece-9a2b-2b1f2c291c4e")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR09")
 					(unit 1)
@@ -4352,7 +4352,7 @@
 			(uuid "2c7ad131-762b-4ee2-90f1-2997c2c8c6cc")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR04")
 					(unit 1)
@@ -4418,7 +4418,7 @@
 			(uuid "233770a2-7a64-4134-8a02-60f0b4a4ac9a")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR03")
 					(unit 1)
@@ -4558,7 +4558,7 @@
 			(uuid "86e91d1d-d572-4760-9464-86817183d3e3")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "C2")
 					(unit 1)
@@ -4624,7 +4624,7 @@
 			(uuid "03615636-6e20-4467-93eb-48525ba0a9b0")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR014")
 					(unit 1)
@@ -4766,7 +4766,7 @@
 			(uuid "8fd3cd41-b02c-4584-9943-0eae54f98652")
 		)
 		(instances
-			(project "autochess_proto"
+			(project "ghostchess_proto"
 				(path "/a7e6d7c6-9fa7-4472-bcf7-3fe46f55134c"
 					(reference "#PWR017")
 					(unit 1)

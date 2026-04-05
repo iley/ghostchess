@@ -1,7 +1,7 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('KiCad electronic assembly'),'2;1');
-FILE_NAME('autochess_proto.step','2025-04-17T18:06:45',('Pcbnew'),(
+FILE_NAME('ghostchess_proto.step','2025-04-17T18:06:45',('Pcbnew'),(
     'Kicad'),'Open CASCADE STEP processor 7.8','KiCad to STEP converter'
   ,'Unknown');
 FILE_SCHEMA(('AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }'));
@@ -15,7 +15,7 @@ DATA;
 #4 = PRODUCT_DEFINITION_SHAPE('','',#5);
 #5 = PRODUCT_DEFINITION('design','',#6,#9);
 #6 = PRODUCT_DEFINITION_FORMATION('','',#7);
-#7 = PRODUCT('autochess_proto 1','autochess_proto 1','',(#8));
+#7 = PRODUCT('ghostchess_proto 1','ghostchess_proto 1','',(#8));
 #8 = PRODUCT_CONTEXT('',#2,'mechanical');
 #9 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #10 = SHAPE_REPRESENTATION('',(#11,#15,#19,#23,#27,#31,#35,#39,#43,#47,
@@ -5658,7 +5658,7 @@ SHAPE_REPRESENTATION_RELATIONSHIP() );
 #5407 = PRODUCT_DEFINITION_SHAPE('','',#5408);
 #5408 = PRODUCT_DEFINITION('design','',#5409,#5412);
 #5409 = PRODUCT_DEFINITION_FORMATION('','',#5410);
-#5410 = PRODUCT('autochess_proto_PCB','autochess_proto_PCB','',(#5411));
+#5410 = PRODUCT('ghostchess_proto_PCB','ghostchess_proto_PCB','',(#5411));
 #5411 = PRODUCT_CONTEXT('',#2,'mechanical');
 #5412 = PRODUCT_DEFINITION_CONTEXT('part definition',#2,'design');
 #5413 = ADVANCED_BREP_SHAPE_REPRESENTATION('',(#11,#5414),#6890);

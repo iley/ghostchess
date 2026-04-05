@@ -473,7 +473,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "autochess_v1.kicad_pro",
+    "filename": "ghostchess_v1.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -640,8 +640,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "autochess_v1.kicad_sch",
-        "name": "autochess_v1",
+        "filename": "ghostchess_v1.kicad_sch",
+        "name": "ghostchess_v1",
         "uuid": "3df8ff08-9f77-4f65-9fed-81b599c9e86e"
       }
     ],
@@ -651,7 +651,7 @@
   "sheets": [
     [
       "3df8ff08-9f77-4f65-9fed-81b599c9e86e",
-      "autochess_v1"
+      "ghostchess_v1"
     ],
     [
       "bbb3b9c6-6f2e-438b-8ed9-1a301d0a9170",

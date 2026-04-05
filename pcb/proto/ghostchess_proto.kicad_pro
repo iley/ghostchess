@@ -463,7 +463,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "autochess_proto.kicad_pro",
+    "filename": "ghostchess_proto.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -525,7 +525,7 @@
       "plot": "gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "autochess_proto.step",
+      "step": "ghostchess_proto.step",
       "svg": "",
       "vrml": ""
     },
