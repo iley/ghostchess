@@ -263,3 +263,11 @@ Q5,2N7002,SOT-23,54,-218.75,0,top
 Q6,2N7002,SOT-23,54,-256.25,0,top
 Q7,2N7002,SOT-23,54,-293.75,0,top
 Q8,2N7002,SOT-23,54,-331.25,0,top
+R2,10K,R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,54,-64.25,90,top
+R3,10K,R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,54,-101.75,90,top
+R4,10K,R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,54,-139.25,90,top
+R5,10K,R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,54,-176.75,90,top
+R6,10K,R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,54,-214.25,90,top
+R7,10K,R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,54,-251.75,90,top
+R8,10K,R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,54,-289.25,90,top
+R9,10K,R_1206_3216Metric_Pad1.30x1.75mm_HandSolder,54,-326.75,90,top
