@@ -9,7 +9,7 @@
 		(in_pos_files yes)
 		(duplicate_pin_numbers_are_jumpers no)
 		(property "Reference" "X"
-			(at 7.366 17.526 0)
+			(at 10.922 15.748 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -63,8 +63,8 @@
 		)
 		(symbol "ghostchess_daughter_board_0_1"
 			(rectangle
-				(start -16.51 21.59)
-				(end 16.51 -7.62)
+				(start -16.51 17.78)
+				(end 16.51 -17.78)
 				(stroke
 					(width 0)
 					(type default)
@@ -76,7 +76,7 @@
 		)
 		(symbol "ghostchess_daughter_board_1_1"
 			(pin power_in line
-				(at 0 -10.16 90)
+				(at -1.27 -20.32 90)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -94,7 +94,7 @@
 				)
 			)
 			(pin power_in line
-				(at -2.54 24.13 270)
+				(at -2.54 20.32 270)
 				(length 2.54)
 				(name "VCC"
 					(effects
@@ -112,7 +112,7 @@
 				)
 			)
 			(pin power_in line
-				(at 2.54 24.13 270)
+				(at 2.54 20.32 270)
 				(length 2.54)
 				(name "3V3"
 					(effects
@@ -130,7 +130,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 17.78 0)
+				(at -19.05 10.16 0)
 				(length 2.54)
 				(name "LED_DI"
 					(effects
@@ -148,7 +148,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 13.97 0)
+				(at -19.05 6.35 0)
 				(length 2.54)
 				(name "SENSOR_ON_1"
 					(effects
@@ -166,7 +166,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 11.43 0)
+				(at -19.05 3.81 0)
 				(length 2.54)
 				(name "SENSOR_ON_2"
 					(effects
@@ -184,7 +184,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 8.89 0)
+				(at -19.05 1.27 0)
 				(length 2.54)
 				(name "SENSOR_ON_3"
 					(effects
@@ -202,7 +202,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 6.35 0)
+				(at -19.05 -1.27 0)
 				(length 2.54)
 				(name "SENSOR_ON_4"
 					(effects
@@ -220,7 +220,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 3.81 0)
+				(at -19.05 -3.81 0)
 				(length 2.54)
 				(name "SENSOR_ON_5"
 					(effects
@@ -238,7 +238,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 1.27 0)
+				(at -19.05 -6.35 0)
 				(length 2.54)
 				(name "SENSOR_ON_6"
 					(effects
@@ -256,7 +256,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 -1.27 0)
+				(at -19.05 -8.89 0)
 				(length 2.54)
 				(name "SENSOR_ON_7"
 					(effects
@@ -274,7 +274,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 -3.81 0)
+				(at -19.05 -11.43 0)
 				(length 2.54)
 				(name "SENSOR_ON_8"
 					(effects
@@ -291,10 +291,10 @@
 					)
 				)
 			)
-			(pin output line
-				(at 19.05 13.97 180)
+			(pin power_in line
+				(at 1.27 -20.32 90)
 				(length 2.54)
-				(name "SENSOR_OUT_1"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -309,10 +309,10 @@
 					)
 				)
 			)
-			(pin output line
-				(at 19.05 11.43 180)
+			(pin no_connect line
+				(at 19.05 12.7 180)
 				(length 2.54)
-				(name "SENSOR_OUT_2"
+				(name "NC"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -327,10 +327,10 @@
 					)
 				)
 			)
-			(pin output line
-				(at 19.05 8.89 180)
+			(pin no_connect line
+				(at 19.05 10.16 180)
 				(length 2.54)
-				(name "SENSOR_OUT_3"
+				(name "NC"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -345,10 +345,10 @@
 					)
 				)
 			)
-			(pin output line
-				(at 19.05 6.35 180)
+			(pin no_connect line
+				(at 19.05 7.62 180)
 				(length 2.54)
-				(name "SENSOR_OUT_4"
+				(name "NC"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -364,9 +364,9 @@
 				)
 			)
 			(pin output line
-				(at 19.05 3.81 180)
+				(at 19.05 5.08 180)
 				(length 2.54)
-				(name "SENSOR_OUT_5"
+				(name "SENSOR_OUT_1"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -382,9 +382,9 @@
 				)
 			)
 			(pin output line
-				(at 19.05 1.27 180)
+				(at 19.05 2.54 180)
 				(length 2.54)
-				(name "SENSOR_OUT_6"
+				(name "SENSOR_OUT_2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -400,9 +400,9 @@
 				)
 			)
 			(pin output line
-				(at 19.05 -1.27 180)
+				(at 19.05 0 180)
 				(length 2.54)
-				(name "SENSOR_OUT_7"
+				(name "SENSOR_OUT_3"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -418,7 +418,79 @@
 				)
 			)
 			(pin output line
-				(at 19.05 -3.81 180)
+				(at 19.05 -2.54 180)
+				(length 2.54)
+				(name "SENSOR_OUT_4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "20"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 19.05 -5.08 180)
+				(length 2.54)
+				(name "SENSOR_OUT_5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "21"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 19.05 -7.62 180)
+				(length 2.54)
+				(name "SENSOR_OUT_6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "22"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 19.05 -10.16 180)
+				(length 2.54)
+				(name "SENSOR_OUT_7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "23"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 19.05 -12.7 180)
 				(length 2.54)
 				(name "SENSOR_OUT_8"
 					(effects
@@ -427,7 +499,7 @@
 						)
 					)
 				)
-				(number "20"
+				(number "24"
 					(effects
 						(font
 							(size 1.27 1.27)

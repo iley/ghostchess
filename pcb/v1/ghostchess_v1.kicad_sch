@@ -1360,7 +1360,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "X"
-				(at 7.366 17.526 0)
+				(at 10.922 15.748 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1414,8 +1414,8 @@
 			)
 			(symbol "ghostchess_daughter_board_0_1"
 				(rectangle
-					(start -16.51 21.59)
-					(end 16.51 -7.62)
+					(start -16.51 17.78)
+					(end 16.51 -17.78)
 					(stroke
 						(width 0)
 						(type default)
@@ -1427,7 +1427,7 @@
 			)
 			(symbol "ghostchess_daughter_board_1_1"
 				(pin power_in line
-					(at 0 -10.16 90)
+					(at -1.27 -20.32 90)
 					(length 2.54)
 					(name "GND"
 						(effects
@@ -1445,7 +1445,7 @@
 					)
 				)
 				(pin power_in line
-					(at -2.54 24.13 270)
+					(at -2.54 20.32 270)
 					(length 2.54)
 					(name "VCC"
 						(effects
@@ -1463,7 +1463,7 @@
 					)
 				)
 				(pin power_in line
-					(at 2.54 24.13 270)
+					(at 2.54 20.32 270)
 					(length 2.54)
 					(name "3V3"
 						(effects
@@ -1481,7 +1481,7 @@
 					)
 				)
 				(pin input line
-					(at -19.05 17.78 0)
+					(at -19.05 10.16 0)
 					(length 2.54)
 					(name "LED_DI"
 						(effects
@@ -1499,7 +1499,7 @@
 					)
 				)
 				(pin input line
-					(at -19.05 13.97 0)
+					(at -19.05 6.35 0)
 					(length 2.54)
 					(name "SENSOR_ON_1"
 						(effects
@@ -1517,7 +1517,7 @@
 					)
 				)
 				(pin input line
-					(at -19.05 11.43 0)
+					(at -19.05 3.81 0)
 					(length 2.54)
 					(name "SENSOR_ON_2"
 						(effects
@@ -1535,7 +1535,7 @@
 					)
 				)
 				(pin input line
-					(at -19.05 8.89 0)
+					(at -19.05 1.27 0)
 					(length 2.54)
 					(name "SENSOR_ON_3"
 						(effects
@@ -1553,7 +1553,7 @@
 					)
 				)
 				(pin input line
-					(at -19.05 6.35 0)
+					(at -19.05 -1.27 0)
 					(length 2.54)
 					(name "SENSOR_ON_4"
 						(effects
@@ -1571,7 +1571,7 @@
 					)
 				)
 				(pin input line
-					(at -19.05 3.81 0)
+					(at -19.05 -3.81 0)
 					(length 2.54)
 					(name "SENSOR_ON_5"
 						(effects
@@ -1589,7 +1589,7 @@
 					)
 				)
 				(pin input line
-					(at -19.05 1.27 0)
+					(at -19.05 -6.35 0)
 					(length 2.54)
 					(name "SENSOR_ON_6"
 						(effects
@@ -1607,7 +1607,7 @@
 					)
 				)
 				(pin input line
-					(at -19.05 -1.27 0)
+					(at -19.05 -8.89 0)
 					(length 2.54)
 					(name "SENSOR_ON_7"
 						(effects
@@ -1625,7 +1625,7 @@
 					)
 				)
 				(pin input line
-					(at -19.05 -3.81 0)
+					(at -19.05 -11.43 0)
 					(length 2.54)
 					(name "SENSOR_ON_8"
 						(effects
@@ -1642,10 +1642,10 @@
 						)
 					)
 				)
-				(pin output line
-					(at 19.05 13.97 180)
+				(pin power_in line
+					(at 1.27 -20.32 90)
 					(length 2.54)
-					(name "SENSOR_OUT_1"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1660,10 +1660,10 @@
 						)
 					)
 				)
-				(pin output line
-					(at 19.05 11.43 180)
+				(pin no_connect line
+					(at 19.05 12.7 180)
 					(length 2.54)
-					(name "SENSOR_OUT_2"
+					(name "NC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1678,10 +1678,10 @@
 						)
 					)
 				)
-				(pin output line
-					(at 19.05 8.89 180)
+				(pin no_connect line
+					(at 19.05 10.16 180)
 					(length 2.54)
-					(name "SENSOR_OUT_3"
+					(name "NC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1696,10 +1696,10 @@
 						)
 					)
 				)
-				(pin output line
-					(at 19.05 6.35 180)
+				(pin no_connect line
+					(at 19.05 7.62 180)
 					(length 2.54)
-					(name "SENSOR_OUT_4"
+					(name "NC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1715,9 +1715,9 @@
 					)
 				)
 				(pin output line
-					(at 19.05 3.81 180)
+					(at 19.05 5.08 180)
 					(length 2.54)
-					(name "SENSOR_OUT_5"
+					(name "SENSOR_OUT_1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1733,9 +1733,9 @@
 					)
 				)
 				(pin output line
-					(at 19.05 1.27 180)
+					(at 19.05 2.54 180)
 					(length 2.54)
-					(name "SENSOR_OUT_6"
+					(name "SENSOR_OUT_2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1751,9 +1751,9 @@
 					)
 				)
 				(pin output line
-					(at 19.05 -1.27 180)
+					(at 19.05 0 180)
 					(length 2.54)
-					(name "SENSOR_OUT_7"
+					(name "SENSOR_OUT_3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1769,7 +1769,79 @@
 					)
 				)
 				(pin output line
-					(at 19.05 -3.81 180)
+					(at 19.05 -2.54 180)
+					(length 2.54)
+					(name "SENSOR_OUT_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 19.05 -5.08 180)
+					(length 2.54)
+					(name "SENSOR_OUT_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 19.05 -7.62 180)
+					(length 2.54)
+					(name "SENSOR_OUT_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 19.05 -10.16 180)
+					(length 2.54)
+					(name "SENSOR_OUT_7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 19.05 -12.7 180)
 					(length 2.54)
 					(name "SENSOR_OUT_8"
 						(effects
@@ -1778,7 +1850,7 @@
 							)
 						)
 					)
-					(number "20"
+					(number "24"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2613,6 +2685,26 @@
 		)
 		(uuid "fce7cd36-64dd-496d-946c-9d0e37e241a1")
 	)
+	(label "SENSOR_OUT_5"
+		(at 156.21 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0a2784b9-7c68-48dc-9d8f-1f4213c0be4f")
+	)
+	(label "SENSOR_OUT_4"
+		(at 156.21 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0b2d6dbf-da62-484b-907a-a283629b4033")
+	)
 	(label "SENSOR_ON_6"
 		(at 46.99 149.86 180)
 		(effects
@@ -2623,15 +2715,15 @@
 		)
 		(uuid "0b38e7ac-bef4-4322-a473-082fecee45aa")
 	)
-	(label "SENSOR_OUT_5"
-		(at 161.29 147.32 0)
+	(label "SENSOR_ON_6"
+		(at 118.11 151.13 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "0f318cd4-2413-4fa3-84bc-41ee5e1c2f19")
+		(uuid "15744eeb-907d-4609-ba97-18b113586d81")
 	)
 	(label "SENSOR_OUT_5"
 		(at 212.09 76.2 90)
@@ -2663,25 +2755,25 @@
 		)
 		(uuid "1a50c8f3-51bd-4c1f-bb57-2c3f3b9faca9")
 	)
-	(label "SENSOR_ON_5"
-		(at 123.19 147.32 180)
+	(label "SENSOR_ON_8"
+		(at 118.11 156.21 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "1c59087f-17d3-4b5d-b112-ebbf3af0ccdf")
+		(uuid "2e18e87a-0721-4eb5-80b1-785394c0a10b")
 	)
-	(label "SENSOR_OUT_1"
-		(at 161.29 137.16 0)
+	(label "SENSOR_ON_7"
+		(at 118.11 153.67 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "31542e0c-0793-44a3-a469-92ce92f4a907")
+		(uuid "320b63ee-4e92-4baf-9fb0-2ede7d18b88f")
 	)
 	(label "LED_DI"
 		(at 173.99 30.48 180)
@@ -2703,6 +2795,16 @@
 		)
 		(uuid "3d98c4c3-301f-421c-8b3b-59b61d0d30dc")
 	)
+	(label "SENSOR_ON_1"
+		(at 118.11 138.43 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "406df741-c4bc-4101-9e93-edb5fa774f32")
+	)
 	(label "SENSOR_ON_2"
 		(at 46.99 139.7 180)
 		(effects
@@ -2723,16 +2825,6 @@
 		)
 		(uuid "447de23e-fb6f-4069-ad35-cad77185659a")
 	)
-	(label "LED_DI"
-		(at 123.19 133.35 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "461548b3-df3c-4300-af5e-ee7374186940")
-	)
 	(label "SENSOR_ON_1"
 		(at 46.99 137.16 180)
 		(effects
@@ -2744,7 +2836,7 @@
 		(uuid "47df745d-07d8-4285-8cde-f2e75f232c59")
 	)
 	(label "SENSOR_OUT_2"
-		(at 85.09 139.7 0)
+		(at 85.09 140.97 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2752,6 +2844,16 @@
 			(justify left bottom)
 		)
 		(uuid "4acb893c-a7e5-4593-bd1f-e5b02f11ad33")
+	)
+	(label "SENSOR_ON_5"
+		(at 118.11 148.59 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4bb6c615-5ce8-4556-a08d-dc224d7cdc80")
 	)
 	(label "SENSOR_ON_8"
 		(at 182.88 99.06 180)
@@ -2783,16 +2885,6 @@
 		)
 		(uuid "505558f4-673c-43aa-8dcf-f2804b3fc975")
 	)
-	(label "SENSOR_ON_1"
-		(at 123.19 137.16 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5419084d-e9a7-433e-a5ac-32a0b3938756")
-	)
 	(label "SENSOR_ON_6"
 		(at 182.88 93.98 180)
 		(effects
@@ -2823,38 +2915,8 @@
 		)
 		(uuid "6771dbd4-b82b-41a6-a6c5-8e22352f2f90")
 	)
-	(label "SENSOR_ON_2"
-		(at 123.19 139.7 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "6e41b603-65b5-4513-9203-20874c3d1fc9")
-	)
-	(label "SENSOR_OUT_8"
-		(at 161.29 154.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "72645b3e-8d90-4c03-8694-02f7eb3a76d7")
-	)
-	(label "SENSOR_OUT_6"
-		(at 161.29 149.86 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "72f18b60-39fc-44df-9a2b-e797cb5df902")
-	)
 	(label "SENSOR_OUT_5"
-		(at 85.09 147.32 0)
+		(at 85.09 148.59 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2883,15 +2945,15 @@
 		)
 		(uuid "7cea1f93-2783-4556-9488-778c42d122ff")
 	)
-	(label "SENSOR_ON_7"
-		(at 123.19 152.4 180)
+	(label "SENSOR_OUT_8"
+		(at 156.21 157.48 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "7e1cef65-4c45-443c-8c51-16e8982008a2")
+		(uuid "83660e7f-3ed2-43aa-a7b2-26b11b4679da")
 	)
 	(label "LED_DI"
 		(at 46.99 133.35 180)
@@ -2914,7 +2976,7 @@
 		(uuid "88320eab-4c64-45f6-99f5-74b4057668a5")
 	)
 	(label "SENSOR_OUT_7"
-		(at 85.09 152.4 0)
+		(at 85.09 153.67 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2923,18 +2985,18 @@
 		)
 		(uuid "8d81671f-3520-472e-b798-aa3f25c75c5e")
 	)
-	(label "SENSOR_OUT_4"
-		(at 161.29 144.78 0)
+	(label "SENSOR_OUT_2"
+		(at 156.21 142.24 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "91a34515-12a0-46e7-b3d7-33f17444fb2c")
+		(uuid "94005143-77dc-4f82-84c9-7494473de3d5")
 	)
 	(label "SENSOR_OUT_1"
-		(at 85.09 137.16 0)
+		(at 85.09 138.43 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2953,6 +3015,26 @@
 		)
 		(uuid "a196dfc3-be0b-4568-8532-22440ba5d8fa")
 	)
+	(label "SENSOR_ON_2"
+		(at 118.11 140.97 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a7c57dcd-465e-4268-a716-313d386aad0f")
+	)
+	(label "SENSOR_OUT_7"
+		(at 156.21 154.94 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "acc09bfc-7937-4071-b762-b01a12d487ca")
+	)
 	(label "SENSOR_ON_4"
 		(at 182.88 88.9 180)
 		(effects
@@ -2963,25 +3045,15 @@
 		)
 		(uuid "b3e7d100-b20a-401b-a9d0-70621251662f")
 	)
-	(label "SENSOR_OUT_3"
-		(at 161.29 142.24 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b9c8f5e9-f0f2-480f-a8b3-1f563541d840")
-	)
-	(label "SENSOR_ON_4"
-		(at 123.19 144.78 180)
+	(label "SENSOR_ON_3"
+		(at 118.11 143.51 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "baa167f2-235f-42dd-bf0d-51971f7df328")
+		(uuid "bb354a87-bdda-447b-99fe-8c33f3579021")
 	)
 	(label "SENSOR_OUT_8"
 		(at 219.71 76.2 90)
@@ -2994,7 +3066,7 @@
 		(uuid "be23af0a-7854-4b03-9ece-775057957a20")
 	)
 	(label "SENSOR_OUT_4"
-		(at 85.09 144.78 0)
+		(at 85.09 146.05 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3013,16 +3085,6 @@
 		)
 		(uuid "c429d121-71ee-4681-b66e-16f926d3dcd2")
 	)
-	(label "SENSOR_ON_3"
-		(at 123.19 142.24 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c618f62f-f0a4-436e-bc49-c7109963aa65")
-	)
 	(label "SENSOR_ON_5"
 		(at 46.99 147.32 180)
 		(effects
@@ -3033,18 +3095,8 @@
 		)
 		(uuid "c984af59-84c5-46b1-adb9-dd135689e462")
 	)
-	(label "SENSOR_ON_6"
-		(at 123.19 149.86 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "ca638bc5-8f08-496a-b6fa-93a6e382fc51")
-	)
 	(label "SENSOR_OUT_6"
-		(at 85.09 149.86 0)
+		(at 85.09 151.13 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3052,6 +3104,16 @@
 			(justify left bottom)
 		)
 		(uuid "cbc6f44e-529f-4985-ae21-273c7486ede7")
+	)
+	(label "SENSOR_OUT_6"
+		(at 156.21 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cc6778eb-ab68-49d9-b6d5-0a1406405cc3")
 	)
 	(label "SENSOR_ON_8"
 		(at 46.99 154.94 180)
@@ -3063,18 +3125,18 @@
 		)
 		(uuid "cfab0dc6-9911-49e3-91d1-fecf9c9531bc")
 	)
-	(label "SENSOR_OUT_7"
-		(at 161.29 152.4 0)
+	(label "SENSOR_ON_4"
+		(at 118.11 146.05 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
-		(uuid "d1318b5b-b23c-4823-bf7a-0c5cdc9fffef")
+		(uuid "d3e4727f-4e6e-486b-aad8-40362aa6c8eb")
 	)
 	(label "SENSOR_OUT_8"
-		(at 85.09 154.94 0)
+		(at 85.09 156.21 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3084,7 +3146,7 @@
 		(uuid "d7d1c02f-7e69-40f7-a2ad-8e805ffbc1f5")
 	)
 	(label "SENSOR_OUT_3"
-		(at 85.09 142.24 0)
+		(at 85.09 143.51 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3093,25 +3155,35 @@
 		)
 		(uuid "dcb97e99-3d5a-42ea-ac7b-6f9ca45a1f71")
 	)
-	(label "SENSOR_OUT_2"
-		(at 161.29 139.7 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e7772e35-5342-4d1d-8bed-4bf725722cf9")
-	)
-	(label "SENSOR_ON_8"
-		(at 123.19 154.94 180)
+	(label "LED_DI"
+		(at 118.11 134.62 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "f1da5173-6450-43c5-86d8-a48800aacc27")
+		(uuid "df7f899e-db3f-4a52-b309-07cc4d31a6f6")
+	)
+	(label "SENSOR_OUT_3"
+		(at 156.21 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e3e175ca-44e2-401c-9adf-af533911f89b")
+	)
+	(label "SENSOR_OUT_1"
+		(at 156.21 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e83c7e68-6727-4c19-9725-1e9911d5cb0c")
 	)
 	(label "SENSOR_OUT_6"
 		(at 214.63 76.2 90)
@@ -3378,7 +3450,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 68.58 127 0)
+		(at 68.58 123.19 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3389,7 +3461,7 @@
 		(fields_autoplaced yes)
 		(uuid "289464bd-c004-41d7-b288-2ed641debfaa")
 		(property "Reference" "#PWR0350"
-			(at 68.58 130.81 0)
+			(at 68.58 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3400,7 +3472,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 68.58 121.92 0)
+			(at 68.58 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3410,7 +3482,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 68.58 127 0)
+			(at 68.58 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3421,7 +3493,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 127 0)
+			(at 68.58 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3432,7 +3504,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 68.58 127 0)
+			(at 68.58 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3449,84 +3521,6 @@
 			(project "ghostchess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
 					(reference "#PWR0350")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 139.7 127 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2dd75266-f486-46c2-930c-39101e4821cc")
-		(property "Reference" "#PWR0258"
-			(at 139.7 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VCC"
-			(at 139.7 121.92 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.7 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 139.7 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 139.7 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "11ab3c48-a446-428d-b540-53b5b7c862e5")
-		)
-		(instances
-			(project "ghostchess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
-					(reference "#PWR0258")
 					(unit 1)
 				)
 			)
@@ -3692,8 +3686,8 @@
 		)
 	)
 	(symbol
-		(lib_id "ghostchess:ghostchess_daughter_board")
-		(at 142.24 151.13 0)
+		(lib_id "power:GND")
+		(at 138.43 165.1 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3701,20 +3695,20 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "431f045d-1d2b-45e7-8b8a-a56d18bca0b9")
-		(property "Reference" "X2"
-			(at 155.194 131.572 0)
+		(uuid "3a1d08a4-2303-4d33-b4dc-64edee38ab46")
+		(property "Reference" "#PWR0354"
+			(at 138.43 171.45 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" ""
-			(at 142.24 151.13 0)
+		(property "Value" "GND"
+			(at 141.478 167.894 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3724,7 +3718,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 142.24 151.13 0)
+			(at 138.43 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3735,7 +3729,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 151.13 0)
+			(at 138.43 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3745,8 +3739,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 142.24 151.13 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 138.43 165.1 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3755,71 +3749,169 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "17"
-			(uuid "057c3f55-fd09-4bac-9649-a0efe442fa82")
-		)
-		(pin "18"
-			(uuid "4ca82806-15d7-44e4-b4e5-c0d19db5a60a")
-		)
-		(pin "19"
-			(uuid "1af6df6b-8e3b-4866-96c5-be4008541a28")
-		)
-		(pin "20"
-			(uuid "7f6a9c01-1814-41cd-aa5f-3d239ee9d278")
-		)
-		(pin "4"
-			(uuid "bc1a29b3-47b3-490d-8808-fe1992a30bf4")
-		)
-		(pin "5"
-			(uuid "d587fbeb-bd29-4092-a21a-cc98a9ce3115")
-		)
-		(pin "6"
-			(uuid "89b61c71-f157-458e-af13-818026a626fe")
-		)
-		(pin "7"
-			(uuid "437191f4-3b71-453a-ba9c-317799fe0163")
-		)
-		(pin "8"
-			(uuid "11a08190-a06d-4455-b139-32132b7d8dc7")
-		)
-		(pin "9"
-			(uuid "23b759ac-f191-411a-a585-623a2edda143")
-		)
-		(pin "3"
-			(uuid "0f9ecca8-b567-42e0-9109-616f50b88d58")
-		)
-		(pin "2"
-			(uuid "90abff1e-2188-40f0-a3b1-d1a7c9f96a87")
 		)
 		(pin "1"
-			(uuid "14c0ef34-72b2-4cf5-af4b-f4cca0ed7181")
-		)
-		(pin "16"
-			(uuid "f43dca01-8207-4e5b-8ccc-da00150bc2e2")
-		)
-		(pin "14"
-			(uuid "b9186b13-6aed-4706-8ac1-5fe897351b03")
-		)
-		(pin "15"
-			(uuid "60bae411-c217-444c-ab0c-ed8cc2923d99")
-		)
-		(pin "10"
-			(uuid "f7531f5d-6a01-4c6f-85db-4e0c2f8c57b7")
-		)
-		(pin "11"
-			(uuid "12571506-d6d5-4e73-aeb4-e8bb82c6468d")
-		)
-		(pin "12"
-			(uuid "cf54165f-75bf-47d2-87f6-45a84c7a4714")
-		)
-		(pin "13"
-			(uuid "2cdb926c-d103-4e25-a0c6-fca59ca47179")
+			(uuid "1ad8d037-e954-4542-9308-0867c848c8f1")
 		)
 		(instances
 			(project "ghostchess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
-					(reference "X2")
+					(reference "#PWR0354")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 135.89 165.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3cf2c219-2ee8-4f83-97ee-42f644873cdd")
+		(property "Reference" "#PWR0353"
+			(at 135.89 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 132.588 167.894 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 135.89 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "60995e06-8f06-4738-b870-d7e7aa36498e")
+		)
+		(instances
+			(project "ghostchess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
+					(reference "#PWR0353")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 139.7 124.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "47c96603-8cba-40f5-8115-08ddcd831afe")
+		(property "Reference" "#PWR0355"
+			(at 139.7 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 139.7 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 139.7 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fd623aa1-5828-4002-a20f-64ae5057b7df")
+		)
+		(instances
+			(project "ghostchess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
+					(reference "#PWR0355")
 					(unit 1)
 				)
 			)
@@ -4011,84 +4103,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 144.78 127 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "60b714ec-fb56-427b-9940-cbd32718326d")
-		(property "Reference" "#PWR0353"
-			(at 144.78 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 144.78 121.92 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 144.78 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 144.78 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 144.78 127 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bdb22b7d-bf5b-4ca2-9387-6b1644c625c5")
-		)
-		(instances
-			(project "ghostchess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
-					(reference "#PWR0353")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 177.8 30.48 90)
 		(unit 1)
@@ -4170,7 +4184,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 63.5 127 0)
+		(at 63.5 123.19 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4181,7 +4195,7 @@
 		(fields_autoplaced yes)
 		(uuid "6339a7a9-2103-484e-b949-ffd38d5439ec")
 		(property "Reference" "#PWR0257"
-			(at 63.5 130.81 0)
+			(at 63.5 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4192,7 +4206,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 63.5 121.92 0)
+			(at 63.5 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4202,7 +4216,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 63.5 127 0)
+			(at 63.5 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4213,7 +4227,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 63.5 127 0)
+			(at 63.5 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4224,7 +4238,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 63.5 127 0)
+			(at 63.5 123.19 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4241,6 +4255,83 @@
 			(project "ghostchess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
 					(reference "#PWR0257")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 67.31 163.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "68e011b4-bedd-40d4-9c18-e4c432bdf690")
+		(property "Reference" "#PWR0352"
+			(at 67.31 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 70.358 166.624 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 67.31 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 67.31 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 67.31 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c4e8e796-5b94-42e2-9a79-d70e43b16158")
+		)
+		(instances
+			(project "ghostchess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
+					(reference "#PWR0352")
 					(unit 1)
 				)
 			)
@@ -4642,142 +4733,8 @@
 		)
 	)
 	(symbol
-		(lib_id "ghostchess:ghostchess_daughter_board")
-		(at 66.04 151.13 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "abd90858-9043-4aef-96f6-9400c0f0d366")
-		(property "Reference" "X1"
-			(at 78.994 131.826 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" ""
-			(at 66.04 151.13 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 66.04 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 66.04 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "17"
-			(uuid "e1594f42-7de4-4e59-9b4e-229411511960")
-		)
-		(pin "18"
-			(uuid "87c22916-840c-4712-a6f6-17a5f4534ce1")
-		)
-		(pin "19"
-			(uuid "68c3bd53-88b4-4b5e-b90d-233216b50ae5")
-		)
-		(pin "20"
-			(uuid "b954ed92-88d9-498e-822c-2c74392a9629")
-		)
-		(pin "4"
-			(uuid "2a92dcb6-b5af-491f-9d95-4640526901d0")
-		)
-		(pin "5"
-			(uuid "3bd6f5f5-c34e-47f5-99ad-7719efc3d06d")
-		)
-		(pin "6"
-			(uuid "484e4f3a-b577-4b76-83bd-a8fc1d2e260b")
-		)
-		(pin "7"
-			(uuid "01c19ec9-15bf-48ae-8bf3-7c89242b04d2")
-		)
-		(pin "8"
-			(uuid "9500fc2f-ecd1-4b95-bc20-b21ccb9d2787")
-		)
-		(pin "9"
-			(uuid "9a7739f8-3c4c-4351-bccd-afd38f2a8302")
-		)
-		(pin "3"
-			(uuid "7dbd20b0-d03a-436d-8355-28b121d03a8d")
-		)
-		(pin "2"
-			(uuid "7ffc6784-1546-4453-9fe0-493eaa1551bd")
-		)
-		(pin "1"
-			(uuid "f3b97b99-92fd-4c32-a7e9-ae9aab9dd067")
-		)
-		(pin "16"
-			(uuid "dc544476-e70e-4f69-8c28-0cdce0c63dc7")
-		)
-		(pin "14"
-			(uuid "cc149a63-0d19-4c61-a26b-572a2a2c0de6")
-		)
-		(pin "15"
-			(uuid "118f4016-9de6-4818-95bf-ce0164532e6a")
-		)
-		(pin "10"
-			(uuid "4c5efefc-d9b5-4f11-b9eb-a86d970c033f")
-		)
-		(pin "11"
-			(uuid "f1896133-1d55-4c50-8f77-fb9279e02e4f")
-		)
-		(pin "12"
-			(uuid "0ceef7c0-13b2-4dc8-8952-ef3232068645")
-		)
-		(pin "13"
-			(uuid "d9579fad-024b-4f3a-b3f3-4fe2f02efaf6")
-		)
-		(instances
-			(project "ghostchess_v1"
-				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
-					(reference "X1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 66.04 161.29 0)
+		(at 64.77 163.83 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4787,7 +4744,7 @@
 		(dnp no)
 		(uuid "af754326-eab2-4335-beac-30100eac7b1a")
 		(property "Reference" "#PWR0351"
-			(at 66.04 167.64 0)
+			(at 64.77 170.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4798,7 +4755,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 62.738 164.084 0)
+			(at 61.468 166.624 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4808,7 +4765,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 66.04 161.29 0)
+			(at 64.77 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4819,7 +4776,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 66.04 161.29 0)
+			(at 64.77 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4830,7 +4787,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 66.04 161.29 0)
+			(at 64.77 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5098,6 +5055,84 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
+		(at 134.62 124.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cf698a86-86eb-4578-93c6-e62fb707eac6")
+		(property "Reference" "#PWR0258"
+			(at 134.62 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC"
+			(at 134.62 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 134.62 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 134.62 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "66da5ce2-ba53-4444-b24d-5d6934f87f5d")
+		)
+		(instances
+			(project "ghostchess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
+					(reference "#PWR0258")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
 		(at 99.06 57.15 0)
 		(unit 1)
 		(body_style 1)
@@ -5168,6 +5203,153 @@
 			(project "ghostchess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
 					(reference "#PWR0260")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ghostchess:ghostchess_daughter_board")
+		(at 66.04 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dfa0f4b2-e09c-47c8-a703-1b01fbb8e3d1")
+		(property "Reference" "X1"
+			(at 70.7233 123.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" ""
+			(at 66.04 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "ghostchess:GhostChess_Daughter_Board"
+			(at 66.04 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 66.04 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "24"
+			(uuid "ed23bacc-51f9-4a23-88ad-0d998434258d")
+		)
+		(pin "23"
+			(uuid "c53d0f46-2c85-4692-8130-2c715f0f8e28")
+		)
+		(pin "21"
+			(uuid "5f64fdda-4fe8-4df5-80e3-a4a4478ede9d")
+		)
+		(pin "22"
+			(uuid "6f7d29d8-2dd1-43a1-9ce2-f627b1bad3d1")
+		)
+		(pin "17"
+			(uuid "1c12dcdf-dfdd-4753-9435-8ccdc937476d")
+		)
+		(pin "16"
+			(uuid "f4e38ed1-ca9e-41d9-ad3e-9ea2346759cf")
+		)
+		(pin "1"
+			(uuid "fc6ed44d-0978-42fe-87ab-faa578510822")
+		)
+		(pin "20"
+			(uuid "7c6f48d5-02d1-4b3e-9d0f-7e8a418d63b3")
+		)
+		(pin "14"
+			(uuid "7ca6d25a-e033-4da0-8e1a-94c6d079255a")
+		)
+		(pin "15"
+			(uuid "fe5e05e2-83bf-4c93-ba6e-a0c92c1ecd92")
+		)
+		(pin "19"
+			(uuid "e5579fe6-d1cb-4e7e-a600-5824ec27ef30")
+		)
+		(pin "5"
+			(uuid "4194b37d-203e-4abe-96d8-732637d31d8d")
+		)
+		(pin "13"
+			(uuid "6c1f1d09-acf5-4216-986c-74964f3b2cff")
+		)
+		(pin "3"
+			(uuid "6acbaf06-83eb-4642-adb4-50e8ac1eaf88")
+		)
+		(pin "7"
+			(uuid "7fd40b6a-fd54-4a1f-bd7c-fd52a76b43ae")
+		)
+		(pin "2"
+			(uuid "dcf7a15c-c137-454e-8788-930ee4a6cea5")
+		)
+		(pin "12"
+			(uuid "1795c08a-0627-4bf0-8ac0-5a6909693225")
+		)
+		(pin "6"
+			(uuid "2b58b19c-4396-408d-867d-6f95fa5444b2")
+		)
+		(pin "4"
+			(uuid "b055efdc-851b-442f-995b-7575b9696bc1")
+		)
+		(pin "10"
+			(uuid "307a3ca9-29ff-421b-8527-ff2afec5ba5b")
+		)
+		(pin "11"
+			(uuid "306a8093-7366-449f-8d51-deacbe38fc3d")
+		)
+		(pin "8"
+			(uuid "32a287dd-9e9c-4715-b893-c0eab8b29594")
+		)
+		(pin "9"
+			(uuid "da0328ef-1d92-4b5f-9a94-b6ae72467fab")
+		)
+		(pin "18"
+			(uuid "ea53f6ce-c219-48de-a294-ee438e5e1327")
+		)
+		(instances
+			(project "ghostchess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
+					(reference "X1")
 					(unit 1)
 				)
 			)
@@ -5257,8 +5439,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 142.24 161.29 0)
+		(lib_id "ghostchess:ghostchess_daughter_board")
+		(at 137.16 144.78 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5266,10 +5448,21 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "fea3a048-f822-4ddf-84f7-d65f09893a1a")
-		(property "Reference" "#PWR0352"
-			(at 142.24 167.64 0)
-			(hide yes)
+		(fields_autoplaced yes)
+		(uuid "f0440e87-64b4-442d-bd75-0704d25fff09")
+		(property "Reference" "X2"
+			(at 141.8433 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" ""
+			(at 137.16 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5278,18 +5471,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 138.938 164.084 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 142.24 161.29 0)
+		(property "Footprint" "ghostchess:GhostChess_Daughter_Board"
+			(at 137.16 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5300,7 +5483,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 161.29 0)
+			(at 137.16 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5310,8 +5493,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 142.24 161.29 0)
+		(property "Description" ""
+			(at 137.16 144.78 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5320,14 +5503,83 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(pin "24"
+			(uuid "a3ac25c3-6684-4e00-b570-7765ee929a90")
+		)
+		(pin "23"
+			(uuid "a926e7b5-3f7b-4620-8df0-cc609465c583")
+		)
+		(pin "21"
+			(uuid "f522515d-2c3e-493e-a999-45cb76f725bd")
+		)
+		(pin "22"
+			(uuid "5ec55718-8e64-4a2f-a08f-b52d2d866125")
+		)
+		(pin "17"
+			(uuid "a31120ec-3c4e-4c6e-bb76-235cae9866b6")
+		)
+		(pin "16"
+			(uuid "4f3d8b97-cd70-464d-bc30-ec53784d5cbe")
 		)
 		(pin "1"
-			(uuid "2f71973e-736b-4997-a046-165003961db0")
+			(uuid "c6efd625-444d-448c-91c4-6543b4f1eaf8")
+		)
+		(pin "20"
+			(uuid "9c63a6b8-25b1-4341-9129-f64a1b5beeaa")
+		)
+		(pin "14"
+			(uuid "a992513f-9344-4bf6-bf75-33849a87b129")
+		)
+		(pin "15"
+			(uuid "2086e375-2824-4528-ace7-520cbec60fcf")
+		)
+		(pin "19"
+			(uuid "6f1a9eda-0f52-4ccf-a694-7ec85bb1a4e3")
+		)
+		(pin "5"
+			(uuid "37b89bcd-2eba-4cf3-9842-d77e5edaa66a")
+		)
+		(pin "13"
+			(uuid "7712db47-131d-44fd-bcc5-2577332659e4")
+		)
+		(pin "3"
+			(uuid "02dea38c-a0cd-48c9-a23a-04a007eee8b9")
+		)
+		(pin "7"
+			(uuid "4200abeb-0dcc-48ed-b965-0ad72084fa19")
+		)
+		(pin "2"
+			(uuid "0cf6abd1-176b-467b-bdb7-94683c886078")
+		)
+		(pin "12"
+			(uuid "8a7b53e8-b5cb-4ac8-8092-361051662b0c")
+		)
+		(pin "6"
+			(uuid "057a6d30-c168-4785-859a-939901d0c4c6")
+		)
+		(pin "4"
+			(uuid "910ffb4b-2241-4067-bcae-f4310f4c4e91")
+		)
+		(pin "10"
+			(uuid "2cd21246-69aa-4479-ac56-61aa16937036")
+		)
+		(pin "11"
+			(uuid "8c66ec18-c682-47cd-a7a8-bd130003f773")
+		)
+		(pin "8"
+			(uuid "2148f04d-2b86-4be7-8140-195905719f68")
+		)
+		(pin "9"
+			(uuid "d05319cd-ef9a-4243-83a7-0c040956f944")
+		)
+		(pin "18"
+			(uuid "108b53d7-0d7e-43dc-b591-3cd3bd0173df")
 		)
 		(instances
 			(project "ghostchess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
-					(reference "#PWR0352")
+					(reference "X2")
 					(unit 1)
 				)
 			)
