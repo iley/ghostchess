@@ -1297,6 +1297,195 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Jumper:SolderJumper_2_Bridged"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "JP"
+				(at 0 2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SolderJumper_2_Bridged"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Solder Jumper, 2-pole, closed/bridged"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "solder jumper SPST"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SolderJumper*Bridged*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Bridged_0_1"
+				(rectangle
+					(start -0.508 0.508)
+					(end 0.508 -0.508)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.254 1.016) (xy -0.254 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.016) (xy 0.254 -1.016)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Bridged_1_1"
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Regulator_Linear:AMS1117-3.3"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -1450,18 +1639,14 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_SPST"
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
+		(symbol "easyeda2kicad:SS11-BBIWJ-R30-R"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "SW"
-				(at 0 3.175 0)
+				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1470,8 +1655,8 @@
 					)
 				)
 			)
-			(property "Value" "SW_SPST"
-				(at 0 -2.54 0)
+			(property "Value" "SS11-BBIWJ-R30-R"
+				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1480,7 +1665,29 @@
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "easyeda2kicad:SW-TH_SS11-BBIWJ-R30-R"
+				(at 0 -12.7 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/Others_Legion-SS11-BBIWJ-R30-R_C309071.html"
+				(at 0 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1491,8 +1698,8 @@
 					)
 				)
 			)
-			(property "Datasheet" ""
-				(at 0 0 0)
+			(property "LCSC Part" "C309071"
+				(at 0 -17.78 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -1502,32 +1709,10 @@
 					)
 				)
 			)
-			(property "Description" "Single Pole Single Throw (SPST) switch"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "switch lever"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SW_SPST_0_0"
+			(symbol "SS11-BBIWJ-R30-R_0_1"
 				(circle
-					(center -2.032 0)
-					(radius 0.508)
+					(center -2.54 0)
+					(radius 0.64)
 					(stroke
 						(width 0)
 						(type default)
@@ -1538,7 +1723,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.254) (xy 1.524 1.778)
+						(xy 2.54 0.76) (xy -2.54 2.03)
 					)
 					(stroke
 						(width 0)
@@ -1549,8 +1734,8 @@
 					)
 				)
 				(circle
-					(center 2.032 0)
-					(radius 0.508)
+					(center 2.54 0)
+					(radius 0.64)
 					(stroke
 						(width 0)
 						(type default)
@@ -1559,12 +1744,10 @@
 						(type none)
 					)
 				)
-			)
-			(symbol "SW_SPST_1_1"
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "A"
+				(pin unspecified line
+					(at -2.54 -5.08 90)
+					(length 5.08)
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1579,10 +1762,10 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "B"
+				(pin unspecified line
+					(at 2.54 -5.08 90)
+					(length 5.08)
+					(name "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1590,6 +1773,24 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 7.62 -5.08 90)
+					(length 5.08)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2061,6 +2262,12 @@
 		(uuid "8d5b1265-65ab-4a9e-84a9-4237c07457d5")
 	)
 	(junction
+		(at 52.07 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9610174c-61d1-4a4c-81ba-2ce8a4f6b96a")
+	)
+	(junction
 		(at 80.01 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2163,16 +2370,6 @@
 			(type default)
 		)
 		(uuid "22227eff-7108-4126-a9b5-02dcc045cba3")
-	)
-	(wire
-		(pts
-			(xy 59.69 57.15) (xy 62.23 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "22643e1e-55d9-43f1-a3a8-b4b820955027")
 	)
 	(wire
 		(pts
@@ -2356,6 +2553,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 54.61) (xy 52.07 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d8c27ba-3107-48a8-90bd-1ee1871b0d04")
+	)
+	(wire
+		(pts
 			(xy 194.31 72.39) (xy 194.31 74.93)
 		)
 		(stroke
@@ -2406,6 +2613,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 44.45) (xy 57.15 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a22c6392-8501-479e-a2c9-3885aabd6a86")
+	)
+	(wire
+		(pts
 			(xy 181.61 30.48) (xy 184.15 30.48)
 		)
 		(stroke
@@ -2413,6 +2630,16 @@
 			(type default)
 		)
 		(uuid "a97a938a-053c-46e7-815b-05e68e808cbc")
+	)
+	(wire
+		(pts
+			(xy 57.15 57.15) (xy 62.23 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af156d2f-06c1-4823-8a1d-1ca9f0d4e93c")
 	)
 	(wire
 		(pts
@@ -2496,6 +2723,16 @@
 	)
 	(wire
 		(pts
+			(xy 62.23 52.07) (xy 62.23 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cda5def4-ce7f-4fb4-8e58-2f3c67314521")
+	)
+	(wire
+		(pts
 			(xy 105.41 81.28) (xy 105.41 82.55)
 		)
 		(stroke
@@ -2553,6 +2790,16 @@
 			(type default)
 		)
 		(uuid "de664241-a00a-410f-8c71-84a1ec0e3a21")
+	)
+	(wire
+		(pts
+			(xy 52.07 54.61) (xy 62.23 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e18a5ba3-33a5-4dc4-9596-ed558cc1d7d2")
 	)
 	(wire
 		(pts
@@ -2616,7 +2863,7 @@
 	)
 	(wire
 		(pts
-			(xy 44.45 57.15) (xy 49.53 57.15)
+			(xy 44.45 57.15) (xy 52.07 57.15)
 		)
 		(stroke
 			(width 0)
@@ -3226,6 +3473,99 @@
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
 					(reference "#PWR0257")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "easyeda2kicad:SS11-BBIWJ-R30-R")
+		(at 54.61 39.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0c7c670a-a744-44a7-887c-55046bd7ddca")
+		(property "Reference" "SW1"
+			(at 56.83 33.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SS11-BBIWJ-R30-R"
+			(at 56.83 35.56 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "easyeda2kicad:SW-TH_SS11-BBIWJ-R30-R"
+			(at 54.61 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/Others_Legion-SS11-BBIWJ-R30-R_C309071.html"
+			(at 54.61 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 54.61 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part" "C309071"
+			(at 54.61 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "37896ae0-49d2-4efc-a06b-38e220d8333d")
+		)
+		(pin "1"
+			(uuid "3285922a-57a8-4193-a886-f2f2a19fa36e")
+		)
+		(pin "3"
+			(uuid "ce7561de-1744-47ec-960a-682f7c1d72b7")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
+					(reference "SW1")
 					(unit 1)
 				)
 			)
@@ -4005,39 +4345,40 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_SPST")
-		(at 54.61 57.15 0)
+		(lib_id "Jumper:SolderJumper_2_Bridged")
+		(at 52.07 49.53 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "351bb785-8cca-4184-aae2-12c4b35c83ca")
-		(property "Reference" "SW1"
-			(at 54.61 50.8 0)
+		(uuid "36ecd8e2-b31c-4a51-b597-65540fba8bf2")
+		(property "Reference" "JP1"
+			(at 44.45 45.466 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "POWER_SW1"
-			(at 54.61 53.34 0)
+		(property "Value" "sw1_closed"
+			(at 39.878 48.006 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Autochess:Marquardt_1858_4205"
-			(at 54.61 57.15 0)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm"
+			(at 52.07 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4048,7 +4389,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 54.61 57.15 0)
+			(at 58.42 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4058,8 +4399,90 @@
 				)
 			)
 		)
-		(property "Description" "Single Pole Single Throw (SPST) switch"
-			(at 54.61 57.15 0)
+		(property "Description" "Solder Jumper, 2-pole, closed/bridged"
+			(at 57.15 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "73263256-7170-4025-bfed-c19e5ee1155f")
+		)
+		(pin "1"
+			(uuid "f5175c54-93d9-4aba-96da-1b3fd53fae0f")
+		)
+		(instances
+			(project "autochess_v1"
+				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
+					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 62.23 48.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4a91e2f9-b800-4a06-9959-7a299c9b92fd")
+		(property "Reference" "R10"
+			(at 64.77 46.9899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0"
+			(at 64.77 49.5299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+			(at 60.452 48.26 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 62.23 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 62.23 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4070,15 +4493,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "f026653e-161a-4253-a87c-136866dd62c7")
+			(uuid "2b4a5cea-ea37-4d5f-a1d5-9b6a818f3a7c")
 		)
 		(pin "2"
-			(uuid "1916657c-3bf4-4cdd-bbdb-400220f140f9")
+			(uuid "d667784a-e5d8-4d27-a935-142aaedd0939")
 		)
 		(instances
 			(project "autochess_v1"
 				(path "/3df8ff08-9f77-4f65-9fed-81b599c9e86e"
-					(reference "SW1")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -5137,10 +5560,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b0863a4a-dcee-4e65-98a4-bd32653d0d8e")
 		(property "Reference" "F1"
-			(at 66.04 50.8 90)
+			(at 66.04 54.864 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5150,7 +5572,7 @@
 			)
 		)
 		(property "Value" "MF-LSMF600"
-			(at 66.04 53.34 90)
+			(at 65.024 59.944 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
