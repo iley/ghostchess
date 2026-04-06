@@ -130,7 +130,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 13.97 0)
+				(at -19.05 10.16 0)
 				(length 2.54)
 				(name "LED_DI"
 					(effects
@@ -148,7 +148,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 10.16 0)
+				(at -19.05 6.35 0)
 				(length 2.54)
 				(name "SENSOR_ON_1"
 					(effects
@@ -166,7 +166,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 7.62 0)
+				(at -19.05 3.81 0)
 				(length 2.54)
 				(name "SENSOR_ON_2"
 					(effects
@@ -184,7 +184,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 5.08 0)
+				(at -19.05 1.27 0)
 				(length 2.54)
 				(name "SENSOR_ON_3"
 					(effects
@@ -202,7 +202,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 2.54 0)
+				(at -19.05 -1.27 0)
 				(length 2.54)
 				(name "SENSOR_ON_4"
 					(effects
@@ -220,7 +220,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 0 0)
+				(at -19.05 -3.81 0)
 				(length 2.54)
 				(name "SENSOR_ON_5"
 					(effects
@@ -238,7 +238,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 -2.54 0)
+				(at -19.05 -6.35 0)
 				(length 2.54)
 				(name "SENSOR_ON_6"
 					(effects
@@ -256,7 +256,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 -5.08 0)
+				(at -19.05 -8.89 0)
 				(length 2.54)
 				(name "SENSOR_ON_7"
 					(effects
@@ -274,7 +274,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 -7.62 0)
+				(at -19.05 -11.43 0)
 				(length 2.54)
 				(name "SENSOR_ON_8"
 					(effects

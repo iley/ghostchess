@@ -1660,10 +1660,10 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin bidirectional line
 					(at 19.05 12.7 180)
 					(length 2.54)
-					(name "NC"
+					(name "USER1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1678,10 +1678,10 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin bidirectional line
 					(at 19.05 10.16 180)
 					(length 2.54)
-					(name "NC"
+					(name "USER2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1696,10 +1696,10 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin bidirectional line
 					(at 19.05 7.62 180)
 					(length 2.54)
-					(name "NC"
+					(name "USER3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2715,6 +2715,16 @@
 		)
 		(uuid "0b38e7ac-bef4-4322-a473-082fecee45aa")
 	)
+	(label "USER3"
+		(at 85.09 135.89 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "100ba122-ace5-45be-8989-a1779f0e40fe")
+	)
 	(label "SENSOR_ON_6"
 		(at 118.11 151.13 180)
 		(effects
@@ -2724,6 +2734,16 @@
 			(justify right bottom)
 		)
 		(uuid "15744eeb-907d-4609-ba97-18b113586d81")
+	)
+	(label "USER1"
+		(at 85.09 130.81 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "15ffee1f-1f74-4249-b400-7374f1e54d01")
 	)
 	(label "SENSOR_OUT_5"
 		(at 212.09 76.2 90)
@@ -2754,6 +2774,16 @@
 			(justify right bottom)
 		)
 		(uuid "1a50c8f3-51bd-4c1f-bb57-2c3f3b9faca9")
+	)
+	(label "USER1"
+		(at 156.21 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "291e5a58-5270-4d06-bd8b-520ca8aeb553")
 	)
 	(label "SENSOR_ON_8"
 		(at 118.11 156.21 180)
@@ -2794,6 +2824,16 @@
 			(justify right bottom)
 		)
 		(uuid "3d98c4c3-301f-421c-8b3b-59b61d0d30dc")
+	)
+	(label "USER3"
+		(at 156.21 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3dd5e8d6-7481-4884-b6b2-fb32c1c8dc35")
 	)
 	(label "SENSOR_ON_1"
 		(at 118.11 138.43 180)
@@ -2985,6 +3025,16 @@
 		)
 		(uuid "8d81671f-3520-472e-b798-aa3f25c75c5e")
 	)
+	(label "USER2"
+		(at 156.21 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "927a230f-4bef-420f-ae16-6c7830439721")
+	)
 	(label "SENSOR_OUT_2"
 		(at 156.21 142.24 0)
 		(effects
@@ -3124,6 +3174,16 @@
 			(justify right bottom)
 		)
 		(uuid "cfab0dc6-9911-49e3-91d1-fecf9c9531bc")
+	)
+	(label "USER2"
+		(at 85.09 133.35 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d0f9fddc-ebcb-4234-b4ee-4224001c5958")
 	)
 	(label "SENSOR_ON_4"
 		(at 118.11 146.05 180)
