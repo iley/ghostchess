@@ -60,12 +60,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "unconnected_items|325262500|373455785|F.Cu|4|63435e48-c244-440c-b676-acf33044d109|6fa82c73-b8f2-4132-9c1a-36740f7e11ac",
-          "connected internally"
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -151,7 +146,7 @@
         "min_track_width": 0.0,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.0,
+        "solder_mask_to_copper_clearance": 0.005,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -706,7 +701,7 @@
         "uuid": "3df8ff08-9f77-4f65-9fed-81b599c9e86e"
       }
     ],
-    "used_designators": "#PWR257-258,#PWR352-355,X1-2,R10,JP1-2,SW2",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
