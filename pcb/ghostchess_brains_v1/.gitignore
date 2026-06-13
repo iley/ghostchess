@@ -1,0 +1,51 @@
+.history
+
+# KiCad temporary and auto-generated files
+
+# Backups
+*-backups/
+*.bak
+*.kicad_pcb-bak
+*.kicad_sch-bak
+_autosave-*
+*.000
+*.00[0-9]
+
+# Lock files (created while a project is open)
+*~
+~*.lck
+*.lck
+fp-info-cache
+
+# Netlist / autorouter intermediates
+*.net
+*.dsn
+*.ses
+
+# ERC / DRC reports
+*.rpt
+*.erc
+*-erc.json
+*-drc.json
+
+# Simulation
+*.raw
+*.sim
+
+# Generated fabrication outputs (regenerate from source)
+# Comment these out if you want to commit fab files.
+*.gbr
+*.gbrjob
+*.drl
+*.pos
+gerbers/
+fab/
+
+# 3D render exports
+*.step
+*.stp
+*.wrl.bak
+
+# OS clutter
+.DS_Store
+Thumbs.db
