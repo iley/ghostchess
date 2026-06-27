@@ -3127,7 +3127,7 @@
 		)
 		(uuid "940b5267-ea88-4b59-9cd9-8090b2765816")
 	)
-	(text "TODO\n * Serial header\n * Correct MCU fuse config!"
+	(text "TODO\n * UART header\n * Correct MCU fuse config!"
 		(exclude_from_sim no)
 		(at 238.506 22.86 0)
 		(effects
@@ -7798,7 +7798,7 @@
 		(uuid "302d8489-95e1-4655-b135-41b570f47c05")
 	)
 	(label "SENSOR_OUT_6"
-		(at 177.8 48.26 0)
+		(at 177.8 55.88 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7978,7 +7978,7 @@
 		(uuid "75c7b0a9-66b8-4024-826a-db33d40b8543")
 	)
 	(label "SENSOR_OUT_7"
-		(at 177.8 45.72 0)
+		(at 177.8 58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8038,7 +8038,7 @@
 		(uuid "90cd7d34-b80f-4d78-a74d-70811d353b5f")
 	)
 	(label "SENSOR_OUT_1"
-		(at 177.8 60.96 0)
+		(at 177.8 43.18 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8068,7 +8068,7 @@
 		(uuid "9e4d2198-8357-4196-982f-500b73cc6b96")
 	)
 	(label "SENSOR_OUT_4"
-		(at 177.8 53.34 0)
+		(at 177.8 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8118,7 +8118,7 @@
 		(uuid "b1b02519-56ab-46c6-8f5e-30852c1c09e0")
 	)
 	(label "SENSOR_OUT_8"
-		(at 177.8 43.18 0)
+		(at 177.8 60.96 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8138,7 +8138,7 @@
 		(uuid "c0422429-27dc-496c-af36-c7a753ab9dd5")
 	)
 	(label "SENSOR_OUT_3"
-		(at 177.8 55.88 0)
+		(at 177.8 48.26 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8158,7 +8158,7 @@
 		(uuid "cf9e41ba-a529-4705-88c5-4fb1d842fdcd")
 	)
 	(label "SENSOR_OUT_2"
-		(at 177.8 58.42 0)
+		(at 177.8 45.72 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8218,7 +8218,7 @@
 		(uuid "e9bab147-dc3c-4b13-918b-005e470013fe")
 	)
 	(label "SENSOR_OUT_5"
-		(at 177.8 50.8 0)
+		(at 177.8 53.34 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10820,7 +10820,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Display:WC1602A"
+		(property "Footprint" "ghostchess:WC1602A_3Hole"
 			(at 251.46 57.15 0)
 			(hide yes)
 			(show_name no)
