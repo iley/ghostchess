@@ -3201,10 +3201,6 @@
 		(uuid "bb8da20f-4281-4400-9594-03f8162216fa")
 	)
 	(no_connect
-		(at 177.8 66.04)
-		(uuid "d9d36b53-0232-4427-baa9-dccfea0295c1")
-	)
-	(no_connect
 		(at 147.32 58.42)
 		(uuid "e472d1f8-1fd6-41f8-86b8-51e241fe6f2e")
 	)
@@ -8256,6 +8252,16 @@
 			(justify right bottom)
 		)
 		(uuid "f6748983-0cc5-495e-8bc8-3ab8e431a93b")
+	)
+	(label "LED_DI"
+		(at 177.8 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f71c6464-537c-496a-aadd-564e3b47ecbe")
 	)
 	(label "SENSOR_OUT_1"
 		(at 90.17 55.88 0)
