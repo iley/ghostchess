@@ -9,6 +9,9 @@
 #define LED_COUNT 64U
 
 #define LED_DATA_BIT PB0
+#define OLED_CS_BIT PB4
+#define OLED_SDI_BIT PB5
+#define OLED_SCL_BIT PB7
 #define SENSOR_SETTLE_US 40U
 #define WHITE_HALF 128U
 #define GREEN_FULL 255U
@@ -80,6 +83,74 @@ static void ws2812_show(const struct pixel *data, uint16_t count)
     _delay_us(80);
 }
 
+/*
+ * WS0010-compatible OLED serial writes are 10 bits: register-select, write,
+ * then eight data bits. OLED data bytes may follow one another under the same
+ * chip-select assertion.
+ */
+static void oled_write_bit(bool high)
+{
+    PORTB &= (uint8_t)~_BV(OLED_SCL_BIT);
+
+    if (high) {
+        PORTB |= _BV(OLED_SDI_BIT);
+    } else {
+        PORTB &= (uint8_t)~_BV(OLED_SDI_BIT);
+    }
+
+    PORTB |= _BV(OLED_SCL_BIT);
+}
+
+static void oled_write_byte(uint8_t value)
+{
+    for (uint8_t mask = 0x80U; mask != 0U; mask >>= 1U) {
+        oled_write_bit((value & mask) != 0U);
+    }
+}
+
+static void oled_command(uint8_t command)
+{
+    PORTB &= (uint8_t)~_BV(OLED_CS_BIT);
+    oled_write_bit(false); /* command */
+    oled_write_bit(false); /* write */
+    oled_write_byte(command);
+    PORTB |= _BV(OLED_CS_BIT);
+
+    /* Direct port writes outrun the WS0010 command execution time. */
+    _delay_us(50);
+}
+
+static void oled_write(const char *text, uint8_t count)
+{
+    PORTB &= (uint8_t)~_BV(OLED_CS_BIT);
+    oled_write_bit(true);  /* data */
+    oled_write_bit(false); /* write */
+
+    while (count-- != 0U) {
+        oled_write_byte((uint8_t)*text++);
+    }
+
+    PORTB |= _BV(OLED_CS_BIT);
+}
+
+static void oled_clear(void)
+{
+    oled_command(0x01U);
+    _delay_ms(2);
+}
+
+static void oled_init(void)
+{
+    _delay_ms(10);
+    oled_command(0x38U); /* 8-bit interface, two display lines, English font */
+    oled_command(0x08U); /* display off */
+    oled_clear();
+    oled_command(0x06U); /* increment cursor, no display shift */
+    oled_command(0x02U); /* home */
+    _delay_ms(2);
+    oled_command(0x0cU); /* display on, cursor off */
+}
+
 /* JTD must be written twice within four CPU cycles. */
 static void disable_jtag(void)
 {
@@ -99,7 +170,9 @@ static void hardware_init(void)
     clock_prescale_set(clock_div_1);
 
     PORTB &= (uint8_t)~_BV(LED_DATA_BIT);
-    DDRB |= _BV(LED_DATA_BIT);
+    PORTB |= _BV(OLED_CS_BIT);
+    DDRB |= _BV(LED_DATA_BIT) | _BV(OLED_CS_BIT) | _BV(OLED_SDI_BIT) |
+            _BV(OLED_SCL_BIT);
 
     /* PA0..PA7 are active-low, open-drain sensor inputs. */
     DDRA = 0x00U;
@@ -198,10 +271,18 @@ static bool scan_sensors(uint16_t now)
 
 int main(void)
 {
+    static const char boot_message[] = "Ghost Chess v1";
+
     hardware_init();
 
     render_board();
     ws2812_show(pixels, LED_COUNT);
+
+    oled_init();
+    oled_command(0x80U); /* first character of the first line */
+    oled_write(boot_message, (uint8_t)(sizeof(boot_message) - 1U));
+    _delay_ms(1000);
+    oled_clear();
 
     for (;;) {
         uint16_t now = TCNT1;
