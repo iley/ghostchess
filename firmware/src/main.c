@@ -11,16 +11,16 @@
 #define LED_COUNT 64U
 
 #define LED_DATA_BIT PB0
-#define SENSOR_SETTLE_US 40U
+#define SENSOR_POWER_ON_MS 2U
+#define SENSOR_POWER_OFF_MS 2U
+#define SENSOR_SAMPLE_COUNT 8U
+#define SENSOR_SAMPLE_INTERVAL_US 100U
+#define SENSOR_DEBOUNCE_SCANS 3U
 #define WHITE_HALF 128U
 #define GREEN_FULL 255U
 
-/* Timer 1 runs at exactly 43.2 kHz with the 11.0592 MHz clock / 256. */
-#define TIMER1_HZ (F_CPU / 256UL)
-#define BLINK_TICKS ((uint16_t)((TIMER1_HZ * 500UL) / 1000UL))
-
 #if F_CPU != 11059200UL
-#error "The WS2812 timing and board timer assume an 11.0592 MHz CPU clock"
+#error "The WS2812 timing assumes an 11.0592 MHz CPU clock"
 #endif
 
 /* WS2812 byte order on the wire is green, red, blue. */
@@ -31,9 +31,8 @@ struct pixel {
 } __attribute__((packed));
 
 static struct pixel pixels[LED_COUNT];
-static bool blink_active[LED_COUNT];
-static uint16_t blink_until[LED_COUNT];
-static uint8_t previous_detected[BOARD_SIZE];
+static bool sensor_active[LED_COUNT];
+static uint8_t sensor_confidence[LED_COUNT];
 
 /*
  * Send one WS2812 frame on PB0.
@@ -111,12 +110,6 @@ static void hardware_init(void)
     PORTC = 0x00U;
     disable_jtag();
     DDRC = 0xffU;
-
-    /* Free-running timebase; 65536 ticks wrap after about 1.5 seconds. */
-    TCCR1A = 0x00U;
-    TCCR1B = 0x00U;
-    TCNT1 = 0U;
-    TCCR1B = _BV(CS12); /* clk/256 */
 }
 
 static uint8_t led_index(uint8_t row, uint8_t file)
@@ -133,7 +126,7 @@ static void render_board(void)
             uint8_t square = (uint8_t)(row * BOARD_SIZE + file);
             struct pixel *pixel = &pixels[led_index(row, file)];
 
-            if (blink_active[square]) {
+            if (sensor_active[square]) {
                 pixel->green = GREEN_FULL;
                 pixel->red = 0U;
                 pixel->blue = 0U;
@@ -151,46 +144,58 @@ static void render_board(void)
     }
 }
 
-static bool time_reached(uint16_t now, uint16_t deadline)
-{
-    return (int16_t)(now - deadline) >= 0;
-}
-
-static bool expire_blinks(uint16_t now)
-{
-    bool changed = false;
-
-    for (uint8_t square = 0U; square < LED_COUNT; ++square) {
-        if (blink_active[square] && time_reached(now, blink_until[square])) {
-            blink_active[square] = false;
-            changed = true;
-        }
-    }
-
-    return changed;
-}
-
-static bool scan_sensors(uint16_t now)
+static bool scan_sensors(void)
 {
     bool changed = false;
 
     for (uint8_t row = 0U; row < BOARD_SIZE; ++row) {
+        /* A low bus before selection still belongs to an earlier row. */
+        uint8_t idle_high = PINA;
+
         /* Row 0 is chess rank 8 / SENSOR_ON_1 / PC7. */
         PORTC = _BV(7U - row);
-        _delay_us(SENSOR_SETTLE_US);
+        _delay_ms(SENSOR_POWER_ON_MS);
 
         uint8_t detected = (uint8_t)~PINA;
+
+        /* Reject short noise pulses on the weakly pulled-up file buses. */
+        for (uint8_t sample = 1U; sample < SENSOR_SAMPLE_COUNT; ++sample) {
+            _delay_us(SENSOR_SAMPLE_INTERVAL_US);
+            detected &= (uint8_t)~PINA;
+        }
+
         PORTC = 0x00U;
 
-        uint8_t newly_detected = detected & (uint8_t)~previous_detected[row];
-        previous_detected[row] = detected;
+        /* Let the previous row release the shared open-drain file buses. */
+        _delay_ms(SENSOR_POWER_OFF_MS);
 
         for (uint8_t file = 0U; file < BOARD_SIZE; ++file) {
-            if ((newly_detected & _BV(file)) != 0U) {
-                uint8_t square = (uint8_t)(row * BOARD_SIZE + file);
-                blink_active[square] = true;
-                blink_until[square] = (uint16_t)(now + BLINK_TICKS);
-                changed = true;
+            uint8_t square = (uint8_t)(row * BOARD_SIZE + file);
+            bool detected_now = (detected & _BV(file)) != 0U;
+
+            if ((idle_high & _BV(file)) == 0U) {
+                continue;
+            }
+
+            if (detected_now) {
+                if (sensor_confidence[square] < SENSOR_DEBOUNCE_SCANS) {
+                    ++sensor_confidence[square];
+                }
+
+                if (sensor_confidence[square] == SENSOR_DEBOUNCE_SCANS &&
+                    !sensor_active[square]) {
+                    sensor_active[square] = true;
+                    changed = true;
+                }
+            } else {
+                if (sensor_confidence[square] > 0U) {
+                    --sensor_confidence[square];
+                }
+
+                if (sensor_confidence[square] == 0U && sensor_active[square]) {
+                    sensor_active[square] = false;
+                    changed = true;
+                }
             }
         }
     }
@@ -213,9 +218,7 @@ int main(void)
     oled_clear();
 
     for (;;) {
-        uint16_t now = TCNT1;
-        bool display_changed = scan_sensors(now);
-        display_changed |= expire_blinks(TCNT1);
+        bool display_changed = scan_sensors();
 
         if (display_changed) {
             render_board();
