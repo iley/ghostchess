@@ -1,7 +1,7 @@
 # Ghost Chess firmware
 
 Initial bare-metal AVR firmware for the `ghostchess_brains_v1` ATmega644PA.
-It displays an 8x8 chessboard by lighting the light squares white at half RGB
+It displays an 8x8 chessboard by lighting the light squares white at full RGB
 level, scans all 64 Hall sensors continuously, and lights each occupied square
 green at full RGB level for as long as its sensor detects a magnet.
 

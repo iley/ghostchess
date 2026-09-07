@@ -16,7 +16,7 @@
 #define SENSOR_SAMPLE_COUNT 8U
 #define SENSOR_SAMPLE_INTERVAL_US 100U
 #define SENSOR_DEBOUNCE_SCANS 3U
-#define WHITE_HALF 128U
+#define WHITE_FULL 255U
 #define GREEN_FULL 255U
 
 #if F_CPU != 11059200UL
@@ -132,9 +132,9 @@ static void render_board(void)
                 pixel->blue = 0U;
             } else if (((row + file) & 1U) == 0U) {
                 /* A8 is a light square; A1 is a dark square. */
-                pixel->green = WHITE_HALF;
-                pixel->red = WHITE_HALF;
-                pixel->blue = WHITE_HALF;
+                pixel->green = WHITE_FULL;
+                pixel->red = WHITE_FULL;
+                pixel->blue = WHITE_FULL;
             } else {
                 pixel->green = 0U;
                 pixel->red = 0U;
