@@ -6,6 +6,7 @@
 #include <util/delay.h>
 
 #include "oled.h"
+#include "assistant.h"
 
 #define BOARD_SIZE 8U
 #define LED_COUNT 64U
@@ -16,8 +17,8 @@
 #define SENSOR_SAMPLE_COUNT 8U
 #define SENSOR_SAMPLE_INTERVAL_US 100U
 #define SENSOR_DEBOUNCE_SCANS 3U
-#define WHITE_FULL 255U
-#define GREEN_FULL 255U
+#define BASE_BRIGHTNESS 6U
+#define HINT_BRIGHTNESS 48U
 
 #if F_CPU != 11059200UL
 #error "The WS2812 timing assumes an 11.0592 MHz CPU clock"
@@ -33,6 +34,7 @@ struct pixel {
 static struct pixel pixels[LED_COUNT];
 static bool sensor_active[LED_COUNT];
 static uint8_t sensor_confidence[LED_COUNT];
+static struct assistant game;
 
 /*
  * Send one WS2812 frame on PB0.
@@ -110,6 +112,10 @@ static void hardware_init(void)
     PORTC = 0x00U;
     disable_jtag();
     DDRC = 0xffU;
+
+    /* BTN1: hold for two seconds to start a new standard game. */
+    DDRD &= (uint8_t)~_BV(PD5);
+    PORTD |= _BV(PD5);
 }
 
 static uint8_t led_index(uint8_t row, uint8_t file)
@@ -119,29 +125,49 @@ static uint8_t led_index(uint8_t row, uint8_t file)
     return (uint8_t)(row * BOARD_SIZE + serial_file);
 }
 
-static void render_board(void)
+/* Poll a free-running timer: LED transmission cannot lose timer interrupts.
+ * Timer1 / 256 = 43200 Hz. Read at least once per 1.5-second wrap. */
+static uint32_t milliseconds(void)
 {
+    static uint16_t previous;
+    static uint16_t remainder;
+    static uint32_t now;
+    uint16_t ticks = TCNT1;
+    uint16_t elapsed = (uint16_t)(ticks - previous);
+    previous = ticks;
+    uint32_t scaled = (uint32_t)elapsed * 10U + remainder;
+    now += scaled / 432U;
+    remainder = scaled % 432U;
+    return now;
+}
+
+static bool render_board(void)
+{
+    bool changed = false;
     for (uint8_t row = 0U; row < BOARD_SIZE; ++row) {
         for (uint8_t file = 0U; file < BOARD_SIZE; ++file) {
             uint8_t square = (uint8_t)(row * BOARD_SIZE + file);
             struct pixel *pixel = &pixels[led_index(row, file)];
-
-            if (sensor_active[square]) {
-                pixel->green = GREEN_FULL;
-                pixel->red = 0U;
-                pixel->blue = 0U;
-            } else if (((row + file) & 1U) == 0U) {
-                /* A8 is a light square; A1 is a dark square. */
-                pixel->green = WHITE_FULL;
-                pixel->red = WHITE_FULL;
-                pixel->blue = WHITE_FULL;
-            } else {
-                pixel->green = 0U;
-                pixel->red = 0U;
-                pixel->blue = 0U;
+            struct pixel next = { 0, 0, 0 };
+            switch (assistant_light(&game, square)) {
+            case LIGHT_WHITE:
+                next.red = next.green = next.blue = BASE_BRIGHTNESS;
+                break;
+            case LIGHT_GREEN: next.green = HINT_BRIGHTNESS; break;
+            case LIGHT_BLUE: next.blue = HINT_BRIGHTNESS; break;
+            case LIGHT_ORANGE:
+                next.red = HINT_BRIGHTNESS;
+                next.green = HINT_BRIGHTNESS / 3U;
+                break;
+            case LIGHT_RED: next.red = HINT_BRIGHTNESS; break;
+            default: break;
             }
+            if (pixel->red != next.red || pixel->green != next.green ||
+                pixel->blue != next.blue) changed = true;
+            *pixel = next;
         }
     }
+    return changed;
 }
 
 static bool scan_sensors(void)
@@ -205,24 +231,44 @@ static bool scan_sensors(void)
 
 int main(void)
 {
-    static const char boot_message[] = "Ghost Chess v1";
-
     hardware_init();
-
+    assistant_init(&game, 0);
     render_board();
     ws2812_show(pixels, LED_COUNT);
-
     oled_init();
-    oled_write_text(boot_message);
-    _delay_ms(1000);
-    oled_clear();
+
+    TCNT1 = 0;
+    TCCR1A = 0;
+    TCCR1B = _BV(CS12); /* Timer1 prescaler 256. */
+    const char *last_status = 0;
+    bool button_down = false;
+    bool reset_done = false;
+    uint32_t button_since = 0;
 
     for (;;) {
-        bool display_changed = scan_sensors();
+        scan_sensors();
+        uint32_t now = milliseconds();
+        if ((PIND & _BV(PD5)) == 0) {
+            if (!button_down) {
+                button_down = true;
+                button_since = now;
+            }
+            if (!reset_done && now - button_since >= 2000U) {
+                assistant_init(&game, now);
+                reset_done = true;
+            }
+        } else {
+            button_down = false;
+            reset_done = false;
+        }
 
-        if (display_changed) {
-            render_board();
-            ws2812_show(pixels, LED_COUNT);
+        assistant_update(&game, sensor_active, now);
+        if (render_board()) ws2812_show(pixels, LED_COUNT);
+        const char *status = assistant_status(&game);
+        if (status != last_status) {
+            oled_clear();
+            oled_write_text(status);
+            last_status = status;
         }
     }
 }

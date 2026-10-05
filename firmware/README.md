@@ -1,9 +1,52 @@
 # Ghost Chess firmware
 
-Initial bare-metal AVR firmware for the `ghostchess_brains_v1` ATmega644PA.
-It displays an 8x8 chessboard by lighting the light squares white at full RGB
-level, scans all 64 Hall sensors continuously, and lights each occupied square
-green at full RGB level for as long as its sensor detects a magnet.
+Bare-metal AVR firmware for the `ghostchess_brains_v1` ATmega644PA.
+The first functional slice tracks ordinary chess moves and gives advisory LED
+feedback. See the [implementation plan](../docs/firmware-plan.md) for remaining
+special moves and recovery work.
+
+## Playing
+
+1. Arrange the standard starting position: white on ranks 1–2, black on 7–8,
+   with queens on D1/D8. The sensors detect occupancy, not piece identity, so
+   the player must put the correct pieces on the correct squares.
+2. Each occupied starting square briefly lights green. Extra pieces on ranks
+   3–6 light red. The game starts with White once all 32 starting squares are
+   occupied, all other squares are empty, and the board is stable for 600 ms.
+3. Lift a piece: legal empty destinations light blue; legal captures light
+   orange. Hints respect blockers, pawn direction, turn, and king safety.
+   A checked king also lights orange.
+4. Put it back to cancel, without changing turns. For a capture, remove the
+   opponent's piece and move yours onto its square; either removal order works.
+   Give each removal time to register (roughly 120 ms with the current scanner).
+5. A landing stable for 180 ms after sensor debounce commits the move. Invalid
+   moves blink red for 2.2 seconds but are accepted immediately. Play can continue
+   during the warning. After any accepted move, the opposite color moves next.
+6. Hold BTN1 for two seconds to reset to setup, or power-cycle. Games are not
+   saved across resets.
+
+The background board is dim white; hints use restrained brightness. Setup
+flashes, move settling, and warning animation do not block sensor scanning.
+The OLED shows setup, the next side, or a request to restore ambiguous handling.
+
+### Current limits
+
+- Castling and en passant are not supported yet. Castling will be treated as
+  separate advisory-invalid moves; en passant cannot be resolved as an ordinary
+  capture. Avoid these until the next slice.
+- Promotion automatically becomes a queen. Underpromotion needs a future button
+  selection flow.
+- Move one piece at a time (plus its capture victim). Multiple unrelated lifts
+  are not reliably identifiable. Restore the last tracked position when the
+  OLED asks `Restore pieces`, or reset and set up again.
+- Hall sensors cannot detect piece swaps, confirm the correct starting identities,
+  or recognize a capture when the victim's empty-square interval is missed.
+  Likewise, replacing a victim while the attacker remains lifted looks exactly
+  like completing a capture. To cancel that gesture, restore the attacker first,
+  then the victim, or restore both within the settling window.
+- An accepted illegal position remains playable, with subsequent hints based on
+  the tracked pieces. There is no undo, arbitrary-position editor, or end-game
+  adjudication yet.
 
 ## Build
 
@@ -14,6 +57,26 @@ then run:
 cd firmware
 pio run
 ```
+
+### Apple Silicon
+
+The pinned PlatformIO AVR package contains Intel binaries. The
+[`native_avr.py`](scripts/native_avr.py) build hook automatically selects native
+Homebrew tools on ARM Macs, for both compilation and upload. Other hosts keep
+PlatformIO's packaged tools. This uses PlatformIO's supported
+[post-script environments](https://docs.platformio.org/en/stable/scripting/construction_environments.html).
+
+Install the dependencies if they are not present:
+
+```sh
+brew install osx-cross/avr/avr-gcc@8 osx-cross/avr/avr-binutils avrdude isl libmpc
+```
+
+Homebrew may require you to trust the individual `osx-cross/avr` formulae before
+installing them. Use the formula-specific instructions Homebrew prints.
+The build hook discovers the Homebrew prefix and does not modify PlatformIO's
+package cache. Its package listing still shows the bundled compiler; the
+`Using native Homebrew AVR toolchain (Apple Silicon)` line confirms the override.
 
 The project deliberately has no Arduino framework dependency; it is compiled
 as C against `avr-libc`. The default upload protocol is USBasp over the board's
@@ -57,3 +120,25 @@ The board design drives a 5 V WS2812B data input directly from 3.3 V logic.
 That is part of the v1 hardware interface and may have limited logic-high
 margin. Also note that 11.0592 MHz at 3.3 V is outside the ATmega644PA's
 datasheet-guaranteed operating region documented for this board.
+
+## Host verification
+
+The chess and gesture logic have no AVR dependencies. Run their tests with a
+C compiler supporting AddressSanitizer and UndefinedBehaviorSanitizer:
+
+```sh
+sh firmware/tests/run.sh  # from the repository root
+```
+
+`CC` can select a different compiler. If an installed macOS beta SDK and linker
+are incompatible, select a compatible installed SDK with `SDKROOT`. On the
+current development machine, the verified command is:
+
+```sh
+SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk sh firmware/tests/run.sh
+```
+
+The tests exercise setup, hints, capture orders, cancellation, advisory invalid
+moves, ambiguous handling, promotion, check/pins, timing rollover, and opening
+move counts of 20 / 400 / 8,902 through three plies. Sensor electrical behavior,
+LED timing/color, and human gesture timing still need verification on the board.
