@@ -51,6 +51,12 @@ Remaining:
 
 ## Slice 3 — recovery and board validation
 
+- Placement acknowledgement during play: briefly pulse the destination square
+  green at subtle brightness when the sensors detect a debounced placement,
+  including captures and lift/return cancellation. This confirms detection, not
+  move legality or commitment, so a missed placement produces no pulse. Reuse
+  the setup pulse duration (currently 350 ms) as a starting point; keep scanning
+  nonblocking and preserve advisory invalid-move warnings after the pulse.
 - Recovery/undo interaction for ambiguous captures, accidental extra pieces,
   piece corrections, and arbitrary-position setup. Occupancy alone cannot
   distinguish all these intentions; use the available buttons/OLED.
@@ -73,6 +79,11 @@ Remaining:
    the attacker. Pause between steps; verify orange hints, the completion prompt,
    and a single turn change. Restore a partial gesture to cancel. Repeat after
    eligibility has expired and verify advisory red feedback.
+8. Once placement acknowledgement during play is implemented, verify a subtle
+   green pulse on each detected landing (ordinary move, capture, lift/return,
+   and partial special move). Confirm no pulse occurs without a detected
+   placement, hints resume afterward, invalid-move warnings remain visible,
+   and immediate subsequent moves are still sensed during the pulse.
 
 Current limits and observable sensor ambiguities are detailed in the
 [firmware README](../firmware/README.md). No firmware upload has been performed.
