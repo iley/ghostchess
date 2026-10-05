@@ -212,6 +212,148 @@ static void test_rules(void)
     assert(board[SQ('c', 1)] == -QUEEN);
 }
 
+static void ep_position(bool white, bool eligible)
+{
+    int8_t board[64] = {0};
+    board[SQ('e', 1)] = KING;
+    board[SQ('e', 8)] = -KING;
+    board[SQ('e', white ? 5 : 4)] = white ? PAWN : -PAWN;
+    board[SQ('d', white ? 5 : 4)] = white ? -PAWN : PAWN;
+    position(board, white);
+    game.en_passant = eligible ? SQ('d', white ? 6 : 3) : CHESS_NO_SQUARE;
+}
+
+static void test_en_passant_orders(void)
+{
+    static const uint8_t orders[6][3] = {
+        {0, 1, 2}, {0, 2, 1}, {1, 0, 2},
+        {1, 2, 0}, {2, 0, 1}, {2, 1, 0}
+    };
+    for (unsigned color = 0; color < 2; ++color) {
+        bool white = color == 0;
+        uint8_t from = SQ('e', white ? 5 : 4);
+        uint8_t victim = SQ('d', white ? 5 : 4);
+        uint8_t to = SQ('d', white ? 6 : 3);
+        uint8_t squares[3] = {from, victim, to};
+        for (unsigned eligible = 0; eligible < 2; ++eligible) {
+            for (unsigned order = 0; order < 6; ++order) {
+                ep_position(white, eligible != 0);
+                for (unsigned event = 0; event < 3; ++event) {
+                    uint8_t action = orders[order][event];
+                    sensor(squares[action], action == 2);
+                    tick(5000); /* Arbitrary pauses between all three events. */
+                    if (event < 2) {
+                        assert(game.white_turn == white);
+                        assert(game.board[from] == (white ? PAWN : -PAWN));
+                        assert(game.board[victim] == (white ? -PAWN : PAWN));
+                    }
+                }
+                assert(game.board[from] == EMPTY && game.board[victim] == EMPTY);
+                assert(game.board[to] == (white ? PAWN : -PAWN));
+                assert(game.white_turn != white);
+                assert((game.warning_remaining == 0) == (eligible != 0));
+                assert(game.en_passant == CHESS_NO_SQUARE);
+            }
+        }
+    }
+    ep_position(true, true);
+    sensors[SQ('e', 5)] = sensors[SQ('d', 5)] = false;
+    sensors[SQ('d', 6)] = true;
+    tick(40);
+    tick(ASSISTANT_SETTLE_MS);
+    assert(game.board[SQ('d', 6)] == PAWN && !game.white_turn);
+}
+
+static void test_en_passant_history_and_cancel(void)
+{
+    start();
+    move(SQ('e', 2), SQ('e', 4));
+    assert(game.en_passant == SQ('e', 3));
+    move(SQ('a', 7), SQ('a', 6));
+    assert(game.en_passant == CHESS_NO_SQUARE);
+    move(SQ('e', 4), SQ('e', 5));
+    move(SQ('d', 7), SQ('d', 5));
+    assert(game.en_passant == SQ('d', 6));
+    sensor(SQ('e', 5), false);
+    assert(game.hints[SQ('d', 6)] == LIGHT_ORANGE);
+    sensor(SQ('d', 6), true);
+    tick(5000);
+    assert(game.en_passant_pending && game.white_turn);
+    assert(strcmp(assistant_status(&game), "Finish en passant") == 0);
+    sensor(SQ('d', 6), false);
+    sensor(SQ('e', 5), true);
+    assert(!game.en_passant_pending && game.white_turn);
+    assert(game.en_passant == SQ('d', 6));
+    move(SQ('g', 1), SQ('f', 3));
+    assert(game.en_passant == CHESS_NO_SQUARE);
+
+    ep_position(true, true);
+    sensor(SQ('e', 5), false);
+    sensor(SQ('d', 5), false);
+    sensors[SQ('e', 5)] = sensors[SQ('d', 5)] = true;
+    tick(40);
+    assert(game.white_turn && game.en_passant == SQ('d', 6));
+
+    ep_position(true, true);
+    game.white_turn = false;
+    sensor(SQ('e', 5), false);
+    sensor(SQ('d', 5), false);
+    sensor(SQ('d', 6), true);
+    tick(ASSISTANT_SETTLE_MS);
+    assert(!game.white_turn && game.warning_remaining != 0);
+
+    start();
+    move(SQ('d', 7), SQ('d', 5)); /* Wrong-turn double move grants no right. */
+    assert(game.en_passant == CHESS_NO_SQUARE);
+
+    /* Unrelated changes must not be swallowed as part of en passant. */
+    ep_position(true, true);
+    sensor(SQ('e', 5), false);
+    sensor(SQ('d', 5), false);
+    sensor(SQ('d', 6), true);
+    sensor(SQ('a', 3), true);
+    tick(5000);
+    assert(game.unresolved && game.white_turn);
+}
+
+static void test_en_passant_rules(void)
+{
+    ep_position(true, true);
+    uint8_t from = SQ('e', 5), to = SQ('d', 6);
+    assert(chess_legal_en_passant(game.board, from, to, to));
+    assert(!chess_legal_en_passant(game.board, from, to, CHESS_NO_SQUARE));
+    game.en_passant = CHESS_NO_SQUARE;
+    sensor(from, false);
+    assert(game.hints[to] == 0);
+    sensor(from, true);
+    game.en_passant = to;
+    assert(chess_en_passant_victim(game.board, 64, to) == CHESS_NO_SQUARE);
+    assert(chess_en_passant_victim(game.board, from, 64) == CHESS_NO_SQUARE);
+    game.board[SQ('e', 8)] = -ROOK;
+    assert(!chess_legal_en_passant(game.board, from, to, to));
+    sensor(from, false);
+    assert(game.hints[to] == 0); /* Pinned pawn must not receive a hint. */
+    sensor(to, true);
+    tick(5000);
+    assert(game.white_turn); /* Still wait for the victim of an illegal move. */
+    sensor(SQ('d', 5), false);
+    tick(ASSISTANT_SETTLE_MS);
+    assert(!game.white_turn && game.warning_remaining != 0);
+
+    /* Removing both pawns can expose a rook along the fifth rank. */
+    ep_position(true, true);
+    game.board[SQ('e', 1)] = EMPTY;
+    game.board[SQ('h', 5)] = KING;
+    game.board[SQ('a', 5)] = -ROOK;
+    assert(!chess_legal_en_passant(game.board, from, to, to));
+    game.board[SQ('a', 5)] = EMPTY;
+    assert(chess_legal_en_passant(game.board, from, to, to));
+    game.board[SQ('d', 5)] = -KNIGHT;
+    assert(chess_en_passant_victim(game.board, from, to) == CHESS_NO_SQUARE);
+    ep_position(false, true);
+    assert(chess_legal_en_passant(game.board, SQ('e', 4), SQ('d', 3), SQ('d', 3)));
+}
+
 static unsigned long perft(const int8_t board[64], bool white, unsigned depth)
 {
     if (depth == 0) return 1;
@@ -252,6 +394,9 @@ int main(void)
     test_settling_and_ambiguity();
     test_rules();
     test_clock_wrap();
+    test_en_passant_orders();
+    test_en_passant_history_and_cancel();
+    test_en_passant_rules();
     int8_t board[64];
     chess_start(board);
     assert(perft(board, true, 1) == 20);

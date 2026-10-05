@@ -13,6 +13,7 @@ void assistant_init(struct assistant *game, uint32_t now)
     chess_start(game->board);
     game->white_turn = true;
     game->selected = NO_SQUARE;
+    game->en_passant = CHESS_NO_SQUARE;
     game->warning_square = NO_SQUARE;
     game->last_update = now;
     game->stable_since = now;
@@ -24,6 +25,7 @@ static void clear_gesture(struct assistant *game)
     memset(game->hints, 0, sizeof game->hints);
     game->selected = NO_SQUARE;
     game->unresolved = false;
+    game->en_passant_pending = false;
 }
 
 static void update_hints(struct assistant *game)
@@ -45,6 +47,8 @@ static void update_hints(struct assistant *game)
     for (uint8_t to = 0; to < 64; ++to) {
         if (chess_legal(game->board, selected, to))
             game->hints[to] = game->board[to] == EMPTY ? LIGHT_BLUE : LIGHT_ORANGE;
+        if (chess_legal_en_passant(game->board, selected, to, game->en_passant))
+            game->hints[to] = LIGHT_ORANGE;
     }
 }
 
@@ -103,11 +107,37 @@ void assistant_update(struct assistant *game, const bool occupied[64],
         }
     }
 
+    /* A diagonal pawn landing can precede either removal. Keep the tracked
+     * position intact until all three squares agree; a pause is not a turn. */
+    game->en_passant_pending = false;
+    uint8_t ep_from = NO_SQUARE, ep_victim = NO_SQUARE, ep_count = 0;
+    if (added_count == 1 && replaced_count == 0) {
+        for (uint8_t from = 0; from < 64; ++from) {
+            uint8_t victim = chess_en_passant_victim(game->board, from, added);
+            if (victim == CHESS_NO_SQUARE) continue;
+            uint8_t participants_missing = (!occupied[from]) + (!occupied[victim]);
+            if (participants_missing == 0 || participants_missing != missing_count)
+                continue;
+            ep_from = from;
+            ep_victim = victim;
+            ++ep_count;
+        }
+    }
+    if (ep_count != 0 && (ep_count != 1 || missing_count != 2)) {
+        game->en_passant_pending = true;
+        game->unresolved = false;
+        return;
+    }
+
     uint8_t to = NO_SQUARE;
     if (missing_count == 1 && added_count == 1 && replaced_count == 0)
         to = added;
     if (missing_count == 1 && added_count == 0 && replaced_count == 1)
         to = replaced;
+    if (ep_count == 1 && missing_count == 2) {
+        missing = ep_from;
+        to = added;
+    }
 
     if (to == NO_SQUARE) {
         /* A single lifted piece, or both participants in a capture, can wait
@@ -118,13 +148,20 @@ void assistant_update(struct assistant *game, const bool occupied[64],
     }
 
     bool white = game->board[missing] > 0;
-    bool legal = white == game->white_turn && chess_legal(game->board, missing, to);
+    bool en_passant = ep_count == 1 && missing_count == 2;
+    bool legal = white == game->white_turn &&
+        (en_passant ? chess_legal_en_passant(game->board, missing, to,
+                                           game->en_passant) :
+                      chess_legal(game->board, missing, to));
     if (!legal) {
         game->warning_square = to;
         game->warning_remaining = ASSISTANT_WARNING_MS;
     }
     /* Legality is advisory. Follow the observed move, including wrong-turn
      * moves, and make the opposite color next. */
+    game->en_passant = !en_passant && legal ?
+        chess_en_passant_target(game->board, missing, to) : CHESS_NO_SQUARE;
+    if (en_passant) game->board[ep_victim] = EMPTY;
     chess_move(game->board, missing, to);
     game->white_turn = !white;
     clear_gesture(game);
@@ -154,6 +191,7 @@ enum square_light assistant_light(const struct assistant *game, uint8_t square)
 const char *assistant_status(const struct assistant *game)
 {
     if (!game->playing) return "Set up pieces";
+    if (game->en_passant_pending) return "Finish en passant";
     if (game->unresolved) return "Restore pieces";
     return game->white_turn ? "White to move" : "Black to move";
 }

@@ -22,6 +22,8 @@ struct assistant {
     bool white_turn;
     bool unresolved;
     uint8_t selected;
+    uint8_t en_passant;
+    bool en_passant_pending;
     uint8_t warning_square;
     uint16_t warning_remaining;
     uint32_t last_update;

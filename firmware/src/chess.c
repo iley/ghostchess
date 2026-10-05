@@ -87,3 +87,36 @@ bool chess_legal(const int8_t board[64], uint8_t from, uint8_t to)
     chess_move(next, from, to);
     return !chess_in_check(next, board[from] > 0);
 }
+
+uint8_t chess_en_passant_victim(const int8_t board[64], uint8_t from, uint8_t to)
+{
+    if (from >= 64 || to >= 64 || board[to] != EMPTY) return CHESS_NO_SQUARE;
+    int piece = board[from];
+    if (magnitude(piece) != PAWN || from / 8 != (piece > 0 ? 3 : 4))
+        return CHESS_NO_SQUARE;
+    int step = piece > 0 ? -1 : 1;
+    if ((int)(to / 8) - from / 8 != step ||
+        magnitude((int)(to % 8) - from % 8) != 1) return CHESS_NO_SQUARE;
+    uint8_t victim = (uint8_t)((int)to - step * 8);
+    return board[victim] == -piece ? victim : CHESS_NO_SQUARE;
+}
+
+bool chess_legal_en_passant(const int8_t board[64], uint8_t from, uint8_t to,
+                          uint8_t eligible)
+{
+    uint8_t victim = chess_en_passant_victim(board, from, to);
+    if (to != eligible || victim == CHESS_NO_SQUARE) return false;
+    int8_t next[64];
+    memcpy(next, board, sizeof next);
+    next[victim] = EMPTY;
+    chess_move(next, from, to);
+    return !chess_in_check(next, board[from] > 0);
+}
+
+uint8_t chess_en_passant_target(const int8_t board[64], uint8_t from, uint8_t to)
+{
+    if (from >= 64 || to >= 64 || magnitude(board[from]) != PAWN ||
+        magnitude((int)to - from) != 16 || !chess_legal(board, from, to))
+        return CHESS_NO_SQUARE;
+    return (uint8_t)((from + to) / 2);
+}

@@ -28,12 +28,23 @@ source plus one newly occupied destination; a capture instead needs a previously
 observed removal and replacement at its destination. Full occupancy restoration
 cancels the gesture. Legality never gates a uniquely inferred move.
 
-## Slice 2 — special moves
+## Slice 2 — special moves (in progress)
+
+Implemented en passant:
+
+- Track eligibility after legal, in-turn double pawn moves and expire it on the
+  next committed move. Lift/return cancellation preserves eligibility.
+- Orange capture hints, with king safety checked after removing both pawns.
+- Resolve all three-square event orders for both colors, with indefinite pauses
+  between steps and an OLED completion prompt for partial landings.
+- Accept uniquely inferred expired, out-of-turn, and king-exposing variants with
+  advisory warnings. Extra unrelated sensor changes require restoration.
+- Sanitized host tests and AVR build pass; hardware acceptance remains pending.
+
+Remaining:
 
 - Track castling rights and resolve king/rook gestures as one turn, in either
   handling order; validate attacked transit squares.
-- Track en passant eligibility and resolve its three-square gesture in practical
-  removal/landing orders.
 - Add button/OLED promotion choice and test replacement of the physical pawn.
 - Extend rules and gesture tests to cover special moves, cancellation, and
   permissive invalid variants without prematurely committing partial gestures.
@@ -58,6 +69,10 @@ cancels the gesture. Legality never gates a uniquely inferred move.
    with the other color. Verify no sensor events are lost during feedback.
 5. Create check and a pinned piece; verify orange king and restricted hints.
 6. Hold BTN1 to reset; verify setup restarts without repeated resets while held.
+7. Play en passant for both colors, removing the victim before and after landing
+   the attacker. Pause between steps; verify orange hints, the completion prompt,
+   and a single turn change. Restore a partial gesture to cancel. Repeat after
+   eligibility has expired and verify advisory red feedback.
 
 Current limits and observable sensor ambiguities are detailed in the
 [firmware README](../firmware/README.md). No firmware upload has been performed.

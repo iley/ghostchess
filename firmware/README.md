@@ -1,7 +1,7 @@
 # Ghost Chess firmware
 
 Bare-metal AVR firmware for the `ghostchess_brains_v1` ATmega644PA.
-The first functional slice tracks ordinary chess moves and gives advisory LED
+The firmware tracks ordinary chess moves and en passant, and gives advisory LED
 feedback. See the [implementation plan](../docs/firmware-plan.md) for remaining
 special moves and recovery work.
 
@@ -19,6 +19,10 @@ special moves and recovery work.
 4. Put it back to cancel, without changing turns. For a capture, remove the
    opponent's piece and move yours onto its square; either removal order works.
    Give each removal time to register (roughly 120 ms with the current scanner).
+   En passant destinations also light orange. Move the pawn and remove the
+   captured pawn in either order; the board waits for all three squares to
+   settle before changing turns. `Finish en passant` means a removal is still
+   pending. Restore the tracked position to cancel.
 5. A landing stable for 180 ms after sensor debounce commits the move. Invalid
    moves blink red for 2.2 seconds but are accepted immediately. Play can continue
    during the warning. After any accepted move, the opposite color moves next.
@@ -31,9 +35,15 @@ The OLED shows setup, the next side, or a request to restore ambiguous handling.
 
 ### Current limits
 
-- Castling and en passant are not supported yet. Castling will be treated as
-  separate advisory-invalid moves; en passant cannot be resolved as an ordinary
-  capture. Avoid these until the next slice.
+- Castling is not supported yet and will be treated as separate advisory-invalid
+  moves. Avoid castling until its gesture handling is implemented.
+- En passant eligibility lasts for the reply to a legal, in-turn double pawn
+  move. Expired, out-of-turn, and king-exposing en passant gestures are still
+  tracked, with an invalid-move warning. An en passant-shaped diagonal landing
+  beside an opposing pawn waits for its removal even when the move is illegal.
+  Occupancy alone cannot distinguish this from an intended illegal ordinary move;
+  restore the pieces to cancel. Removing the victim and placing a piece on the
+  destination before lifting the attacker also waits for completion.
 - Promotion automatically becomes a queen. Underpromotion needs a future button
   selection flow.
 - Move one piece at a time (plus its capture victim). Multiple unrelated lifts
@@ -139,6 +149,8 @@ SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk sh firmware/test
 ```
 
 The tests exercise setup, hints, capture orders, cancellation, advisory invalid
-moves, ambiguous handling, promotion, check/pins, timing rollover, and opening
+moves, ambiguous handling, promotion, check/pins, timing rollover, en passant for
+both colors in all six sensor-event orders (including long pauses), eligibility
+expiry, cancellation, and king safety after removing both pawns, plus opening
 move counts of 20 / 400 / 8,902 through three plies. Sensor electrical behavior,
 LED timing/color, and human gesture timing still need verification on the board.
