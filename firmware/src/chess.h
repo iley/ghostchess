@@ -8,6 +8,15 @@
 enum chess_piece { EMPTY, PAWN, KNIGHT, BISHOP, ROOK, QUEEN, KING };
 #define CHESS_NO_SQUARE 64U
 
+#define CHESS_CASTLE_ALL 15U
+/* Bits: white kingside, white queenside, black kingside, black queenside. */
+uint8_t chess_castle_right(bool white, bool kingside);
+bool chess_castle_shape(const int8_t board[64], bool white, bool kingside);
+bool chess_legal_castle(const int8_t board[64], bool white, bool kingside,
+                        uint8_t rights);
+uint8_t chess_rights_after(const int8_t board[64], uint8_t from, uint8_t to,
+                           uint8_t rights);
+
 void chess_start(int8_t board[64]);
 bool chess_in_check(const int8_t board[64], bool white);
 /* Ordinary moves, including automatic queen promotion; no castle/en passant. */

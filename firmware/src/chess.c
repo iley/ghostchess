@@ -120,3 +120,47 @@ uint8_t chess_en_passant_target(const int8_t board[64], uint8_t from, uint8_t to
         return CHESS_NO_SQUARE;
     return (uint8_t)((from + to) / 2);
 }
+
+uint8_t chess_castle_right(bool white, bool kingside)
+{
+    return (uint8_t)(1U << ((white ? 0 : 2) + (kingside ? 0 : 1)));
+}
+
+bool chess_castle_shape(const int8_t board[64], bool white, bool kingside)
+{
+    uint8_t row = white ? 56 : 0;
+    return board[row + 4] == (white ? KING : -KING) &&
+           board[row + (kingside ? 7 : 0)] == (white ? ROOK : -ROOK) &&
+           board[row + (kingside ? 6 : 2)] == EMPTY &&
+           board[row + (kingside ? 5 : 3)] == EMPTY;
+}
+
+bool chess_legal_castle(const int8_t board[64], bool white, bool kingside,
+                        uint8_t rights)
+{
+    if (!(rights & chess_castle_right(white, kingside)) ||
+        !chess_castle_shape(board, white, kingside) ||
+        chess_in_check(board, white)) return false;
+    uint8_t row = white ? 56 : 0;
+    if (!kingside && board[row + 1] != EMPTY) return false;
+    int8_t next[64];
+    memcpy(next, board, sizeof next);
+    chess_move(next, row + 4, row + (kingside ? 5 : 3));
+    if (chess_in_check(next, white)) return false;
+    chess_move(next, row + (kingside ? 5 : 3), row + (kingside ? 6 : 2));
+    chess_move(next, row + (kingside ? 7 : 0), row + (kingside ? 5 : 3));
+    return !chess_in_check(next, white);
+}
+
+uint8_t chess_rights_after(const int8_t board[64], uint8_t from, uint8_t to,
+                           uint8_t rights)
+{
+    if (board[from] == KING) rights &= (uint8_t)~3U;
+    if (board[from] == -KING) rights &= (uint8_t)~12U;
+    /* A captured/replaced corner rook can never regain the original right. */
+    static const uint8_t corners[4] = {63, 56, 7, 0};
+    for (uint8_t i = 0; i < 4; ++i)
+        if (from == corners[i] || to == corners[i])
+            rights &= (uint8_t)~(1U << i);
+    return rights;
+}

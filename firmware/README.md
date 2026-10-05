@@ -1,9 +1,9 @@
 # Ghost Chess firmware
 
 Bare-metal AVR firmware for the `ghostchess_brains_v1` ATmega644PA.
-The firmware tracks ordinary chess moves and en passant, and gives advisory LED
-feedback. See the [implementation plan](../docs/firmware-plan.md) for remaining
-special moves and recovery work.
+The firmware tracks ordinary moves, en passant, castling, and promotion, with
+advisory LED feedback. See the [implementation plan](../docs/firmware-plan.md)
+for remaining recovery work and hardware acceptance checks.
 
 ## Playing
 
@@ -23,20 +23,36 @@ special moves and recovery work.
    captured pawn in either order; the board waits for all three squares to
    settle before changing turns. `Finish en passant` means a removal is still
    pending. Restore the tracked position to cancel.
-5. A landing stable for 180 ms after sensor debounce commits the move. Invalid
-   moves blink red for 2.2 seconds but are accepted immediately. Play can continue
-   during the warning. After any accepted move, the opposite color moves next.
-6. Hold BTN1 for two seconds to reset to setup, or power-cycle. Games are not
+5. Castle by moving the king and rook, in either order. The board waits for both
+   pieces, even with long pauses, and changes turns once. If the rook lands first,
+   `Castle/3 rook` means finish castling or press BTN3 to commit a rook-only move.
+   Restore both pieces to cancel. Castling through check or after losing rights
+   is accepted with an advisory warning when the gesture is identifiable.
+6. On promotion, BTN2 cycles queen, rook, bishop, knight; BTN3 confirms. Replace
+   the pawn with the selected piece before confirming. The board waits while the
+   destination is empty and requires a stable placement. Restore the original
+   position to cancel. Sensors cannot verify the replacement's identity.
+7. Every detected placement briefly pulses green (350 ms), including captures
+   and returning a lifted piece. This confirms detection, not legality or a turn
+   change. Ordinary landings stable for 180 ms after sensor debounce commit the
+   move; special moves wait for completion or confirmation. Invalid moves blink
+   red for 2.2 seconds, visible after any green pulse ends. Play can continue
+   during feedback. After any accepted move, the opposite color moves next.
+8. Hold BTN1 for two seconds to reset to setup, or power-cycle. Games are not
    saved across resets.
 
 The background board is dim white; hints use restrained brightness. Setup
-flashes, move settling, and warning animation do not block sensor scanning.
+and placement pulses, move settling, and warning animation do not block sensor
+scanning. BTN2/BTN3 act once per debounced press; holding them does not repeat.
 The OLED shows setup, the next side, or a request to restore ambiguous handling.
 
 ### Current limits
 
-- Castling is not supported yet and will be treated as separate advisory-invalid
-  moves. Avoid castling until its gesture handling is implemented.
+- A rook moving from its home corner to its castling destination with the king
+  still home is ambiguous, even after rights have expired. BTN3 confirms an
+  ordinary rook move; no timeout guesses the intent. Castle recognition requires
+  the matching king/rook on their home squares and empty landing squares in the
+  tracked position. Other changes may require restoration.
 - En passant eligibility lasts for the reply to a legal, in-turn double pawn
   move. Expired, out-of-turn, and king-exposing en passant gestures are still
   tracked, with an invalid-move warning. An en passant-shaped diagonal landing
@@ -44,10 +60,10 @@ The OLED shows setup, the next side, or a request to restore ambiguous handling.
   Occupancy alone cannot distinguish this from an intended illegal ordinary move;
   restore the pieces to cancel. Removing the victim and placing a piece on the
   destination before lifting the attacker also waits for completion.
-- Promotion automatically becomes a queen. Underpromotion needs a future button
-  selection flow.
-- Move one piece at a time (plus its capture victim). Multiple unrelated lifts
-  are not reliably identifiable. Restore the last tracked position when the
+- Promotion must be confirmed before starting the next move; unrelated board
+  changes show `Restore pieces` and prevent confirmation.
+- Move one piece at a time (plus its capture victim or castling partner). Multiple
+  unrelated lifts are not reliably identifiable. Restore the last tracked position when the
   OLED asks `Restore pieces`, or reset and set up again.
 - Hall sensors cannot detect piece swaps, confirm the correct starting identities,
   or recognize a capture when the victim's empty-square interval is missed.
@@ -109,6 +125,8 @@ the board separately and keep programmer and board grounds connected.
   runtime so all eight pins work as GPIO.
 - Sensor inputs: `PA0..PA7` for files A..H, using internal pull-ups. A low
   input means a magnet is present.
+- Buttons: `PD5`/BTN1 reset, `PD6`/BTN2 promotion choice, `PD7`/BTN3 confirm;
+  active-low with internal pull-ups and 50 ms debounce.
 - LED color order: WS2812 GRB, with the documented serpentine rank mapping.
 
 The firmware does not program fuses. Before running it, configure the fuses to
@@ -151,6 +169,12 @@ SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk sh firmware/test
 The tests exercise setup, hints, capture orders, cancellation, advisory invalid
 moves, ambiguous handling, promotion, check/pins, timing rollover, en passant for
 both colors in all six sensor-event orders (including long pauses), eligibility
-expiry, cancellation, and king safety after removing both pawns, plus opening
-move counts of 20 / 400 / 8,902 through three plies. Sensor electrical behavior,
-LED timing/color, and human gesture timing still need verification on the board.
+expiry, cancellation, and king safety after removing both pawns. Castling tests
+cover both sides/colors, all six physical lift/landing interleavings with pauses,
+rights loss, attacked squares, cancellation, and rook-only confirmation.
+Promotion tests cover all four choices, both colors, both capture orders,
+physical replacement, cancellation, and invalid moves. Button bounce, held-button
+behavior, reset across timer rollover, and placement pulses are also exercised.
+Opening move counts of 20 / 400 / 8,902 through three plies remain checked. Sensor
+electrical behavior, LED timing/color, and human gesture timing still need
+verification on the board.

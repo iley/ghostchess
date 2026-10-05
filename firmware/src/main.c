@@ -7,6 +7,7 @@
 
 #include "oled.h"
 #include "assistant.h"
+#include "buttons.h"
 
 #define BOARD_SIZE 8U
 #define LED_COUNT 64U
@@ -113,9 +114,9 @@ static void hardware_init(void)
     disable_jtag();
     DDRC = 0xffU;
 
-    /* BTN1: hold for two seconds to start a new standard game. */
-    DDRD &= (uint8_t)~_BV(PD5);
-    PORTD |= _BV(PD5);
+    /* Active-low buttons: reset, next choice, confirm. */
+    DDRD &= (uint8_t)~(_BV(PD5) | _BV(PD6) | _BV(PD7));
+    PORTD |= _BV(PD5) | _BV(PD6) | _BV(PD7);
 }
 
 static uint8_t led_index(uint8_t row, uint8_t file)
@@ -153,7 +154,7 @@ static bool render_board(void)
             case LIGHT_WHITE:
                 next.red = next.green = next.blue = BASE_BRIGHTNESS;
                 break;
-            case LIGHT_GREEN: next.green = HINT_BRIGHTNESS; break;
+            case LIGHT_GREEN: next.green = HINT_BRIGHTNESS / 2U; break;
             case LIGHT_BLUE: next.blue = HINT_BRIGHTNESS; break;
             case LIGHT_ORANGE:
                 next.red = HINT_BRIGHTNESS;
@@ -241,28 +242,13 @@ int main(void)
     TCCR1A = 0;
     TCCR1B = _BV(CS12); /* Timer1 prescaler 256. */
     const char *last_status = 0;
-    bool button_down = false;
-    bool reset_done = false;
-    uint32_t button_since = 0;
+    struct buttons buttons = {0};
 
     for (;;) {
         scan_sensors();
         uint32_t now = milliseconds();
-        if ((PIND & _BV(PD5)) == 0) {
-            if (!button_down) {
-                button_down = true;
-                button_since = now;
-            }
-            if (!reset_done && now - button_since >= 2000U) {
-                assistant_init(&game, now);
-                reset_done = true;
-            }
-        } else {
-            button_down = false;
-            reset_done = false;
-        }
-
         assistant_update(&game, sensor_active, now);
+        buttons_update(&buttons, &game, (uint8_t)(((uint8_t)~PIND >> PD5) & 7U), now);
         if (render_board()) ws2812_show(pixels, LED_COUNT);
         const char *status = assistant_status(&game);
         if (status != last_status) {

@@ -1,4 +1,5 @@
 #include "assistant.h"
+#include "buttons.h"
 
 #include <assert.h>
 #include <stdio.h>
@@ -141,6 +142,8 @@ static void test_advisory(void)
     start();
     move(SQ('e', 2), SQ('e', 5));
     assert(game.board[SQ('e', 5)] == PAWN && !game.white_turn);
+    assert(assistant_light(&game, SQ('e', 5)) == LIGHT_GREEN);
+    tick(ASSISTANT_GREEN_MS - ASSISTANT_SETTLE_MS);
     assert(assistant_light(&game, SQ('e', 5)) == LIGHT_RED);
     tick(220);
     assert(assistant_light(&game, SQ('e', 5)) != LIGHT_RED);
@@ -354,6 +357,350 @@ static void test_en_passant_rules(void)
     assert(chess_legal_en_passant(game.board, SQ('e', 4), SQ('d', 3), SQ('d', 3)));
 }
 
+
+static void castle_position(bool white, bool kingside)
+{
+    int8_t board[64] = {0};
+    board[SQ('e', 1)] = KING;
+    board[SQ('e', 8)] = -KING;
+    board[SQ(kingside ? 'h' : 'a', white ? 1 : 8)] = white ? ROOK : -ROOK;
+    position(board, white);
+}
+
+static void test_castle_orders(void)
+{
+    /* All interleavings with each physical lift preceding its own landing. */
+    static const uint8_t orders[6][4] = {
+        {0,1,2,3}, {0,2,1,3}, {0,2,3,1},
+        {2,3,0,1}, {2,0,3,1}, {2,0,1,3}
+    };
+    for (unsigned color = 0; color < 2; ++color) {
+        bool white = color == 0;
+        uint8_t rank = white ? 1 : 8;
+        for (unsigned side = 0; side < 2; ++side) {
+            bool kingside = side == 0;
+            uint8_t squares[4] = {SQ('e', rank), SQ(kingside ? 'g' : 'c', rank),
+                SQ(kingside ? 'h' : 'a', rank), SQ(kingside ? 'f' : 'd', rank)};
+            for (unsigned invalid = 0; invalid < 3; ++invalid) {
+                for (unsigned order = 0; order < 6; ++order) {
+                    castle_position(white, kingside);
+                    if (invalid == 1) game.castle_rights = 0;
+                    if (invalid == 2) game.white_turn = !white;
+                    bool turn = game.white_turn;
+                    for (unsigned event = 0; event < 4; ++event) {
+                        unsigned action = orders[order][event];
+                        sensor(squares[action], (action & 1U) != 0);
+                        tick(ASSISTANT_SETTLE_MS);
+                        if (event < 3) {
+                            tick(5000);
+                            assert(game.white_turn == turn);
+                            assert(game.board[squares[0]] == (white ? KING : -KING));
+                            assert(game.board[squares[2]] == (white ? ROOK : -ROOK));
+                        }
+                    }
+                    assert(game.board[squares[0]] == EMPTY);
+                    assert(game.board[squares[2]] == EMPTY);
+                    assert(game.board[squares[1]] == (white ? KING : -KING));
+                    assert(game.board[squares[3]] == (white ? ROOK : -ROOK));
+                    assert(game.white_turn == !white && !game.castle_pending);
+                    assert((game.warning_remaining != 0) == (invalid != 0));
+                    assert(!(game.castle_rights & (white ? 3U : 12U)));
+                    tick(5000);
+                    assert(game.white_turn == !white);
+                }
+            }
+        }
+    }
+    castle_position(true, true);
+    sensors[SQ('e',1)] = sensors[SQ('h',1)] = false;
+    sensors[SQ('g',1)] = sensors[SQ('f',1)] = true;
+    tick(40);
+    tick(ASSISTANT_SETTLE_MS);
+    assert(game.board[SQ('g',1)] == KING && !game.white_turn);
+}
+
+static void test_castle_cancel_and_rook(void)
+{
+    castle_position(true, true);
+    sensor(SQ('e',1), false);
+    assert(game.hints[SQ('g',1)] == LIGHT_BLUE);
+    sensor(SQ('g',1), true);
+    tick(5000);
+    assert(game.castle_pending && !game.rook_only && game.white_turn);
+    assistant_button(&game, 3);
+    assert(game.white_turn);
+    sensor(SQ('g',1), false);
+    sensor(SQ('e',1), true);
+    assert(!game.castle_pending && game.castle_rights == CHESS_CASTLE_ALL);
+    move(SQ('h',1), SQ('f',1));
+    assert(game.rook_only && game.white_turn);
+    sensor(SQ('f',1), false);
+    sensor(SQ('h',1), true);
+    assert(!game.castle_pending && game.castle_rights == CHESS_CASTLE_ALL);
+    move(SQ('h',1), SQ('f',1));
+    sensor(SQ('a',3), true);
+    assistant_button(&game, 3); /* Stale button confirmation must not commit. */
+    tick(5000);
+    assistant_button(&game, 3);
+    assert(game.unresolved && game.white_turn);
+    sensor(SQ('a',3), false);
+    tick(ASSISTANT_SETTLE_MS);
+    assistant_button(&game, 3);
+    assert(!game.white_turn && game.board[SQ('f',1)] == ROOK);
+    assert(!(game.castle_rights & 1U));
+    assert(game.castle_rights & 2U);
+    move(SQ('f',1), SQ('h',1));
+    assert(!(game.castle_rights & 1U));
+
+    castle_position(true, true);
+    move(SQ('e',1), SQ('f',1)); /* Ordinary king move must not wait. */
+    assert(!game.castle_pending && game.board[SQ('f',1)] == KING);
+    assert(!(game.castle_rights & 3U));
+    move(SQ('f',1), SQ('e',1));
+    assert(!(game.castle_rights & 3U));
+    castle_position(true, true);
+    move(SQ('h',1), SQ('g',1)); /* Nor an ordinary rook move. */
+    assert(!game.castle_pending && game.board[SQ('g',1)] == ROOK);
+}
+
+static void test_castle_rules(void)
+{
+    for (unsigned color = 0; color < 2; ++color) {
+        bool white = color == 0;
+        uint8_t rank = white ? 1 : 8;
+        for (unsigned side = 0; side < 2; ++side) {
+            bool kingside = side == 0;
+            castle_position(white, kingside);
+            assert(chess_legal_castle(game.board, white, kingside, CHESS_CASTLE_ALL));
+            assert(!chess_legal_castle(game.board, white, kingside, 0));
+            /* Test attack on the start, transit, and destination separately. */
+            const char files[3] = {'e', kingside ? 'f' : 'd', kingside ? 'g' : 'c'};
+            for (unsigned i = 0; i < 3; ++i) {
+                uint8_t attacker = SQ(files[i], white ? 3 : 6);
+                game.board[attacker] = white ? -ROOK : ROOK;
+                assert(!chess_legal_castle(game.board, white, kingside, CHESS_CASTLE_ALL));
+                game.board[attacker] = EMPTY;
+            }
+            game.board[SQ(kingside ? 'f' : 'b', rank)] = white ? KNIGHT : -KNIGHT;
+            assert(!chess_legal_castle(game.board, white, kingside, CHESS_CASTLE_ALL));
+        }
+    }
+    castle_position(true, true);
+    game.board[SQ('f',3)] = -ROOK;
+    sensors[SQ('f',3)] = game.occupied[SQ('f',3)] = true;
+    sensor(SQ('e',1), false);
+    assert(!game.hints[SQ('g',1)]);
+    sensor(SQ('g',1), true);
+    tick(5000);
+    assert(game.white_turn);
+    sensor(SQ('h',1), false);
+    sensor(SQ('f',1), true);
+    tick(ASSISTANT_SETTLE_MS);
+    assert(!game.white_turn && game.warning_remaining);
+
+    castle_position(true, true);
+    /* Capturing a home rook expires only that corner's right. */
+    game.board[SQ('h',8)] = -ROOK;
+    sensors[SQ('h',8)] = game.occupied[SQ('h',8)] = true;
+    sensor(SQ('h',1), false);
+    sensor(SQ('h',8), false);
+    sensor(SQ('h',1), true);
+    tick(ASSISTANT_SETTLE_MS);
+    assert(game.board[SQ('h',1)] == -ROOK);
+    assert(!(game.castle_rights & 5U));
+    assert((game.castle_rights & 10U) == 10U);
+}
+
+static void promotion_position(bool white, bool capture)
+{
+    int8_t board[64] = {0};
+    board[SQ('e',1)] = KING;
+    board[SQ('e',8)] = -KING;
+    board[SQ('b',white ? 7 : 2)] = white ? PAWN : -PAWN;
+    if (capture) board[SQ('a',white ? 8 : 1)] = white ? -ROOK : ROOK;
+    position(board, white);
+}
+
+static void test_promotions(void)
+{
+    static const uint8_t choices[4] = {QUEEN, ROOK, BISHOP, KNIGHT};
+    for (unsigned color = 0; color < 2; ++color) {
+        bool white = color == 0;
+        for (unsigned capture = 0; capture < 3; ++capture) {
+            for (unsigned choice = 0; choice < 4; ++choice) {
+                promotion_position(white, capture != 0);
+                uint8_t from = SQ('b',white ? 7 : 2);
+                uint8_t to = SQ(capture ? 'a' : 'b',white ? 8 : 1);
+                if (capture == 1) sensor(to, false);
+                sensor(from, false);
+                if (capture == 2) sensor(to, false);
+                sensor(to, true);
+                tick(ASSISTANT_SETTLE_MS);
+                assert(game.promotion_pending && game.white_turn == white);
+                for (unsigned i = 0; i < choice; ++i) assistant_button(&game, 2);
+                sensor(to, false); /* Swap the physical pawn, with a long pause. */
+                tick(5000);
+                assistant_button(&game, 3);
+                assert(game.promotion_pending && game.white_turn == white);
+                assert(strcmp(assistant_status(&game), "Place promotion") == 0);
+                sensor(to, true);
+                assistant_button(&game, 3); /* Wait for a settled replacement. */
+                assert(game.promotion_pending);
+                tick(ASSISTANT_SETTLE_MS);
+                assistant_button(&game, 3);
+                assert(!game.promotion_pending && game.white_turn != white);
+                assert(game.board[to] == (white ? choices[choice] : -choices[choice]));
+                assert(game.board[from] == EMPTY && !game.warning_remaining);
+                if (capture) assert(!(game.castle_rights & (white ? 8U : 2U)));
+                tick(5000);
+                assert(game.white_turn != white);
+            }
+        }
+    }
+}
+
+static void test_promotion_cancel_and_invalid(void)
+{
+    promotion_position(true, false);
+    move(SQ('b',7), SQ('b',8));
+    assert(game.promotion_pending);
+    for (unsigned i = 0; i < 4; ++i) assistant_button(&game, 2);
+    assert(game.promotion_choice == 0);
+    sensor(SQ('a',3), true);
+    tick(5000);
+    assistant_button(&game, 3);
+    assert(game.promotion_pending && game.unresolved && game.white_turn);
+    sensor(SQ('a',3), false);
+    sensor(SQ('b',8), false);
+    sensor(SQ('b',7), true);
+    assert(!game.promotion_pending && game.white_turn);
+    assert(game.board[SQ('b',7)] == PAWN);
+    game.white_turn = false;
+    move(SQ('b',7), SQ('b',8));
+    assistant_button(&game, 3);
+    assert(game.board[SQ('b',8)] == QUEEN && game.warning_remaining);
+    assert(!game.white_turn);
+
+    promotion_position(true, true);
+    sensor(SQ('a',8), false);
+    move(SQ('b',7), SQ('a',8));
+    assert(game.promotion_pending);
+    sensor(SQ('a',8), false);
+    sensor(SQ('b',7), true);
+    sensor(SQ('a',8), true);
+    assert(!game.promotion_pending && game.white_turn);
+    assert(game.board[SQ('a',8)] == -ROOK);
+}
+
+static void test_special_reset_and_history(void)
+{
+    for (unsigned promotion = 0; promotion < 2; ++promotion) {
+        struct buttons buttons = {0};
+        if (promotion) {
+            promotion_position(true, false);
+            game.en_passant = SQ('d',6);
+            move(SQ('b',7), SQ('b',8));
+            assert(game.promotion_pending && game.en_passant == SQ('d',6));
+        } else {
+            castle_position(true, true);
+            game.en_passant = SQ('d',6);
+            move(SQ('h',1), SQ('f',1));
+            assert(game.castle_pending && game.en_passant == SQ('d',6));
+        }
+        buttons_update(&buttons, &game, 1, now);
+        tick(BUTTON_DEBOUNCE_MS);
+        buttons_update(&buttons, &game, 1, now);
+        tick(BUTTON_RESET_MS);
+        buttons_update(&buttons, &game, 1, now);
+        assert(!game.playing && !game.promotion_pending && !game.castle_pending);
+        assert(game.castle_rights == CHESS_CASTLE_ALL);
+        assert(game.en_passant == CHESS_NO_SQUARE);
+    }
+    castle_position(true, true);
+    game.en_passant = SQ('d',6);
+    move(SQ('e',1), SQ('g',1));
+    move(SQ('h',1), SQ('f',1));
+    assert(game.en_passant == CHESS_NO_SQUARE && !game.white_turn);
+    promotion_position(true, false);
+    game.en_passant = SQ('d',6);
+    move(SQ('b',7), SQ('c',8)); /* Invalid non-capture promotion still asks. */
+    assert(game.promotion_pending && game.white_turn);
+    assistant_button(&game, 2);
+    assistant_button(&game, 3);
+    assert(game.board[SQ('c',8)] == ROOK && game.warning_remaining);
+    assert(game.en_passant == CHESS_NO_SQUARE && !game.white_turn);
+}
+
+static void test_placement_feedback(void)
+{
+    start();
+    sensor(SQ('e',2), false);
+    assert(game.green_remaining[SQ('e',4)] == 0);
+    sensor(SQ('e',4), true);
+    assert(assistant_light(&game, SQ('e',4)) == LIGHT_GREEN);
+    tick(ASSISTANT_SETTLE_MS);
+    assert(!game.white_turn);
+    sensor(SQ('e',7), false); /* Scanning continues during the pulse. */
+    assert(game.selected == SQ('e',7));
+    tick(ASSISTANT_GREEN_MS);
+    assert(assistant_light(&game, SQ('e',4)) != LIGHT_GREEN);
+    sensor(SQ('e',7), true);
+    assert(assistant_light(&game, SQ('e',7)) == LIGHT_GREEN);
+    tick(ASSISTANT_GREEN_MS);
+    assert(assistant_light(&game, SQ('e',7)) != LIGHT_GREEN);
+}
+
+static void button_tick(struct buttons *buttons, uint8_t pressed, uint32_t ms)
+{
+    tick(ms);
+    buttons_update(buttons, &game, pressed, now);
+}
+
+static void test_buttons(void)
+{
+    struct buttons buttons = {0};
+    promotion_position(true, false);
+    move(SQ('b',7), SQ('b',8));
+    button_tick(&buttons, 2, 1);
+    button_tick(&buttons, 0, 20);
+    button_tick(&buttons, 2, 20);
+    button_tick(&buttons, 2, BUTTON_DEBOUNCE_MS - 1);
+    assert(game.promotion_choice == 0);
+    button_tick(&buttons, 2, 1);
+    assert(game.promotion_choice == 1);
+    button_tick(&buttons, 2, 5000);
+    assert(game.promotion_choice == 1);
+    button_tick(&buttons, 0, 1);
+    button_tick(&buttons, 0, BUTTON_DEBOUNCE_MS);
+    button_tick(&buttons, 6, 1); /* Simultaneous buttons do not choose/commit. */
+    button_tick(&buttons, 6, BUTTON_DEBOUNCE_MS);
+    assert(game.promotion_pending && game.promotion_choice == 1);
+    button_tick(&buttons, 0, 1);
+    button_tick(&buttons, 0, BUTTON_DEBOUNCE_MS);
+    button_tick(&buttons, 2, 1);
+    button_tick(&buttons, 6, 20); /* Also reject staggered overlapping presses. */
+    button_tick(&buttons, 6, BUTTON_DEBOUNCE_MS);
+    assert(game.promotion_pending && game.promotion_choice == 1);
+    button_tick(&buttons, 0, 1);
+    button_tick(&buttons, 0, BUTTON_DEBOUNCE_MS);
+    button_tick(&buttons, 4, 1);
+    button_tick(&buttons, 4, BUTTON_DEBOUNCE_MS);
+    assert(!game.promotion_pending && game.board[SQ('b',8)] == ROOK);
+    button_tick(&buttons, 0, 1);
+    button_tick(&buttons, 0, BUTTON_DEBOUNCE_MS);
+    now = UINT32_MAX - 100U;
+    game.last_update = now;
+    button_tick(&buttons, 1, 1);
+    button_tick(&buttons, 1, BUTTON_DEBOUNCE_MS);
+    button_tick(&buttons, 1, BUTTON_RESET_MS - 1);
+    assert(game.playing);
+    button_tick(&buttons, 1, 1);
+    assert(!game.playing && game.castle_rights == CHESS_CASTLE_ALL);
+    game.warning_remaining = 10000;
+    button_tick(&buttons, 1, 3000);
+    assert(game.warning_remaining == 7000); /* Held reset does not repeat. */
+}
+
 static unsigned long perft(const int8_t board[64], bool white, unsigned depth)
 {
     if (depth == 0) return 1;
@@ -397,6 +744,14 @@ int main(void)
     test_en_passant_orders();
     test_en_passant_history_and_cancel();
     test_en_passant_rules();
+    test_castle_orders();
+    test_castle_cancel_and_rook();
+    test_castle_rules();
+    test_promotions();
+    test_promotion_cancel_and_invalid();
+    test_special_reset_and_history();
+    test_placement_feedback();
+    test_buttons();
     int8_t board[64];
     chess_start(board);
     assert(perft(board, true, 1) == 20);
