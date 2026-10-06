@@ -171,10 +171,8 @@ static bool render_board(void)
     return changed;
 }
 
-static bool scan_sensors(void)
+static void scan_sensors(void)
 {
-    bool changed = false;
-
     for (uint8_t row = 0U; row < BOARD_SIZE; ++row) {
         /* A low bus before selection still belongs to an earlier row. */
         uint8_t idle_high = PINA;
@@ -212,7 +210,6 @@ static bool scan_sensors(void)
                 if (sensor_confidence[square] == SENSOR_DEBOUNCE_SCANS &&
                     !sensor_active[square]) {
                     sensor_active[square] = true;
-                    changed = true;
                 }
             } else {
                 if (sensor_confidence[square] > 0U) {
@@ -221,13 +218,10 @@ static bool scan_sensors(void)
 
                 if (sensor_confidence[square] == 0U && sensor_active[square]) {
                     sensor_active[square] = false;
-                    changed = true;
                 }
             }
         }
     }
-
-    return changed;
 }
 
 int main(void)

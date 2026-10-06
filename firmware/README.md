@@ -68,8 +68,13 @@ The OLED shows setup, the next side, or a request to restore ambiguous handling.
 - Hall sensors cannot detect piece swaps, confirm the correct starting identities,
   or recognize a capture when the victim's empty-square interval is missed.
   Likewise, replacing a victim while the attacker remains lifted looks exactly
-  like completing a capture. To cancel that gesture, restore the attacker first,
-  then the victim, or restore both within the settling window.
+  like completing a capture. Restoring the attacker first can instead look like
+  a reverse capture, which advisory mode also accepts. Neither restoration order
+  is safe with a pause: both original squares must be detected as restored before
+  the 180 ms settling window expires after the first restoration. Sensor debounce
+  makes this difficult to time by hand. If a capture has already committed, merely
+  restoring the pieces cannot undo it; reset and set up again. Reliable cancellation
+  with arbitrary pauses needs an explicit cancel/undo interaction (not implemented).
 - An accepted illegal position remains playable, with subsequent hints based on
   the tracked pieces. There is no undo, arbitrary-position editor, or end-game
   adjudication yet.

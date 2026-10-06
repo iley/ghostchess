@@ -26,10 +26,7 @@ static void clear_gesture(struct assistant *game)
     memset(game->hints, 0, sizeof game->hints);
     game->selected = NO_SQUARE;
     game->unresolved = false;
-    game->en_passant_pending = false;
-    game->castle_pending = false;
-    game->rook_only = false;
-    game->promotion_pending = false;
+    game->gesture = GESTURE_NONE;
 }
 
 static void update_hints(struct assistant *game)
@@ -61,6 +58,21 @@ static void update_hints(struct assistant *game)
     }
 }
 
+/* Record history against the original position, before moving any pieces. */
+static void record_move(struct assistant *game, uint8_t from, uint8_t to,
+                        bool legal, uint8_t next_en_passant)
+{
+    if (!legal) {
+        game->warning_square = to;
+        game->warning_remaining = ASSISTANT_WARNING_MS;
+    }
+    game->castle_rights = chess_rights_after(game->board, from, to,
+                                            game->castle_rights);
+    game->en_passant = next_en_passant;
+    game->white_turn = game->board[from] < 0;
+    clear_gesture(game);
+}
+
 static void commit_move(struct assistant *game, uint8_t from, uint8_t to,
                         uint8_t victim, uint8_t promotion)
 {
@@ -69,27 +81,18 @@ static void commit_move(struct assistant *game, uint8_t from, uint8_t to,
         (victim != NO_SQUARE ?
          chess_legal_en_passant(game->board, from, to, game->en_passant) :
          chess_legal(game->board, from, to));
-    if (!legal) {
-        game->warning_square = to;
-        game->warning_remaining = ASSISTANT_WARNING_MS;
-    }
-    game->en_passant = victim == NO_SQUARE && legal ?
+    uint8_t next_en_passant = victim == NO_SQUARE && legal ?
         chess_en_passant_target(game->board, from, to) : CHESS_NO_SQUARE;
-    game->castle_rights = chess_rights_after(game->board, from, to,
-                                            game->castle_rights);
+    record_move(game, from, to, legal, next_en_passant);
     if (victim != NO_SQUARE) game->board[victim] = EMPTY;
     chess_move(game->board, from, to);
     if (promotion != EMPTY) game->board[to] = white ? promotion : -promotion;
-    game->white_turn = !white;
-    clear_gesture(game);
 }
 
 /* Preserve both pieces until the entire castle is observed. Legality is
  * advisory; rights and attacks do not change the physical gesture shape. */
 static bool handle_castle(struct assistant *game)
 {
-    game->castle_pending = false;
-    game->rook_only = false;
     for (uint8_t variant = 0; variant < 4; ++variant) {
         bool white = variant < 2, kingside = (variant & 1U) == 0;
         if (!chess_castle_shape(game->board, white, kingside)) continue;
@@ -110,28 +113,19 @@ static bool handle_castle(struct assistant *game)
         }
         if (!compatible) continue;
         game->unresolved = false;
-        game->en_passant_pending = false;
         if (!game->occupied[king] && !game->occupied[rook] &&
             game->occupied[kt] && game->occupied[rt]) {
-            if (white != game->white_turn ||
-                !chess_legal_castle(game->board, white, kingside,
-                                    game->castle_rights)) {
-                game->warning_square = kt;
-                game->warning_remaining = ASSISTANT_WARNING_MS;
-            }
-            game->castle_rights = chess_rights_after(game->board, king, kt,
-                                                    game->castle_rights);
+            bool legal = white == game->white_turn &&
+                chess_legal_castle(game->board, white, kingside, game->castle_rights);
+            record_move(game, king, kt, legal, CHESS_NO_SQUARE);
             chess_move(game->board, king, kt);
             chess_move(game->board, rook, rt);
-            game->en_passant = CHESS_NO_SQUARE;
-            game->white_turn = !white;
-            clear_gesture(game);
         } else {
-            game->castle_pending = true;
-            game->rook_only = game->occupied[king] && !game->occupied[rook] &&
-                              !game->occupied[kt] && game->occupied[rt];
-            game->castle_from = rook;
-            game->castle_to = rt;
+            game->gesture = game->occupied[king] && !game->occupied[rook] &&
+                            !game->occupied[kt] && game->occupied[rt] ?
+                            GESTURE_ROOK_OR_CASTLE : GESTURE_CASTLE;
+            game->gesture_from = rook;
+            game->gesture_to = rt;
         }
         return true;
     }
@@ -141,9 +135,9 @@ static bool handle_castle(struct assistant *game)
 static bool promotion_matches(const struct assistant *game, bool allow_lift)
 {
     for (uint8_t s = 0; s < 64; ++s) {
-        if (s == game->promotion_to && allow_lift) continue;
-        bool expected = s == game->promotion_to ||
-                        (s != game->promotion_from && game->board[s] != EMPTY);
+        if (s == game->gesture_to && allow_lift) continue;
+        bool expected = s == game->gesture_to ||
+                        (s != game->gesture_from && game->board[s] != EMPTY);
         if (game->occupied[s] != expected) return false;
     }
     return true;
@@ -153,14 +147,14 @@ void assistant_button(struct assistant *game, uint8_t button)
 {
     if (!game->playing || game->unresolved ||
         game->last_update - game->stable_since < ASSISTANT_SETTLE_MS) return;
-    if (game->promotion_pending) {
+    if (game->gesture == GESTURE_PROMOTION) {
         static const uint8_t choices[4] = {QUEEN, ROOK, BISHOP, KNIGHT};
         if (button == 2) game->promotion_choice = (game->promotion_choice + 1) % 4;
         if (button == 3 && promotion_matches(game, false))
-            commit_move(game, game->promotion_from, game->promotion_to,
+            commit_move(game, game->gesture_from, game->gesture_to,
                         NO_SQUARE, choices[game->promotion_choice]);
-    } else if (button == 3 && game->castle_pending && game->rook_only) {
-        commit_move(game, game->castle_from, game->castle_to, NO_SQUARE, EMPTY);
+    } else if (button == 3 && game->gesture == GESTURE_ROOK_OR_CASTLE) {
+        commit_move(game, game->gesture_from, game->gesture_to, NO_SQUARE, EMPTY);
     }
 }
 
@@ -200,14 +194,13 @@ void assistant_update(struct assistant *game, const bool occupied[64],
         return;
     }
 
-    if (game->promotion_pending) {
+    if (game->gesture == GESTURE_PROMOTION) {
         game->unresolved = !promotion_matches(game, true);
         return;
     }
 
-    /* Never allow a button to confirm stale partial-castle state. */
-    game->castle_pending = false;
-    game->rook_only = false;
+    /* Reclassify from this snapshot; never confirm stale castle state. */
+    game->gesture = GESTURE_NONE;
     update_hints(game);
     if (now - game->stable_since < ASSISTANT_SETTLE_MS) return;
 
@@ -231,7 +224,6 @@ void assistant_update(struct assistant *game, const bool occupied[64],
 
     /* A diagonal pawn landing can precede either removal. Keep the tracked
      * position intact until all three squares agree; a pause is not a turn. */
-    game->en_passant_pending = false;
     uint8_t ep_from = NO_SQUARE, ep_victim = NO_SQUARE, ep_count = 0;
     if (added_count == 1 && replaced_count == 0) {
         for (uint8_t from = 0; from < 64; ++from) {
@@ -246,7 +238,7 @@ void assistant_update(struct assistant *game, const bool occupied[64],
         }
     }
     if (ep_count != 0 && (ep_count != 1 || missing_count != 2)) {
-        game->en_passant_pending = true;
+        game->gesture = GESTURE_EN_PASSANT;
         game->unresolved = false;
         return;
     }
@@ -254,6 +246,8 @@ void assistant_update(struct assistant *game, const bool occupied[64],
     uint8_t to = NO_SQUARE;
     if (missing_count == 1 && added_count == 1 && replaced_count == 0)
         to = added;
+    /* Either restoration order after two lifts is indistinguishable from a
+     * capture. Only full restoration before settling cancels it reliably. */
     if (missing_count == 1 && added_count == 0 && replaced_count == 1)
         to = replaced;
     if (ep_count == 1 && missing_count == 2) {
@@ -272,9 +266,9 @@ void assistant_update(struct assistant *game, const bool occupied[64],
     bool white = game->board[missing] > 0;
     if (game->board[missing] == (white ? PAWN : -PAWN) &&
         to / 8 == (white ? 0 : 7)) {
-        game->promotion_pending = true;
-        game->promotion_from = missing;
-        game->promotion_to = to;
+        game->gesture = GESTURE_PROMOTION;
+        game->gesture_from = missing;
+        game->gesture_to = to;
         game->promotion_choice = 0;
         game->unresolved = false;
         memset(game->hints, 0, sizeof game->hints);
@@ -313,16 +307,16 @@ const char *assistant_status(const struct assistant *game)
 {
     if (!game->playing) return "Set up pieces";
     if (game->unresolved) return "Restore pieces";
-    if (game->promotion_pending) {
-        if (!game->occupied[game->promotion_to]) return "Place promotion";
+    if (game->gesture == GESTURE_PROMOTION) {
+        if (!game->occupied[game->gesture_to]) return "Place promotion";
         static const char *const prompts[4] = {
             "Queen 2next 3OK", "Rook 2next 3OK",
             "Bishop 2next 3OK", "Knight 2next 3OK"
         };
         return prompts[game->promotion_choice];
     }
-    if (game->castle_pending)
-        return game->rook_only ? "Castle/3 rook" : "Finish castling";
-    if (game->en_passant_pending) return "Finish en passant";
+    if (game->gesture == GESTURE_ROOK_OR_CASTLE) return "Castle/3 rook";
+    if (game->gesture == GESTURE_CASTLE) return "Finish castling";
+    if (game->gesture == GESTURE_EN_PASSANT) return "Finish en passant";
     return game->white_turn ? "White to move" : "Black to move";
 }

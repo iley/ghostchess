@@ -12,6 +12,10 @@
 enum square_light { LIGHT_OFF, LIGHT_WHITE, LIGHT_GREEN, LIGHT_BLUE,
                     LIGHT_ORANGE, LIGHT_RED };
 
+/* Only promotion persists across snapshots; other gestures are reclassified. */
+enum assistant_gesture { GESTURE_NONE, GESTURE_EN_PASSANT, GESTURE_CASTLE,
+                         GESTURE_ROOK_OR_CASTLE, GESTURE_PROMOTION };
+
 struct assistant {
     int8_t board[64];
     bool occupied[64];
@@ -23,15 +27,11 @@ struct assistant {
     bool unresolved;
     uint8_t selected;
     uint8_t en_passant;
-    bool en_passant_pending;
     uint8_t castle_rights;
-    bool castle_pending;
-    bool rook_only;
-    uint8_t castle_from;
-    uint8_t castle_to;
-    bool promotion_pending;
-    uint8_t promotion_from;
-    uint8_t promotion_to;
+    enum assistant_gesture gesture;
+    /* Confirmation endpoints for promotion or the rook-only castle option. */
+    uint8_t gesture_from;
+    uint8_t gesture_to;
     uint8_t promotion_choice;
     uint8_t warning_square;
     uint16_t warning_remaining;

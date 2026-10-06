@@ -57,7 +57,8 @@ static void oled_send_command(enum oled_command command)
 void oled_clear(void)
 {
     oled_send_command(OLED_CLEAR_DISPLAY);
-    _delay_ms(2);
+    /* WS0010 clear takes up to 6.2 ms at a 250 kHz controller clock. */
+    _delay_ms(7);
 }
 
 void oled_write_text(const char *text)
