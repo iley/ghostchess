@@ -142,6 +142,10 @@ The OLED is a write-only SPI peripheral in this design: `PB4` is active-low chip
 
 ## Sensor scanning
 
+Known issue: two occupied squares can cause phantom detections at other
+rank/file intersections. See [sensor ghosting](sensor-ghosting.md) for the
+suspected cause and proposed, unvalidated output-diode repair.
+
 Each `SENSOR_ON_n` drives a 2N7002 gate with a 10 kΩ pull-down. A high level turns on that rank's low-side ground switch; low turns the rank off. Keep only one rank enabled at a time.
 
 Each file bus is shared by eight DRV5033A open-drain outputs and has no external pull-up. Configure `PA0`–`PA7` as inputs with their internal pull-ups enabled. A detected magnet pulls the selected file input low; no detected magnet reads high.
